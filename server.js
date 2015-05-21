@@ -14,6 +14,14 @@ var questions = require('./server/questions/questionsRouter');
 var mongoose = require('mongoose');
 var databaseURI = 'mongodb://localhost/projectApp' + process.env.NODE_ENV;
 
+var jwt = require('express-jwt');
+
+
+  var jwtCheck = jwt({
+    secret: new Buffer('65S3UJfGQYZcG4Z_ZdY7NHG-osl9AHgjLKvLTJdBJXWP1eCbnpDV4ZLg-hFTTitb', 'base64'),
+    audience: 'FOrVLNPaeqV6M1xjG5cHnpstTzBxQBVq'
+  });
+
 mongoose.connect(databaseURI, function(err) {
   if (err) {
     console.error(databaseURI + ' connection error. ', err);
