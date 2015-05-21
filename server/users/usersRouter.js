@@ -9,7 +9,7 @@ var ObjectId = require('mongoose').Types.ObjectId;
 router.get('/', function(req, res, next) {
   // console.log(req);
 ;
-  Question.find({}},null,{sort : {_id : -1,} },function (err, questions) {
+  Question.find({},null,{sort : {_id : -1,} },function (err, questions) {
     if (err) return next(err);
     res.json(questions);
   });
