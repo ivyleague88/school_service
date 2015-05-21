@@ -1,0 +1,381 @@
+html,body {
+  height: 100%;
+}
+
+.container-full h1 {
+  font-size: 80px;
+  color: #FFF;
+}
+
+.container-full .lead {
+  color: #FFF;
+}
+
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 65%;
+  /*background-color: #110022;*/
+  background-image: url("../img/sky.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #eee;
+  overflow: hidden;
+}
+
+.v-center {
+  margin-top: 200px;
+  padding-bottom: 50px;
+}
+
+.container-main {
+  margin-top: 100px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette-divider-sm {
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+.featurette-header {
+  text-align: center;
+}
+
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.footer {
+  margin-top: 50px;
+  padding-top: 50px;
+  min-height: 150px;
+  background-color: #110022;
+  text-align: center;
+  color: #DDCCEE;
+}
+
+.header-links {
+  position: absolute;
+  width: 100%;
+  margin: 25px auto 0;
+  padding: 6px 12px;
+  line-height: 1.428571429;
+  color: white;
+  text-align: right;
+}
+
+.header-nav-links {
+  float: right;
+}
+
+.home:hover, 
+.header-nav-links a {
+  color: #DDCCEE;
+}
+
+.home, 
+.header-nav-links > li > a:hover,
+.header-nav-links > li > a:active {
+  background-color: transparent;
+  color: #eee;
+}
+
+.header-nav-links > li > a {
+  padding: 5px 15px;
+}
+
+.header-nav-links > li.active > a:hover,
+.header-nav-links > li.active > a:active {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.profile-img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.navbar-header {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 50px;
+  background-color: #110022;
+  color: #eee;
+  overflow: hidden;
+}
+
+.navbar-header {
+  padding-top: 5px;
+}
+
+.navbar-header > .input-group,
+.navbar-header > .header-nav-links {
+  margin-top: 5px;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.edit {
+  position: absolute;
+  cursor: pointer;
+}
+
+.edit span.label {
+  padding: 10px;
+}
+
+.profile-list .list-inline > li {
+  padding: 5px;
+}
+
+.profile-list,
+.profile-list > ul {
+  font-size: 16px;
+}
+
+span.label {
+  cursor: pointer;
+}
+
+.badge-danger {
+  background-color: #d9534f !important;
+}
+
+.panel-heading:hover {
+    cursor:pointer;
+}
+.panel-heading {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.side-tab:hover {
+  cursor: pointer;
+}
+
+.panel.panel-default {
+  border: none;
+  box-shadow: none !important;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.panel-heading {
+  border: none;
+  background-color: #eee;
+}
+
+.panel-body {
+  background-color: #f5f5f5;
+}
+
+.panel-title {
+  font-weight: 400;
+}
+
+/*----------------------------------
+    Macbook pro mockup from:
+    http://jaredhardy.com/minimal-devices/
+    
+----------------------------------*/
+
+.md-macbook-pro {
+  display: block;
+  width: 55.3125em;
+  height: 31.875em;
+  font-size: 13px;
+  margin: 0 auto;
+
+  @media (max-width:1199px){
+    font-size: 11px;
+  }
+  @media (max-width:1024px){
+    font-size: 10px;
+  }
+
+  @media (max-width:767px){
+    font-size: 7px;
+  }
+
+  @media (max-width:320px){
+    font-size: 5px;
+  }
+
+}
+
+.md-macbook-pro .md-lid {
+  width: 45em;
+  height: 30.625em;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1.875em;
+  border: solid 0.1875em #cdced1;
+  background: #131313;
+}
+
+.md-macbook-pro .md-camera {
+  width: 0.375em;
+  height: 0.375em;
+  margin: 0 auto;
+  position: relative;
+  top: 1.0625em;
+  background: #000;
+  border-radius: 100%;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.md-macbook-pro .md-camera:after {
+  content: "";
+  display: block;
+  width: 0.125em;
+  height: 0.125em;
+  position: absolute;
+  left: 0.125em;
+  top: 0.0625em;
+  background: #353542;
+  border-radius: 100%;
+}
+
+.md-macbook-pro .md-screen {
+  width: 42.25em;
+  height: 26.375em;
+  margin: 0 auto;
+  position: relative;
+  top: 2.0625em;
+  // background: #1d1d1d;
+  background: #fff;
+  overflow: hidden;
+}
+
+.md-macbook-pro .md-screen img {
+  width: 100%;
+}
+
+.md-macbook-pro .md-base {
+  width: 100%;
+  height: 0.9375em;
+  position: relative;
+  top: -0.75em;
+  background: #c6c7ca;
+}
+
+.md-macbook-pro .md-base:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5em;
+  margin: 0 auto;
+  position: relative;
+  bottom: -0.1875em;
+  background: #b9babe;
+  border-radius: 0 0 1.25em 1.25em;
+}
+
+.md-macbook-pro .md-base:before {
+  content: "";
+  display: block;
+  width: 7.6875em;
+  height: 0.625em;
+  margin: 0 auto;
+  position: relative;
+  background: #a6a8ad;
+  border-radius: 0 0 0.625em 0.625em;
+}
+
+.md-macbook-pro.md-glare .md-lid:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 1.25em 0 0;
+  background: -webkit-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -moz-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -o-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: linear-gradient(53deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+}
+
+/* IE8 Fixes */
+
+.list-inline {
+    display: inline;
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid #f0f0f0;
+}
+
+.list-inline {
+    border-right: none;
+}
