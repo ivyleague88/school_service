@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./server/index/indexRouter');
 var projects = require('./server/project/projectRouter');
+var questions = require('./server/questions/questionsRouter');
 
 var mongoose = require('mongoose');
 var databaseURI = 'mongodb://localhost/projectApp' + process.env.NODE_ENV;
@@ -38,7 +39,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/projects', projects);
+app.use('/api/projects', projects);
+app.use('/api/questions', questions);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

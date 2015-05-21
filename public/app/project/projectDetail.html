@@ -82,11 +82,57 @@
 	                        </div>
 	                      </div>
 
+	                <!-- MATCHED PEOLE -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#matchedPeople" aria-expanded="false" aria-controls="matchedPeople">
+	                            <h4 class="panel-title">Matched People</h4>
+	                        </div>
+	                    </span>
+
+	                        <div id="matchedPeople" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                          <div class="panel-body">
+	                          <!-- tab content goes here -->
+								<div class="row">
+									<div class="col-md-6"><strong>ANBINH</strong></div>
+									<div class="col-md-6">	<button class="btn btn-success">Accept</button></div>
+								</div>
+								
+	                          </div>
+	                        </div>
+	                      </div>
+	                <!-- END OF MATCHED PEOPLE ACCORDION -->
+
+
+	                <!-- APPLIED PEOLE -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#appliedPeople" aria-expanded="false" aria-controls="appliedPeople">
+	                            <h4 class="panel-title">Applied People</h4>
+	                        </div>
+	                    </span>
+
+	                        <div id="appliedPeople" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                          <div class="panel-body">
+	                          <!-- tab content goes here -->
+								<div class="row">
+									<div class="col-md-6"><strong>ANBINH</strong></div>
+									<div class="col-md-6">	<button class="btn btn-success">Accept</button></div>
+								</div>
+								
+	                          </div>
+	                        </div>
+	                      </div>
+	                <!-- END OF APPLIED PEOPLE ACCORDION -->
+
+
 	                      <!--  panel 4 -->
 	                <div class="panel panel-default">
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
-	                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" ng-click="showQuestions">
 	                            <h4 class="panel-title">Project Contact</h4>
 	                        </div>
 	                    </span>
@@ -95,7 +141,14 @@
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
 	                           <a href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-save"></span> Apply</a>
-	                           <a href="#" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-info-sign"></span> Ask</a>
+	                           <div class="btn btn-lg btn-info" ng-click="ask();"><span class="glyphicon glyphicon-info-sign" ></span> Ask</div>
+	                           
+	                           <form class="form-horizontal" ng-submit="submitQuestion()" ng-show="showAsk">
+	                           	</br>
+	                           	<textarea class="form-control" id="project-skillset" placeholder="Enter your question" ng-model="question" name="project-skillset"></textarea >
+	                           	</br>
+	                           	<button id="project-submit" name="project-submit" class="btn btn-danger" >Submit</button>
+	                           </form>
 	                          </div>
 	                        </div>
 	                      </div>
@@ -130,6 +183,18 @@
 	                </div>
 	                <div class="md-base"></div>
 	            </div> <!-- end macbook pro mockup -->
+
+	            <div class="media" ng-repeat="question in questions">
+					<div class="pull-left">
+					  <a href="#">
+					    <img class="img-circle" src="http://placehold.it/60x60">
+					  </a>
+					</div>
+					<div class="media-body">
+					  <h4 class="media-heading">Media heading</h4>
+					  {{question.content}}
+					</div>
+				</div>
 	        </div> <!-- / .col-md-8 -->
 	    </div> <!--/ .row -->
 	</div><!-- /.container -->

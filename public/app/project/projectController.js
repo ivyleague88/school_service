@@ -3,7 +3,6 @@
 angular.module('project')
   .controller('ProjectController', ['$scope', 'Projects','$location','$routeParams', function ($scope, Projects,$location,$routeParams) {
     $scope.editing = [];
-    $scope.projects = Projects.query();
 
     $scope.project = {};
 
@@ -15,7 +14,7 @@ angular.module('project')
     $scope.isNewProject = true;
 
 
-    if ($routeParams.id != "") {
+    if ($routeParams.id != undefined) {
       var project = Projects.get({id: $routeParams.id }, function(){
         project.postedEndDate = new Date(project.postedEndDate);
         project.startDate = new Date(project.startDate);
