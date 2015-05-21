@@ -8,10 +8,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./server/index/indexRouter');
-var todos = require('./server/todo/todoRouter');
+var projects = require('./server/project/projectRouter');
 
 var mongoose = require('mongoose');
-var databaseURI = 'mongodb://localhost/todoApp' + process.env.NODE_ENV;
+var databaseURI = 'mongodb://localhost/projectApp' + process.env.NODE_ENV;
 
 mongoose.connect(databaseURI, function(err) {
   if (err) {
@@ -38,7 +38,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/todos', todos);
+app.use('/projects', projects);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

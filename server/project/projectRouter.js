@@ -2,43 +2,43 @@
 
 var express = require('express');
 var router = express.Router();
-var Todo = require('./TodoSchema');
+var Project = require('./ProjectSchema');
 
-/* GET /todos listing. */
+/* GET /projects listing. */
 router.get('/', function(req, res, next) {
-  Todo.find(function (err, todos) {
+  Project.find(function (err, projects) {
     if (err) return next(err);
-    res.json(todos);
+    res.json(projects);
   });
 });
 
-/* POST /todos */
+/* POST /projects */
 router.post('/', function(req, res, next) {
-  Todo.create(req.body, function (err, post) {
+  Project.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* GET /todos/id */
+/* GET /projects/id */
 router.get('/:id', function(req, res, next) {
-  Todo.findById(req.params.id, function (err, post) {
+  Project.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* PUT /todos/:id */
+/* PUT /projects/:id */
 router.put('/:id', function(req, res, next) {
-  Todo.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Project.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* DELETE /todos/:id */
+/* DELETE /projects/:id */
 router.delete('/:id', function(req, res, next) {
-  Todo.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Project.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

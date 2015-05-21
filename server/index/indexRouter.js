@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'ngTodo App' });
+  res.render('index', { title: 'School Service App' });
 });
 
 module.exports = router;

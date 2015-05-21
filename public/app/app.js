@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('app', ['todo']);
+angular.module('app', ['project']);
