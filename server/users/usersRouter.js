@@ -2,46 +2,46 @@
 
 var express = require('express');
 var router = express.Router();
-var Question = require('./questionsSchema');
+var User = require('./usersSchema');
 var ObjectId = require('mongoose').Types.ObjectId; 
 
-/* GET /questions listing. */
+/* GET /users listing. */
 router.get('/', function(req, res, next) {
   // console.log(req);
 ;
-  Question.find({},null,{sort : {_id : -1,} },function (err, questions) {
+  User.find({},null,{sort : {_id : -1,} },function (err, users) {
     if (err) return next(err);
-    res.json(questions);
+    res.json(users);
   });
 });
 
-/* POST /questions */
+/* POST /users */
 router.post('/', function(req, res, next) {
-  Question.create(req.body, function (err, post) {
+  User.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* GET /questions/id */
+/* GET /users/id */
 router.get('/:id', function(req, res, next) {
-  Question.findById(req.params.id, function (err, post) {
+  User.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* PUT /questions/:id */
+/* PUT /users/:id */
 router.put('/:id', function(req, res, next) {
-  Question.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  User.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* DELETE /questions/:id */
+/* DELETE /users/:id */
 router.delete('/:id', function(req, res, next) {
-  Question.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  User.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
