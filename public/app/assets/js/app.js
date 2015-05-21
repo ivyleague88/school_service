@@ -24,16 +24,8 @@ $(document).ready(function() {
     $("#editProfileDone").click(function(){
         window.location.href = "./profile.html";
     });
-    $(".post-btn").each(function(){
-        $(this).click(function(){
-            window.location.href = "./postproject.html";
-        });
-    });
-    $(".btn-default").each(function(){
-        $(this).click(function(){
-            window.location.href = "./projectdetails.html";
-        });
-    });
+   
+    
 
     $(window).on("resize", function () {
         $(".modal:visible").each(centerModal);

@@ -5,13 +5,20 @@ angular.module('project')
     $scope.editing = [];
     $scope.projects = Projects.query();
 
+    $scope.project = {};
+
+    $scope.defaultEffortRequired = [ '1 Hour', '1 Day' ];
+    $scope.project.effortRequired = '1 Hour';
+
+    $scope.project.chargable = false;
+
     $scope.save = function(){
-      if(!$scope.newProject || $scope.newProject.length < 1) return;
-      var project = new Projects({ name: $scope.newProject, completed: false });
+      if(!$scope.newProjectVal || $scope.newProjectVal.length < 1) return;
+      var project = new Projects({ name: $scope.newProjectVal, completed: false });
 
       project.$save(function(){
         $scope.projects.push(project);
-        $scope.newProject = ''; // clear textbox
+        $scope.newProjectVal = ''; // clear textbox
       });
     };
 
@@ -36,4 +43,34 @@ angular.module('project')
         $scope.projects.splice(index, 1);
       });
     };
+
+    $scope.test = function(){
+      var newProject = angular.copy($scope.project);
+
+      newProject.skillset = newProject.skillset.split(',');
+
+      var now = new Date();
+      now.setHours(0,0,0,0);
+
+      if (newProject.postedEndDate.getTime() < now.getTime()) {
+        alert("Project Posted End Date has to be greater than today");
+        return;
+      }
+
+      if (newProject.startDate.getTime() < newProject.postedEndDate.getTime()) {
+        alert("Start Date has to be after Project Posted End Date ");
+        return;
+      }
+
+      if (newProject.endDate.getTime() < newProject.startDate.getTime()) {
+        alert("End Date has to be after Start Date ");
+        return;
+      }
+
+
+      console.log(newProject);
+    };
+
+
+
   }]);

@@ -9,6 +9,137 @@ Search: <input type="text" ng-model="search.name">
     <input ng-show="editing[$index]" type="text" ng-model="project.name">
     <button ng-show="editing[$index]" ng-click="update($index)">update</button>
     <button ng-show="editing[$index]" ng-click="cancel($index)">cancel</button>
+
+    
   </li>
 </ul>
-New task <input type="text" ng-model="newProject"><button ng-click="save()">Create</button>
+New task <input type="text" ng-model="newProjectVal"><button ng-click="save()">Create</button>
+
+<form class="form-horizontal" ng-submit="test()">
+	<!-- Form Name -->
+	<div class="page-header" style="margin-top: 0;">
+		<h1 style="margin-top: 0;">Create a new Project</h1>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-title">Project Title</label>  
+	  <div class="col-md-4">
+	  <input id="project-title" name="project-title" type="text" placeholder="my-awesome-project" class="form-control input-md" ng-required="true" ng-model="project.title">
+	    
+	  </div>
+	</div>
+
+	<!-- Multiple Radios -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-category">Project Category</label>
+	  <div class="col-md-4">
+	  <div class="radio">
+	    <label for="project-category-0">
+	      <input type="radio" ng-required="true" name="project-category" id="project-category-0" ng-value="business" checked="checked" ng-model="project.category">
+	      Business
+	    </label>
+		</div>
+	  <div class="radio">
+	    <label for="project-category-1">
+	      <input type="radio" name="project-category" id="project-category-1" value="operations" ng-model="project.category">
+	      Operations
+	    </label>
+		</div>
+	  <div class="radio">
+	    <label for="project-category-2">
+	      <input type="radio" name="project-category" id="project-category-2" value="it" ng-model="project.category">
+	      IT
+	    </label>
+		</div>
+	  <div class="radio">
+	    <label for="project-category-3">
+	      <input type="radio" name="project-category" id="project-category-3" value="security" ng-model="project.category">
+	      Security
+	    </label>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-chargable">Project Financials</label>
+	  <div class="col-md-4">
+	  <div class="radio">
+	    <label for="project-chargable-0">
+	      <input type="radio" name="project-chargable" id="project-chargable-0" ng-value="true" value="true" ng-model="project.chargable" >
+	      Chargeable
+	    </label>
+		</div>
+	  <div class="radio">
+	    <label for="project-chargable-1">
+	      <input type="radio" name="project-chargable" id="project-chargable-1" ng-value="false" value="false" ng-model="project.chargable" >
+	      Non-Chargeable
+	    </label>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Textarea -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-summary">Project Summary</label>
+	  <div class="col-md-4">                     
+	    <textarea class="form-control" id="project-summary" name="project-summary" placeholder="Summary and benefits" ng-model="project.description" ng-required="true"></textarea >
+	  </div>
+	</div>
+
+	<!-- Select Multiple -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-skillset">Project Skillset</label>
+	  <div class="col-md-4">
+	    <textarea class="form-control" id="project-skillset" placeholder="Enter your skillset, separated by commas" name="project-skillset" ng-model="project.skillset" ng-value="" ng-required="true"></textarea >
+	  </div>
+	</div>
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-timeline">Effort Required</label>
+	  <div class="col-md-4">
+
+	    <select class="form-control" ng-model="project.effortRequired" ng-options="effort for effort in defaultEffortRequired">
+		</select>
+	  </div>
+	</div>
+
+	<!-- PROJECT POSTED END DATE FIELD -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-timeline">Project Posted End Date</label>
+	  <div class="col-md-4">
+
+	    <input type="date" name="project-posted-end-date" id="project-posted-end-date-1" placeholder="yyyy-MM-dd" ng-model="project.postedEndDate" ng-required="true" >
+	  </div>
+	</div>
+
+	<!-- START DATE FIELD -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-timeline">Start date</label>
+	  <div class="col-md-4">
+
+	    <input type="date" name="project-start-date" id="project-start-date-1" placeholder="yyyy-MM-dd" ng-model="project.startDate" ng-required="true" >
+	  </div>
+	</div>
+
+	<!-- END DATE FIELD -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-timeline">End date</label>
+	  <div class="col-md-4">
+
+	    <input type="date" name="project-end-date" id="project-end-date-1" placeholder="yyyy-MM-dd" ng-model="project.endDate" ng-required="true" >
+	  </div>
+	</div>
+
+
+
+	<!-- Button -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-submit"></label>
+	  <div class="col-md-4">
+	    <button id="project-submit" name="project-submit" class="btn btn-danger" >Submit</button>
+	  </div>
+	</div>
+</form>

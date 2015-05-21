@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 
 
 /* GET project page. */
-router.get('/postproject.html', function(req, res) {
+router.get('/postproject', function(req, res) {
   res.render('postproject', {  });
 });
 
