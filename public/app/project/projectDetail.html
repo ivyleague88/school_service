@@ -1,7 +1,135 @@
-<h1>{{ project.name }}</h1>
-completed: <input type="checkbox" ng-model="project.completed"><br>
-note: <textarea ng-model="project.note"></textarea><br><br>
 
-<button ng-click="update()">update</button>
-<button ng-click="remove()">remove</button>
-<a href="/">Cancel</a>
+	<div class="container container-main" style="min-height: 75%">
+		<div class="page-header" style="margin-top: 0;">
+			<!-- Use green for Available, red for In Progress, grey for Completed -->
+			<h1 style="margin-top: 0;">{{project.title}} <small style="color: red">In Progress</small> </h1>
+		</div>
+	    <div class="row">
+	        <div class="col-md-4">
+	            <!-- begin panel group -->
+	            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	                
+	                <!-- panel 1 -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	                            <h4 class="panel-title">Project Summary <a class="pull-right" href="#/edit/{{project._id}}">Edit</a></h4>
+
+
+	                        </div>
+	                    </span>
+	                    
+	                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	                        <div class="panel-body">
+	                        {{project.description}}
+	                        </div>
+	                    </div>
+	                </div> 
+	                <!-- / panel 1 -->
+	                
+	                <!-- panel 2 -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	                            <h4 class="panel-title collapsed">Project Skillset</h4>
+	                        </div>
+	                    </span>
+
+	                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	                        <div class="panel-body">
+	                        <!-- Tab content goes here -->
+	                        	<div class="profile-list">
+			                        <ul class="list-inline">
+										<li ng-repeat="skill in project.skillset" ><span class="label label-success">{{skill}}</span></li>
+									</ul>
+								</div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- / panel 2 -->
+	                
+	                <!--  panel 3 -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	                            <h4 class="panel-title">Project Details</h4>
+	                        </div>
+	                    </span>
+
+	                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                          <div class="panel-body">
+	                          <!-- tab content goes here -->
+								<div class="row">
+									<div class="col-md-6"><strong>Project Type</strong></div>
+									<div class="col-md-6">{{project.category}}</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6"><strong>Project Financials</strong></div>
+									<div class="col-md-6">{{ (project.chargeable ) ? 'Chargeable' :  'Non-Chargeable' }} </div>
+								</div>
+								<div class="row">
+									<div class="col-md-6"><strong>Effort Required</strong></div>
+									<div class="col-md-6">{{ project.effortRequired }}</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6"><strong>Due Date</strong></div>
+									<div class="col-md-6">{{ project.endDate | date:'yyyy/MM/dd'}}</div>
+								</div>
+	                          </div>
+	                        </div>
+	                      </div>
+
+	                      <!--  panel 4 -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	                            <h4 class="panel-title">Project Contact</h4>
+	                        </div>
+	                    </span>
+
+	                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+	                          <div class="panel-body">
+	                          <!-- tab content goes here -->
+	                           <a href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-save"></span> Apply</a>
+	                           <a href="#" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-info-sign"></span> Ask</a>
+	                          </div>
+	                        </div>
+	                      </div>
+	            </div> <!-- / panel-group -->
+	             
+	        </div> <!-- /col-md-4 -->
+	        
+	        <div class="col-md-8">
+	            <!-- begin macbook pro mockup -->
+	            <div class="md-macbook-pro md-glare">
+	                <div class="md-lid">
+	                    <div class="md-camera"></div>
+	                    <div class="md-screen">
+	                    <!-- content goes here -->                
+	                        <div class="tab-featured-image">
+	                            <div class="tab-content">
+	                                <div class="tab-pane fade in active" id="tab1">
+	                                        <img src="https://ununsplash.imgix.net/photo-1417024321782-1375735f8987?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950" class="img img-responsive">
+	                                </div>
+	                                <div class="tab-pane fade" id="tab2">
+	                                        <img src="https://unsplash.imgix.net/uploads/1411724908903377d4696/2e9b0cb2?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950" class="img img-responsive">
+	                                </div>
+	                                <div class="tab-pane fade" id="tab3">
+	                                        <img src="https://ununsplash.imgix.net/photo-1422479516648-9b1f0b6e8da8?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950" class="img img-responsive">
+	                                </div>
+	                                <div class="tab-pane fade" id="tab4">
+	                                        <img src="http://www.placehold.it/950x650" class="img img-responsive">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="md-base"></div>
+	            </div> <!-- end macbook pro mockup -->
+	        </div> <!-- / .col-md-8 -->
+	    </div> <!--/ .row -->
+	</div><!-- /.container -->

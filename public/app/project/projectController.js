@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('project')
-  .controller('ProjectController', ['$scope', 'Projects', function ($scope, Projects) {
+  .controller('ProjectController', ['$scope', 'Projects','$location','$routeParams', function ($scope, Projects,$location,$routeParams) {
     $scope.editing = [];
     $scope.projects = Projects.query();
 
@@ -10,17 +10,32 @@ angular.module('project')
     $scope.defaultEffortRequired = [ '1 Hour', '1 Day' ];
     $scope.project.effortRequired = '1 Hour';
 
-    $scope.project.chargable = false;
+    $scope.project.chargeable = false;
 
-    $scope.save = function(){
-      if(!$scope.newProjectVal || $scope.newProjectVal.length < 1) return;
-      var project = new Projects({ name: $scope.newProjectVal, completed: false });
+    $scope.isNewProject = true;
 
-      project.$save(function(){
-        $scope.projects.push(project);
-        $scope.newProjectVal = ''; // clear textbox
+
+    if ($routeParams.id != "") {
+      var project = Projects.get({id: $routeParams.id }, function(){
+        project.postedEndDate = new Date(project.postedEndDate);
+        project.startDate = new Date(project.startDate);
+        project.endDate = new Date(project.endDate);
+        $scope.project = project;
+        $scope.isNewProject = false;
       });
-    };
+      
+      
+    }
+
+    // $scope.save = function(){
+    //   if(!$scope.newProjectVal || $scope.newProjectVal.length < 1) return;
+    //   var project = new Projects({ name: $scope.newProjectVal, completed: false });
+
+    //   project.$save(function(){
+    //     $scope.projects.push(project);
+    //     $scope.newProjectVal = ''; // clear textbox
+    //   });
+    // };
 
     $scope.update = function(index){
       var project = $scope.projects[index];
@@ -44,10 +59,14 @@ angular.module('project')
       });
     };
 
-    $scope.test = function(){
+    $scope.save = function(){
       var newProject = angular.copy($scope.project);
 
-      newProject.skillset = newProject.skillset.split(',');
+      if (newProject.skillset.constructor !== Array){
+        newProject.skillset = newProject.skillset.split(',');
+      }
+
+      
 
       var now = new Date();
       now.setHours(0,0,0,0);
@@ -67,8 +86,24 @@ angular.module('project')
         return;
       }
 
-
       console.log(newProject);
+
+      var project = new Projects(newProject);
+      if ($scope.isNewProject === true) {
+        project.$save(function(){
+          console.log("PROJECT HAS BEEN CREATED",project);
+          $location.url("/"+project._id);
+        });
+      } else {
+        Projects.update({id: project._id}, project);
+        console.log("PROJECT HAS BEEN UPDATED",project);
+        $location.url("/"+project._id);
+      }
+
+      
+
+
+      
     };
 
 

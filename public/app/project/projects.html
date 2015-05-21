@@ -1,31 +1,15 @@
-Search: <input type="text" ng-model="search.name">
-<ul>
-  <li ng-repeat="project in projects | filter: search">
-    <input type="checkbox" ng-model="project.completed" ng-change="update($index)">
-    <a ng-show="!editing[$index]" href="#/{{project._id}}">{{project.name}}</a>
-    <button ng-show="!editing[$index]" ng-click="edit($index)">edit</button>
-    <button ng-show="!editing[$index]" ng-click="remove($index)">remove</button>
 
-    <input ng-show="editing[$index]" type="text" ng-model="project.name">
-    <button ng-show="editing[$index]" ng-click="update($index)">update</button>
-    <button ng-show="editing[$index]" ng-click="cancel($index)">cancel</button>
-
-    
-  </li>
-</ul>
-New task <input type="text" ng-model="newProjectVal"><button ng-click="save()">Create</button>
-
-<form class="form-horizontal" ng-submit="test()">
+<form class="form-horizontal" ng-submit="save()">
 	<!-- Form Name -->
 	<div class="page-header" style="margin-top: 0;">
-		<h1 style="margin-top: 0;">Create a new Project</h1>
+		<h1 style="margin-top: 0;">{{ (isNewProject) ? "Create a new Project" : "Edit The Project" }}</h1>
 	</div>
 
 	<!-- Text input-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="project-title">Project Title</label>  
 	  <div class="col-md-4">
-	  <input id="project-title" name="project-title" type="text" placeholder="my-awesome-project" class="form-control input-md" ng-required="true" ng-model="project.title">
+	  <input id="project-title" name="project-title" type="text" placeholder="Your Project Title" class="form-control input-md" ng-required="true" ng-model="project.title">
 	    
 	  </div>
 	</div>
@@ -63,17 +47,17 @@ New task <input type="text" ng-model="newProjectVal"><button ng-click="save()">C
 
 	<!-- Multiple Radios -->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="project-chargable">Project Financials</label>
+	  <label class="col-md-4 control-label" for="project-chargeable">Project Financials</label>
 	  <div class="col-md-4">
 	  <div class="radio">
-	    <label for="project-chargable-0">
-	      <input type="radio" name="project-chargable" id="project-chargable-0" ng-value="true" value="true" ng-model="project.chargable" >
+	    <label for="project-chargeable-0">
+	      <input type="radio" name="project-chargeable" id="project-chargeable-0" ng-value="true" value="true" ng-model="project.chargeable" >
 	      Chargeable
 	    </label>
 		</div>
 	  <div class="radio">
-	    <label for="project-chargable-1">
-	      <input type="radio" name="project-chargable" id="project-chargable-1" ng-value="false" value="false" ng-model="project.chargable" >
+	    <label for="project-chargeable-1">
+	      <input type="radio" name="project-chargeable" id="project-chargeable-1" ng-value="false" value="false" ng-model="project.chargeable" >
 	      Non-Chargeable
 	    </label>
 		</div>
@@ -139,7 +123,7 @@ New task <input type="text" ng-model="newProjectVal"><button ng-click="save()">C
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="project-submit"></label>
 	  <div class="col-md-4">
-	    <button id="project-submit" name="project-submit" class="btn btn-danger" >Submit</button>
+	    <button id="project-submit" name="project-submit" class="btn btn-danger" >{{ (isNewProject) ? "Submit" : "Update" }}</button>
 	  </div>
 	</div>
 </form>

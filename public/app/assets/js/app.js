@@ -15,7 +15,7 @@ $(document).ready(function() {
     $(".modal").on("show.bs.modal", centerModal);
     $(".home").each(function(){
         $(this).click(function(){
-            window.location.href = "./index.html";
+            window.location.href = "/";
         });
     });
     $("#editProfile").click(function(){
