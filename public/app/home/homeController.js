@@ -3,7 +3,9 @@
 
 
 angular.module('home')
-  .controller('HomeController', function ($scope, auth, store, $location) {
+  .controller('HomeController', function (auth,$scope, store, $location) {
+
+    $scope.auth = auth;
     $scope.login = function() {
   
       // alert("me");
@@ -12,10 +14,19 @@ angular.module('home')
         store.set('profile', profile);
         store.set('token', token);
         $location.path('/');
-      }, function() {
+
+        console.log("USER INFO",profile);
+      }, function(err) {
         // Error callback
+
+        console.log("error",err);
       });
     }
+
+    $scope.logout = function() {
+      auth.signout();
+      store.remove('profile');
+      store.remove('token');
+    }
   
-    $scope.name = 'hello';
 });

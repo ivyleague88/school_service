@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" ng-controller="HeaderController">
 		<nav class="navbar navbar-header navbar-fixed-top">
 			<div class="col-sm-2 text-center">
 				<h4><span class="home">School WebService</span></h4>
@@ -48,7 +48,7 @@
 				<span class="input-group-btn"><button id="searchButton" class="btn btn-lg btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button></span>
 			</div>
 			<ul class="nav nav-pills header-nav-links">
-				<li role="presentation" class="login-btn"><a href="#">My Account</a></li>
+				<li role="presentation" class="login-btn"><a href="#">My Account - {{auth.profile.nickname}}</a></li>
 				<li role="presentation" class=""><a href="#/list">All Projects</a></li>
 				<li role="presentation" class="active"><a href="/project/#/">Post Your Project</a></li>
 				<li role="presentation"><a href="#"><i class="glyphicon glyphicon-question-sign"></i></a></li>

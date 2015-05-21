@@ -11,6 +11,13 @@ angular.module('project')
       'update': { method:'PUT' },
       'get' :  {method : 'GET' }
     });
+  }])
+  .factory('Users', ['$resource', function($resource){
+
+    return $resource('/api/users/:id', null, {
+      'update': { method:'PUT' },
+      'get' :  {method : 'GET' }
+    });
   }]);
 
 

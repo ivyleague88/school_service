@@ -1,7 +1,13 @@
 'use strict';
 
 angular.module('project')
-  .controller('ProjectController', ['$scope', 'Projects','$location','$routeParams', function ($scope, Projects,$location,$routeParams) {
+  .controller('ProjectController', ['$scope', 'Projects','$location','$routeParams','auth', function ($scope, Projects,$location,$routeParams,auth) {
+
+
+    $scope.auth = auth;
+
+    console.log(auth.profile);
+
     $scope.editing = [];
 
     $scope.project = {};
@@ -107,4 +113,18 @@ angular.module('project')
 
 
 
-  }]);
+  }])
+
+  .controller('HeaderController', ['$scope', 'Projects','$location','$routeParams','auth', function ($scope, Projects,$location,$routeParams,auth) {
+
+
+    $scope.auth = auth;
+
+    console.log('HEADER',auth.profile);
+
+    
+
+
+
+  }])
+;
