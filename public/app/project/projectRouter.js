@@ -8,6 +8,11 @@ angular.module('project')
         controller: 'ProjectController'
       })
 
+      .when('/list', {
+        templateUrl: '/app/project/project_list.html',
+        controller: 'ProjectListController'
+      })
+
       .when('/edit/:id', {
         templateUrl: '/app/project/projects.html',
         controller: 'ProjectController'

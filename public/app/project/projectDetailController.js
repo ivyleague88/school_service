@@ -9,7 +9,7 @@ angular.module('project')
       console.log($scope.questions,"MY QUESTION");
     });
 
-    $scope.showQuestion = false;
+    $scope.showQuestion = true;
 
     $scope.showAsk = false;
 
@@ -45,4 +45,12 @@ angular.module('project')
         });
       console.log($scope.question);
     };
+
+
+    $scope.showQuestions = function(){
+      $scope.showQuestion = true;
+    }
+
+
+
   }]);

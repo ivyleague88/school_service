@@ -132,7 +132,7 @@
 	                <div class="panel panel-default">
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
-	                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" ng-click="showQuestions">
+	                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" ng-click="showQuestions()">
 	                            <h4 class="panel-title">Project Contact</h4>
 	                        </div>
 	                    </span>
@@ -184,14 +184,14 @@
 	                <div class="md-base"></div>
 	            </div> <!-- end macbook pro mockup -->
 
-	            <div class="media" ng-repeat="question in questions">
+	            <div class="media" ng-show="showQuestion" ng-repeat="question in questions">
 					<div class="pull-left">
 					  <a href="#">
 					    <img class="img-circle" src="http://placehold.it/60x60">
 					  </a>
 					</div>
 					<div class="media-body">
-					  <h4 class="media-heading">Media heading</h4>
+					  <h4 class="media-heading">Username</h4>
 					  {{question.content}}
 					</div>
 				</div>
