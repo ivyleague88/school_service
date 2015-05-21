@@ -8,4 +8,10 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'School Service App' });
 });
 
+
+/* GET project page. */
+router.get('/postproject.html', function(req, res) {
+  res.render('postproject', {  });
+});
+
 module.exports = router;
