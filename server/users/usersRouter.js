@@ -8,7 +8,6 @@ var ObjectId = require('mongoose').Types.ObjectId;
 /* GET /users listing. */
 router.get('/', function(req, res, next) {
   // console.log(req);
-;
   User.find({},null,{sort : {_id : -1,} },function (err, users) {
     if (err) return next(err);
     res.json(users);

@@ -14,4 +14,4 @@ var ProjectSchema = new mongoose.Schema({
   date_created : { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Question', ProjectSchema);
+module.exports = mongoose.model('User', ProjectSchema);
