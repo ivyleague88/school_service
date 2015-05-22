@@ -10,7 +10,8 @@ angular.module('project')
     return $resource('/api/projects/:id', null, {
       'update': { method:'PUT' },
       'get' :  {method : 'GET' },
-      'getByUserId' : {method : 'GET', 'url' : '/api/projects/by_user_id/:user_id', isArray : true}
+      'getByUserId' : {method : 'GET', 'url' : '/api/projects/by_user_id/:user_id', isArray : true},
+      'getCompletedProjectsByUserId' : {method : 'GET', 'url' : '/api/projects/completed/by_user_id/:user_id', isArray : true}
     });
   }])
   .factory('Users', ['$resource', function($resource){

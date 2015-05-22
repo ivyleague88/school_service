@@ -13,10 +13,26 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET /projects/by_id/:user_id */
+router.get('/completed/by_user_id/:user_id', function(req, res, next) {
+
+  // console.log("USEr ID",req.params.user_id );
+  var query = Project.find({'user.user_id' : req.params.user_id, 'status' : 'Completed'  });
+
+  query.exec(function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
+/* GET /projects/by_id/:user_id */
 router.get('/by_user_id/:user_id', function(req, res, next) {
 
   // console.log("USEr ID",req.params.user_id );
-  Project.find({'user.user_id' : req.params.user_id  }, function (err, post) {
+  var query = Project.find({'user.user_id' : req.params.user_id  });
+
+  query.or([{status : "Open"},{status : "In Progress"}]);
+
+  query.exec(function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

@@ -28,7 +28,7 @@ angular.module('project')
     });
 
 
-    var completedProjects = Projects.getByUserId({user_id : $scope.userId},function(){
+    var completedProjects = Projects.getCompletedProjectsByUserId({user_id : $scope.userId},function(){
       // console.log("USER PROJECT",projects);
 
       $scope.completedProjects = completedProjects;
