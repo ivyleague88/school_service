@@ -2,7 +2,7 @@
 	<div class="container container-main" style="min-height: 75%">
 		<div class="page-header" style="margin-top: 0;">
 			<!-- Use green for Available, red for In Progress, grey for Completed -->
-			<h1 style="margin-top: 0;">{{project.title}} <small style="color: green">{{project.status}}</small> </h1>
+			<h1 style="margin-top: 0;">{{project.title}} <small style="color: green">{{project.status}}</small>  <button ng-show="isAdmin" class="btn btn-danger" ng-click="delete()">Delete</button>  </h1>
 		</div>
 	    <div class="row">
 	        <div class="col-md-4">
@@ -129,7 +129,7 @@
 
 
 	                      <!--  panel 4 -->
-	                <div class="panel panel-default">
+	                <div class="panel panel-default" ng-show="auth.isAuthenticated">
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
 	                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" ng-click="showQuestions()">
@@ -137,11 +137,11 @@
 	                        </div>
 	                    </span>
 
-	                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+	                        <div  id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
 	                           <a ng-show="!isOwner" href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-save"></span> Apply</a>
-	                           <div class="btn btn-lg btn-info" ng-click="ask();"><span class="glyphicon glyphicon-info-sign" ></span> {{ (isOwner) ? 'Answer' : 'Ask' }}</div>
+	                           <div   class="btn btn-lg btn-info" ng-click="ask();"><span class="glyphicon glyphicon-info-sign" ></span> {{ (isOwner) ? 'Answer' : 'Ask' }}</div>
 	                           
 	                           <form class="form-horizontal" ng-submit="submitQuestion()" ng-show="showAsk">
 	                           	</br>

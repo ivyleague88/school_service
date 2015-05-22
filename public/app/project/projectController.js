@@ -34,6 +34,16 @@ angular.module('project')
           $scope.isOwner = true;
         } else {
           $scope.isOwner = false;
+
+
+          
+        }
+
+        if ($scope.auth.profile.email == ADMIN_EMAIL){
+          $scope.isOwner = true;
+        }
+
+        if ($scope.isOwner == false){
           alert("You do not have authorization to edit this project");
           window.location = '/';
         }

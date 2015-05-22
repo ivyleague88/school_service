@@ -5,12 +5,20 @@ angular.module('project')
     
     $scope.auth = auth;
 
+    $scope.isAdmin = false;
+
 
     $scope.project = Projects.get({id: $routeParams.id },function(){
         if ($scope.auth.profile.user_id == $scope.project.user.user_id){
           $scope.isOwner = true;
         } else {
           $scope.isOwner = false;
+        }
+
+
+        if ($scope.auth.profile.email == ADMIN_EMAIL){
+          $scope.isOwner = true;
+          $scope.isAdmin = true;
         }
     });
 
@@ -31,8 +39,9 @@ angular.module('project')
       });
     };
 
-    $scope.remove = function(){
+    $scope.delete = function(){
       Projects.remove({id: $scope.project._id}, function(){
+        alert("Project has been removed");
         $location.url('/');
       });
     };
