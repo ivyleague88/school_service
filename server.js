@@ -14,7 +14,7 @@ var users = require('./server/users/usersRouter');
 
 
 var mongoose = require('mongoose');
-var databaseURI = 'mongodb://localhost/projectApp' + process.env.NODE_ENV;
+var databaseURI = 'mongodb://localhost/school';
 
 var jwt = require('express-jwt');
 
