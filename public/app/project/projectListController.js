@@ -5,7 +5,7 @@ angular.module('project')
     
     $scope.projects = Projects.query();
 
-  
+  	
 
 
   }]);
