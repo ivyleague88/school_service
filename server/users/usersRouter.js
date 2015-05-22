@@ -30,13 +30,28 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+/* PUT /users/upsert/:user_id */
+router.put('/upsert/:user_id', function(req, res, next) {
+  User.update({ user_id : req.params.user_id}, req.body, {upsert : true} , function (err, post) {
+    if (err) return next(err);
+    User.findOne({user_id : req.params.user_id},function(err,user){
+        if (err) return next(err);
+        res.json(user);
+    })
+  });
+});
+
 /* PUT /users/:id */
 router.put('/:id', function(req, res, next) {
   User.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
+    
+    
   });
 });
+
+
 
 /* DELETE /users/:id */
 router.delete('/:id', function(req, res, next) {

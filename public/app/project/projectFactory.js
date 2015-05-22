@@ -16,7 +16,8 @@ angular.module('project')
 
     return $resource('/api/users/:id', null, {
       'update': { method:'PUT' },
-      'get' :  {method : 'GET' }
+      'get' :  {method : 'GET' },
+      'upsert':   {method:'PUT', 'url' : '/api/users/upsert/:user_id'},
     });
   }]);
 

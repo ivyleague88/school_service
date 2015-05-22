@@ -5,8 +5,9 @@ var mongoose = require('mongoose');
 var ProjectSchema = new mongoose.Schema({
   user_id: String,
   name : String,
-  email : String,
-  email_verified : Boolean,
+  email : {type : String , default : ''},
+  email_verified : {type : Boolean , default : false},
+  role : {type : String , default : 'regular'},
   nickname : String,
   picture : String,
   given_name : {type : String , default : ''},
