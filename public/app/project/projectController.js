@@ -17,6 +17,9 @@ angular.module('project')
 
     $scope.project = {};
 
+    $scope.defaultCategories = [ 'Business', 'Operations', 'IT', 'Security' ];
+    $scope.project.category = 'Business';
+
     $scope.defaultEffortRequired = [ '1 Hour', '1 Day' ];
     $scope.project.effortRequired = '1 Hour';
 

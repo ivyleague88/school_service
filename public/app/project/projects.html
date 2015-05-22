@@ -18,30 +18,8 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="project-category">Project Category</label>
 	  <div class="col-md-4">
-	  <div class="radio">
-	    <label for="project-category-0">
-	      <input type="radio" ng-required="true" name="project-category" id="project-category-0" ng-value="business" checked="checked" ng-model="project.category">
-	      Business
-	    </label>
-		</div>
-	  <div class="radio">
-	    <label for="project-category-1">
-	      <input type="radio" name="project-category" id="project-category-1" value="operations" ng-model="project.category">
-	      Operations
-	    </label>
-		</div>
-	  <div class="radio">
-	    <label for="project-category-2">
-	      <input type="radio" name="project-category" id="project-category-2" value="it" ng-model="project.category">
-	      IT
-	    </label>
-		</div>
-	  <div class="radio">
-	    <label for="project-category-3">
-	      <input type="radio" name="project-category" id="project-category-3" value="security" ng-model="project.category">
-	      Security
-	    </label>
-		</div>
+	  <select class="form-control" ng-model="project.category" ng-options="category for category in defaultCategories">
+		</select>
 	  </div>
 	</div>
 
