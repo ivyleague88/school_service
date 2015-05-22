@@ -20,6 +20,8 @@ angular.module('project')
     $scope.defaultEffortRequired = [ '1 Hour', '1 Day' ];
     $scope.project.effortRequired = '1 Hour';
 
+    $scope.defaultStatuses = ['Open','In Progress','Completed','Closed'];
+
     $scope.project.chargeable = false;
 
     $scope.isNewProject = true;
@@ -111,11 +113,13 @@ angular.module('project')
 
       newProject.user = {
         user_id : auth.profile.user_id,
-        name  : auth.profile.name
+        name  : auth.profile.name,
       };
 
       var project = new Projects(newProject);
       if ($scope.isNewProject === true) {
+
+        newProject.status = 'Open';
         project.$save(function(){
           console.log("PROJECT HAS BEEN CREATED",project);
           $location.url("/"+project._id);

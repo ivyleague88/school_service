@@ -117,6 +117,15 @@
 	  </div>
 	</div>
 
+	<!-- STATUS FIELD -->
+	<div class="form-group" ng-show="!isNewProject">
+	  <label class="col-md-4 control-label" for="project-timeline">Status</label>
+	  <div class="col-md-4">
+	  <select class="form-control" ng-model="project.status" ng-options="status for status in defaultStatuses">
+		</select>
+	  </div>
+	</div>
+
 
 
 	<!-- Button -->
