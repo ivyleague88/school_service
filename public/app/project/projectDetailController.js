@@ -1,13 +1,25 @@
 'use strict';
 
 angular.module('project')
-  .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location','Questions', function ($scope, $routeParams, Projects, $location, Questions) {
-    $scope.project = Projects.get({id: $routeParams.id });
+  .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location','Questions','auth','Credentials', function ($scope, $routeParams, Projects, $location, Questions,auth,Credentials) {
+    
+    $scope.auth = auth;
+
+
+    $scope.project = Projects.get({id: $routeParams.id },function(){
+        if ($scope.auth.profile.user_id == $scope.project.user.user_id){
+          $scope.isOwner = true;
+        } else {
+          $scope.isOwner = false;
+        }
+    });
 
     $scope.questions = Questions.query({project_id: $routeParams.id },function(){
 
       console.log($scope.questions,"MY QUESTION");
     });
+
+   
 
     $scope.showQuestion = true;
 
@@ -35,7 +47,11 @@ angular.module('project')
 
       var newQuestion = {
         content : $scope.question,
-        project_id : $scope.project._id
+        project_id : $scope.project._id,
+        user : {
+          name : $scope.auth.profile.name,
+          user_id : $scope.auth.profile.user_id
+        }
       };
       var question = new Questions(newQuestion);
       question.$save(function(){

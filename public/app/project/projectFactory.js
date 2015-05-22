@@ -9,7 +9,8 @@ angular.module('project')
 
     return $resource('/api/projects/:id', null, {
       'update': { method:'PUT' },
-      'get' :  {method : 'GET' }
+      'get' :  {method : 'GET' },
+      'getByUserId' : {method : 'GET', 'url' : '/api/projects/by_user_id/:user_id', isArray : true}
     });
   }])
   .factory('Users', ['$resource', function($resource){
@@ -18,6 +19,7 @@ angular.module('project')
       'update': { method:'PUT' },
       'get' :  {method : 'GET' },
       'upsert':   {method:'PUT', 'url' : '/api/users/upsert/:user_id'},
+      'getByUserId' : {method : 'GET', 'url' : '/api/users/by_id/:user_id'}
     });
   }]);
 

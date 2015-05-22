@@ -27,6 +27,16 @@ angular.module('project')
 
     if ($routeParams.id != undefined) {
       var project = Projects.get({id: $routeParams.id }, function(){
+
+        if ($scope.auth.profile.user_id == project.user.user_id){
+          $scope.isOwner = true;
+        } else {
+          $scope.isOwner = false;
+          alert("You do not have authorization to edit this project");
+          window.location = '/';
+        }
+
+
         project.postedEndDate = new Date(project.postedEndDate);
         project.startDate = new Date(project.startDate);
         project.endDate = new Date(project.endDate);
@@ -133,7 +143,7 @@ angular.module('project')
 
     $scope.auth = auth;
 
-    // console.log('HEADER',auth.profile);
+    console.log('HEADER',auth);
 
     $scope.login  = Credentials.login;
     $scope.logout = Credentials.logout;

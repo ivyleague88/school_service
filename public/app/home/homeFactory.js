@@ -12,15 +12,18 @@ angular.module('home')
       // alert("me");
       auth.signin({}, function(profile, token) {
         // Success callback
-        store.set('profile', profile);
-        store.set('token', token);
-        $location.path('/');
+        
 
         var user = profile;
 
         user.role = "regular";
-        Users.upsert({ user_id : user.user_id },user,function(){
-          console.log("USER HAS BEEN SAVED",user);
+        Users.upsert({ user_id : user.user_id },user,function(dat){
+          console.log("USER HAS BEEN SAVED",user,dat);
+
+          profile._id = dat._id;
+          store.set('profile', profile);
+          store.set('token', token);
+          $location.path('/');
         })
 
         // console.log("USER INFO",profile);

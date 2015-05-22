@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 
-var ProjectSchema = new mongoose.Schema({
+var UserSchema = new mongoose.Schema({
   user_id: String,
   name : String,
   email : {type : String , default : ''},
@@ -12,7 +12,9 @@ var ProjectSchema = new mongoose.Schema({
   picture : String,
   given_name : {type : String , default : ''},
   family_name : {type : String , default : ''},
+  skills : {type : Array , default : []},
+  interests : {type : Array , default : []},
   date_created : { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('User', ProjectSchema);
+module.exports = mongoose.model('User', UserSchema);

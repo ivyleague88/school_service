@@ -30,6 +30,14 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+/* GET /users/by_id/:user_id */
+router.get('/by_id/:user_id', function(req, res, next) {
+  User.findOne({user_id: req.params.user_id}, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
 /* PUT /users/upsert/:user_id */
 router.put('/upsert/:user_id', function(req, res, next) {
   User.update({ user_id : req.params.user_id}, req.body, {upsert : true} , function (err, post) {

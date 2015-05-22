@@ -14,7 +14,7 @@
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
 	                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	                            <h4 class="panel-title">Project Summary <a class="pull-right" href="#/edit/{{project._id}}">Edit</a></h4>
+	                            <h4 class="panel-title">Project Summary <a class="pull-right" ng-show="isOwner" href="#/edit/{{project._id}}">Edit</a></h4>
 
 
 	                        </div>
@@ -140,8 +140,8 @@
 	                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
-	                           <a href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-save"></span> Apply</a>
-	                           <div class="btn btn-lg btn-info" ng-click="ask();"><span class="glyphicon glyphicon-info-sign" ></span> Ask</div>
+	                           <a ng-show="!isOwner" href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-save"></span> Apply</a>
+	                           <div class="btn btn-lg btn-info" ng-click="ask();"><span class="glyphicon glyphicon-info-sign" ></span> {{ (isOwner) ? 'Answer' : 'Ask' }}</div>
 	                           
 	                           <form class="form-horizontal" ng-submit="submitQuestion()" ng-show="showAsk">
 	                           	</br>
@@ -191,7 +191,7 @@
 					  </a>
 					</div>
 					<div class="media-body">
-					  <h4 class="media-heading">Username</h4>
+					  <h4 class="media-heading">{{question.user.name}}</h4>
 					  {{question.content}}
 					</div>
 				</div>

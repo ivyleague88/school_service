@@ -8,95 +8,47 @@
 				</div>
 				<img src="/app/assets/img/user.png" width="120" height="120" border="0" class="img-circle">
 				<br /><br />
-				<h1 class="media-heading">John Doe <small>GLTv</small></h1>.
+				<h1 class="media-heading"> {{ auth.profile.name}}<small>{{user.role}}</small></h1>.
 				<div class="text-left">
 					<div class="profile-list">
 						<strong>Skills:</strong>
 						<ul class="list-inline">
-							<li><span class="label label-success">HTML5/CSS3</span></li>
-							<li><span class="label label-info">Business Analysis</span></li>
-							<li><span class="label label-success">JavaScript</span></li>
-							<li><span class="label label-success">Node.js</span></li>
-							<li><span class="label label-success">React.js</span></li>
-							<li><span class="label label-info">Project Management</span></li>
-							<li><span class="label label-warning">HSBCnet</span></li>
-							<li><span class="label label-success">HTML5/CSS3</span></li>
-							<li><span class="label label-info">Business Analysis</span></li>
-							<li><span class="label label-success">JavaScript</span></li>
-							<li><span class="label label-success">Node.js</span></li>
-							<li><span class="label label-success">React.js</span></li>
-							<li><span class="label label-info">Project Management</span></li>
-							<li><span class="label label-warning">HSBCnet</span></li>
-							<li><span class="label label-success">HTML5/CSS3</span></li>
-							<li><span class="label label-info">Business Analysis</span></li>
-							<li><span class="label label-success">JavaScript</span></li>
-							<li><span class="label label-success">Node.js</span></li>
-							<li><span class="label label-success">React.js</span></li>
-							<li><span class="label label-info">Project Management</span></li>
-							<li><span class="label label-warning">HSBCnet</span></li>
+							<li ng-repeat="skill in user.skills"><span class="label label-success">{{skill}}</span></li>
+							
 						</ul>
 					</div>
 					<br />
 					<div class="profile-list">
 						<strong>Interests:</strong>
 						<ul class="list-inline">
-							<li><span class="label label-success">HTML5/CSS3</span></li>
-							<li><span class="label label-info">Business Analysis</span></li>
-							<li><span class="label label-success">JavaScript</span></li>
-							<li><span class="label label-success">Node.js</span></li>
-							<li><span class="label label-success">React.js</span></li>
-							<li><span class="label label-info">Project Management</span></li>
-							<li><span class="label label-warning">HSBCnet</span></li>
-							<li><span class="label label-success">HTML5/CSS3</span></li>
-							<li><span class="label label-info">Business Analysis</span></li>
-							<li><span class="label label-success">JavaScript</span></li>
-							<li><span class="label label-success">Node.js</span></li>
-							<li><span class="label label-success">React.js</span></li>
-							<li><span class="label label-info">Project Management</span></li>
-							<li><span class="label label-warning">HSBCnet</span></li>
-							<li><span class="label label-success">HTML5/CSS3</span></li>
-							<li><span class="label label-info">Business Analysis</span></li>
-							<li><span class="label label-success">JavaScript</span></li>
-							<li><span class="label label-success">Node.js</span></li>
-							<li><span class="label label-success">React.js</span></li>
-							<li><span class="label label-info">Project Management</span></li>
-							<li><span class="label label-warning">HSBCnet</span></li>
+							<li ng-repeat="interest in user.interests"><span class="label label-success">{{interest}}</span></li>
+							
 						</ul>
 					</div>
 					<br />
-					<div class="profile-list">
-						<strong>Time Per Week:</strong>
-						<ul class="list-inline">
-							<li><span class="label label-default">2 Hours</span></li>
-						</ul>
-					</div>
+					
 				</div>
 			</div>
 			
 			<hr class="featurette-divider-sm">
 			<h2>My Current Projects</h2>
 			<div class="row">
-				<div class="col-md-4 text-center">
+				<div class="col-md-4 text-center" ng-repeat="project in projects">
 					<img class="img-circle" src="http://placehold.it/140x140">
-					<h3>Project</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</p>
-					<p><a class="btn btn-default" href="#">View details »</a></p>
+					<h3>{{project.title}}</h3>
+					<p>{{project.description}}</p>
+					<p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
 				</div>
 			</div><!-- /.row -->
 			<hr class="featurette-divider-sm">
 			<h2>My Completed Projects</h2>
 			<div class="row">
-				<div class="col-md-4 text-center">
+				
+				<div class="col-md-4 text-center" ng-repeat="project in completedProjects">
 					<img class="img-circle" src="http://placehold.it/140x140">
-					<h3>Project</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</p>
-					<p><a class="btn btn-default" href="#">View details »</a></p>
-				</div>
-				<div class="col-md-4 text-center">
-					<img class="img-circle" src="http://placehold.it/140x140">
-					<h3>Project</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</p>
-					<p><a class="btn btn-default" href="#">View details »</a></p>
+					<h3>{{project.title}}</h3>
+					<p>{{project.description}}</p>
+					<p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
 				</div>
 			</div><!-- /.row -->
 	    </div>

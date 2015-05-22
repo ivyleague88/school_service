@@ -14,6 +14,6 @@ var ProjectSchema = new mongoose.Schema({
   endDate : { type: Date, default: Date.now },
   user : mongoose.Schema.Types.Mixed,
   createdDate : { type: Date, default: Date.now }
-});
+},{ strict: false });
 
 module.exports = mongoose.model('Project', ProjectSchema);
