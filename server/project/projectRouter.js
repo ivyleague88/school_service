@@ -2,7 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
-var Project = require('./ProjectSchema');
+var Project = require(__dirname + '/ProjectSchema');
 
 /* GET /projects listing. */
 router.get('/', function(req, res, next) {
