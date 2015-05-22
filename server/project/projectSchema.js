@@ -12,6 +12,7 @@ var ProjectSchema = new mongoose.Schema({
   postedEndDate : { type: Date, default: Date.now },
   startDate : { type: Date, default: Date.now },
   endDate : { type: Date, default: Date.now },
+  user : mongoose.Schema.Types.Mixed,
   createdDate : { type: Date, default: Date.now }
 });
 

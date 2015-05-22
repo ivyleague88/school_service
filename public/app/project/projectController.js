@@ -1,10 +1,15 @@
 'use strict';
 
 angular.module('project')
-  .controller('ProjectController', ['$scope', 'Projects','$location','$routeParams','auth', function ($scope, Projects,$location,$routeParams,auth) {
+  .controller('ProjectController', ['$scope', 'Projects','$location','$routeParams','auth','Credentials', function ($scope, Projects,$location,$routeParams,auth,Credentials) {
 
 
     $scope.auth = auth;
+
+    if (!auth.isAuthenticated) {
+      Credentials.login();
+      return;
+    }
 
     console.log(auth.profile);
 
@@ -93,6 +98,12 @@ angular.module('project')
 
       console.log(newProject);
 
+
+      newProject.user = {
+        user_id : auth.profile.user_id,
+        name  : auth.profile.name
+      };
+
       var project = new Projects(newProject);
       if ($scope.isNewProject === true) {
         project.$save(function(){
@@ -111,18 +122,21 @@ angular.module('project')
       
     };
 
-    
+
 
 
 
   }])
 
-  .controller('HeaderController', ['$scope', 'Projects','$location','$routeParams','auth', function ($scope, Projects,$location,$routeParams,auth) {
+  .controller('HeaderController', ['$scope', 'Projects','$location','$routeParams','auth','Credentials', function ($scope, Projects,$location,$routeParams,auth,Credentials) {
 
 
     $scope.auth = auth;
 
-    console.log('HEADER',auth.profile);
+    // console.log('HEADER',auth.profile);
+
+    $scope.login  = Credentials.login;
+    $scope.logout = Credentials.logout;
 
     
 

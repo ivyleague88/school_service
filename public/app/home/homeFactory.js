@@ -37,6 +37,8 @@ angular.module('home')
       auth.signout();
       store.remove('profile');
       store.remove('token');
+      console.log("GO OUT");
+      window.location = '/';
     }
 
     return {

@@ -14,4 +14,10 @@ router.get('/project', function(req, res) {
   res.render('postproject', {  });
 });
 
+/* GET profile page. */
+router.get('/my_profile', function(req, res) {
+  res.render('profile', {  });
+});
+
+
 module.exports = router;

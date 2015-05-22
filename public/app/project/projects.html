@@ -1,5 +1,5 @@
 
-<form class="form-horizontal" ng-submit="save()">
+<form class="form-horizontal" ng-submit="save()" ng-show="auth.isAuthenticated">
 	<!-- Form Name -->
 	<div class="page-header" style="margin-top: 0;">
 		<h1 style="margin-top: 0;">{{ (isNewProject) ? "Create a new Project" : "Edit The Project" }}</h1> {{auth.profile.nickname}}

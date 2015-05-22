@@ -23,7 +23,7 @@
 		<nav class="header-links">
 			<ul class="nav nav-pills header-nav-links">
 
-			<li role="presentation" ng-show="auth.isAuthenticated" class="login-btn" ng-click="logout()"><a href="#/">Logout</a></li>
+				<li role="presentation" ng-show="auth.isAuthenticated" class="login-btn" ng-click="logout()"><a href="#/">Logout</a></li>
 				<li role="presentation" class="login-btn" ng-show="!auth.isAuthenticated" ng-click="login()"><a href="#/">Login</a></li>
 
 				<li role="presentation" class="login-btn" ng-show="auth.isAuthenticated" ><a href="#/"> {{auth.profile.name}}</a></li>
