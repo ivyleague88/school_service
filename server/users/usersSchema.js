@@ -12,6 +12,7 @@ var UserSchema = new mongoose.Schema({
   picture : String,
   given_name : {type : String , default : ''},
   family_name : {type : String , default : ''},
+  featured : {type : Boolean, default : false},
   skills : {type : Array , default : []},
   interests : {type : Array , default : []},
   date_created : { type: Date, default: Date.now }

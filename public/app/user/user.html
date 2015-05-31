@@ -1,0 +1,55 @@
+<div class="container container-main">
+		<div class="row">
+			<div class="containter text-center profile">
+				<div ng-show="isAdmin" class="edit">
+					<span class="label {{(user.featured) ? 'label-info' : 'label-default' }} " id="feature" ng-click="feature()">
+						<i class="glyphicon {{(user.featured) ? 'glyphicon-star' : 'glyphicon-star-empty' }}">Featured</i> 
+					</span>
+				</div>
+				<img src="{{user.picture}}" width="120" height="120" border="0" class="img-circle">
+				<br /><br />
+				<h1 class="media-heading"> {{ user.name}}<small>{{user.role}}</small></h1>.
+				<div class="text-left">
+					<div class="profile-list">
+						<strong>Skills:</strong>
+						<ul class="list-inline">
+							<li ng-repeat="skill in user.skills"><span class="label label-success">{{skill}}</span></li>
+							
+						</ul>
+					</div>
+					<br />
+					<div class="profile-list">
+						<strong>Interests:</strong>
+						<ul class="list-inline">
+							<li ng-repeat="interest in user.interests"><span class="label label-success">{{interest}}</span></li>
+							
+						</ul>
+					</div>
+					<br />
+					
+				</div>
+			</div>
+			
+			<hr class="featurette-divider-sm">
+			<h2>My Current Projects</h2>
+			<div class="row">
+				<div class="col-md-4 text-center" ng-repeat="project in projects">
+					<img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
+					<h3>{{project.title}}</h3>
+					<p>{{project.description}}</p>
+					<p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
+				</div>
+			</div><!-- /.row -->
+			<hr class="featurette-divider-sm">
+			<h2>My Completed Projects</h2>
+			<div class="row">
+				
+				<div class="col-md-4 text-center" ng-repeat="project in completedProjects">
+					<img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
+					<h3>{{project.title}}</h3>
+					<p>{{project.description}}</p>
+					<p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
+				</div>
+			</div><!-- /.row -->
+	    </div>
+	</div><!-- /.container -->

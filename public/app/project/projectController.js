@@ -57,6 +57,9 @@ angular.module('project')
         project.endDate = new Date(project.endDate);
         $scope.project = project;
         $scope.isNewProject = false;
+
+
+
       });
       
       
@@ -157,15 +160,27 @@ angular.module('project')
 
   .controller('HeaderController', ['$scope', 'Projects','$location','$routeParams','auth','Credentials', function ($scope, Projects,$location,$routeParams,auth,Credentials) {
 
+    console.log('HEADER',auth);
 
     $scope.auth = auth;
 
-    console.log('HEADER',auth);
+    $scope.isAdmin = false;
+
+    $scope.$watch('auth.profile',function(){
+      if (($scope.auth.profile) && ($scope.auth.profile.email == ADMIN_EMAIL)){
+          $scope.isAdmin = true;
+      }
+    })
+
+    
 
     $scope.login  = Credentials.login;
     $scope.logout = Credentials.logout;
 
     
+    $scope.search = function(){
+      window.location = "/search/#/?q="+ $scope.query ;
+    }
 
 
 

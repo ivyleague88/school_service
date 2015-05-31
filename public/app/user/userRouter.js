@@ -3,10 +3,16 @@
 angular.module('project')
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: '/app/user/profile.html',
+
+      .when('/list', {
+        templateUrl: '/app/user/list.html',
+        controller: 'UserListController'
+      })
+      .when('/:id', {
+        templateUrl: '/app/user/user.html',
         controller: 'UserController'
       })
+
 
       
   }]);

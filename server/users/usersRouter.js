@@ -22,6 +22,40 @@ router.post('/', function(req, res, next) {
   });
 });
 
+
+/* GET /users/featured */
+router.get('/featured', function(req, res, next) {
+
+  var query = User.find({ featured :  true}).limit(3);
+  // query.or([{status : "Open"},{status : "In Progress"}]);
+  query.exec(function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+
+});
+
+
+/* GET /users/matches */
+router.get('/matches', function(req, res, next) {
+
+  console.log("QUERY ID",req.query);
+
+
+  var query = User.find({ skills : { $in : req.query.skills.split(',')} }).limit(10);
+
+  // query.or([{status : "Open"},{status : "In Progress"}]);
+
+  query.exec(function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+
+
+
+});
+
+
 /* GET /users/id */
 router.get('/:id', function(req, res, next) {
   User.findById(req.params.id, function (err, post) {
@@ -30,8 +64,15 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+
+
+
+/* 
+
 /* GET /users/by_id/:user_id */
 router.get('/by_id/:user_id', function(req, res, next) {
+
+  console.log("USER ID",req.params.user_id);
   User.findOne({user_id: req.params.user_id}, function (err, post) {
     if (err) return next(err);
     res.json(post);

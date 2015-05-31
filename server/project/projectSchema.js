@@ -13,6 +13,10 @@ var ProjectSchema = new mongoose.Schema({
   startDate : { type: Date, default: Date.now },
   endDate : { type: Date, default: Date.now },
   user : mongoose.Schema.Types.Mixed,
+  featured : {type : Boolean, default : false},
+  appliedUsers : {type : mongoose.Schema.Types.Mixed, default : []},
+  invitedUsers : {type : mongoose.Schema.Types.Mixed, default : []},
+  selectedUsers : {type : mongoose.Schema.Types.Mixed, default : []},
   status : { type: String, default: 'Open' },
   createdDate : { type: Date, default: Date.now }
 },{ strict: false });

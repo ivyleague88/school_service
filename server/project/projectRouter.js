@@ -12,7 +12,20 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* GET /projects/by_id/:user_id */
+
+/* GET /projects/featured */
+router.get('/featured', function(req, res, next) {
+
+  // console.log("USEr ID",req.params.user_id );
+  var query = Project.find({'featured' : true }).limit(3);
+
+  query.exec(function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
+/* GET /projects/completed/by_user_id/:user_id */
 router.get('/completed/by_user_id/:user_id', function(req, res, next) {
 
   // console.log("USEr ID",req.params.user_id );
@@ -24,7 +37,7 @@ router.get('/completed/by_user_id/:user_id', function(req, res, next) {
   });
 });
 
-/* GET /projects/by_id/:user_id */
+/* GET /projects/by_user_id/:user_id */
 router.get('/by_user_id/:user_id', function(req, res, next) {
 
   // console.log("USEr ID",req.params.user_id );
@@ -38,9 +51,52 @@ router.get('/by_user_id/:user_id', function(req, res, next) {
   });
 });
 
+router.get('/invited', function(req, res, next) {
+
+  console.log("USEr ID",req.query.id );
+  var query = Project.find({'invitedUsers': {$elemMatch : { user_id : req.query.id }}});
+
+
+  query.exec(function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
+/* GET /projects/by_id/:user_id */
+router.get('/search', function(req, res, next) {
+
+  console.log("USEr ID",req.query.q );
+  var query = Project.find();
+
+  query.or([{title : new RegExp(req.query.q,'i')},{description : new RegExp(req.query.q,'i')},{category : new RegExp(req.query.q,'i')},{skillset : { $in : [req.query.q]} }]);
+
+  query.exec(function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
 /* POST /projects */
 router.post('/', function(req, res, next) {
   Project.create(req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
+
+router.post('/apply', function(req, res, next) {
+
+  var dat = req.body;
+
+  var user = {
+    user_id : dat.user_id,
+    name : dat.name
+  };
+
+  // console.log(dat);
+  Project.findByIdAndUpdate( dat.project_id, { $addToSet : { appliedUsers : user}}, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

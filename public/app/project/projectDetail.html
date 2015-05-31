@@ -2,8 +2,8 @@
 	<div class="container container-main" style="min-height: 75%">
 		<div class="page-header" style="margin-top: 0;">
 			<!-- Use green for Available, red for In Progress, grey for Completed -->
-			<h1 style="margin-top: 0;">{{project.title}}    <small style="color: green">{{project.status}}</small>  <button ng-show="isAdmin" class="btn btn-danger" ng-click="delete()">Delete</button>  </h1>
-			<h2><small style="color: blue"> By {{auth.profile.name}}</small></h2>
+			<h1 style="margin-top: 0;">{{project.title}}    <small style="color: green">{{project.status}}</small>  <button ng-show="isAdmin" class="btn btn-danger" ng-click="delete()">Delete</button> <i ng-show="isAdmin" class="glyphicon {{(project.featured) ? 'glyphicon-star text-warning' : 'glyphicon-star-empty'}}" ng-click="feature()"></i> <button ng-show="hasBeenInvited" class="btn btn-success" ng-click="acceptInvitation(auth.profile)">Accept this project</button> </h1>
+			<h2><small style="color: blue"> By <a href="/user/#/{{project.user.user_id}}">{{project.user.name}}</a></small> </h2>
 		</div>
 	    <div class="row">
 	        <div class="col-md-4">
@@ -95,9 +95,9 @@
 	                        <div id="matchedPeople" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
-								<div class="row">
-									<div class="col-md-6"><strong>ANBINH</strong></div>
-									<div class="col-md-6">	<button class="btn btn-success">Accept</button></div>
+								<div class="row" ng-repeat="user in matchedUsers">
+									<div class="col-md-6"><a href="/user/#/{{user.user_id}}"><strong>{{user.name}}</strong></a></div>
+									<div ng-click="invite(user)" ng-show="isOwner" class="col-md-6">	<button class="btn btn-success">{{ (user.invited == true) ? 'Resend' : 'Invite' }}</button></div>
 								</div>
 								
 	                          </div>
@@ -118,15 +118,39 @@
 	                        <div id="appliedPeople" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
-								<div class="row">
-									<div class="col-md-6"><strong>ANBINH</strong></div>
-									<div class="col-md-6">	<button class="btn btn-success">Accept</button></div>
+								<div class="row" ng-repeat="user in project.appliedUsers">
+									<div class="col-md-6"><a href="/user/#/{{user.user_id}}"><strong>{{user.name}}</strong></a></div>
+									<div ng-show="isOwner" class="col-md-6" ng-click="accept(user)">	<button class="btn btn-success">Accept</button></div>
 								</div>
 								
 	                          </div>
 	                        </div>
 	                      </div>
 	                <!-- END OF APPLIED PEOPLE ACCORDION -->
+
+
+	                <!-- SELECTED PEOLE -->
+	                <div class="panel panel-default">
+	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+	                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#selectedPeople" aria-expanded="false" aria-controls="selectedPeople">
+	                            <h4 class="panel-title">Selected People</h4>
+	                        </div>
+	                    </span>
+
+	                        <div id="selectedPeople" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                          <div class="panel-body">
+	                          <!-- tab content goes here -->
+								<div class="row" ng-repeat="user in project.selectedUsers">
+									<div class="col-md-12"><a href="/user/#/{{user.user_id}}"><strong>{{user.name}}</strong></a></div>
+									
+								</div>
+								
+	                          </div>
+	                        </div>
+	                      </div>
+	                <!-- END OF SELECTED PEOPLE ACCORDION -->
+
 
 
 	                      <!--  panel 4 -->
@@ -141,7 +165,7 @@
 	                        <div  id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
-	                           <a ng-show="!isOwner" href="#" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-save"></span> Apply</a>
+	                           <div ng-show="(!isOwner) && (hasApplied==false)" href="#" class="btn btn-lg btn-danger" ng-click="apply()"><span class="glyphicon glyphicon-save"></span> Apply</div>
 	                           <div   class="btn btn-lg btn-info" ng-click="ask();"><span class="glyphicon glyphicon-info-sign" ></span> {{ (isOwner) ? 'Answer' : 'Ask' }}</div>
 	                           
 	                           <form class="form-horizontal" ng-submit="submitQuestion()" ng-show="showAsk">

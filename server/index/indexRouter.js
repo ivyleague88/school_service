@@ -19,5 +19,13 @@ router.get('/my_profile', function(req, res) {
   res.render('profile', {  });
 });
 
+router.get('/user', function(req, res) {
+  res.render('user', {  });
+});
+
+router.get('/search', function(req, res) {
+  res.render('search', {  });
+});
+
 
 module.exports = router;

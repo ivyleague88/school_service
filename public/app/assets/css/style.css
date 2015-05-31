@@ -99,12 +99,57 @@ html,body {
   color: #DDCCEE;
 }
 
+.navbar-default .navbar-nav>li>a {
+  color: #DDCCEE;
+}
+
 .home, 
 .header-nav-links > li > a:hover,
 .header-nav-links > li > a:active {
   background-color: transparent;
   color: #eee;
 }
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  color: #eee;
+}
+
+.navbar-default .navbar-brand {
+  color: #eee;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #dce;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+  color: #FFF;
+  background-color: #428BCA
+}
+
+.navbar-default .navbar-collapse {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav>li>a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.navbar-form {
+  margin-top: 0px;
+}
+
+.featured-project {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+
+
 
 .header-nav-links > li > a {
   padding: 5px 15px;
@@ -159,22 +204,19 @@ html,body {
 }
 
 .navbar-header {
-  margin: 0 auto;
-  width: 100%;
-  min-height: 50px;
+
   background-color: #110022;
   color: #eee;
-  overflow: hidden;
+
 }
 
-.navbar-header {
-  padding-top: 5px;
+.navbar-collapse {
+
+  background-color: #110022;
+  color: #eee;
+
 }
 
-.navbar-header > .input-group,
-.navbar-header > .header-nav-links {
-  margin-top: 5px;
-}
 
 .home {
   cursor: pointer;
@@ -379,3 +421,38 @@ span.label {
 .list-inline {
     border-right: none;
 }
+
+
+.project:hover {
+  color :#4aa3df;
+  cursor: pointer;
+}
+
+
+
+.project.active {
+  color :#16a085;
+}
+
+
+.seeker-active,
+.owner-active  {
+  max-height: 500px;
+  opacity: 1;
+  /*transition: all 0.5s ease-in;*/
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+
+.seeker-inactive,
+.owner-inactive  {
+  max-height: 0;  overflow: hidden;
+  opacity: 0;
+}
+
+.user-header, 
+.project-header {
+  min-height: 70px;
+}
+
