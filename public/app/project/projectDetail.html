@@ -212,7 +212,7 @@
 	            <div class="media" ng-show="showQuestion" ng-repeat="question in questions">
 					<div class="pull-left">
 					  <a href="#">
-					    <img class="img-circle" src="http://placehold.it/60x60">
+					    <img class="img-circle" width="60px" src="{{ (question.user.picture) ? question.user.picture : 'http://placehold.it/60x60' }}">
 					  </a>
 					</div>
 					<div class="media-body">

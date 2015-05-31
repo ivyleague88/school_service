@@ -163,7 +163,8 @@ angular.module('project')
         project_id : $scope.project._id,
         user : {
           name : $scope.auth.profile.name,
-          user_id : $scope.auth.profile.user_id
+          user_id : $scope.auth.profile.user_id,
+          picture : $scope.auth.profile.picture,
         }
       };
       var question = new Questions(newQuestion);
