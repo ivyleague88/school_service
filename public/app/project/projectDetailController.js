@@ -193,24 +193,36 @@ angular.module('project')
         console.log("APPPLIED PROJECT",$scope.project);
         $scope.hasApplied = true;
 
+        Users.getByUserId({user_id : $scope.project.user.user_id},function(newUser){
+          if (newUser.email == "") {
+                SweetAlert.swal("Error!", "This user has no email. We cannot send the invitation", "error");
+                return;
+          }
 
-        Email.apply({
-          admin_email : ADMIN_EMAIL,
-          username: $scope.auth.profile.name,
-          user_id : $scope.auth.profile.user_id,
-          project_name : $scope.project.title,
-          project_id  : $scope.project._id
-        },function(){
-          console.log("Email has been sent");
-          
+          Email.apply({
+            owner_email : newUser.email,
+            owner_name : newUser.name,
+            username: $scope.auth.profile.name,
+            user_id : $scope.auth.profile.user_id,
+            project_name : $scope.project.title,
+            project_id  : $scope.project._id
+          },function(){
+            console.log("Email has been sent");
+            
+          });
+
+          SweetAlert.swal("Done!", "You applied to the project! An email has been sent to the owner " + newUser.email , "success");
+
+
         });
 
-        SweetAlert.swal("Done!", "You applied to the project! An email has been sent to the admin", "success");
         
         
+        
+       
 
-      })
-    }
+      });
+    };
 
     $scope.invite = function(user){
       console.log(user);

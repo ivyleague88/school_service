@@ -37,7 +37,7 @@ router.post('/apply', function(req, res, next) {
     // setup e-mail data with unicode symbols
     var mailOptions = {
         from: 'School WebService ✔ <schoolservice2@gmail.com>', // sender address
-        to: dat.admin_email, // list of receivers
+        to: dat.owner_email, // list of receivers
         subject: 'New user applying for the project - ' + dat.project_name, // Subject line
         text: 'Hello world ✔', // plaintext body
         html: final_html // html body
