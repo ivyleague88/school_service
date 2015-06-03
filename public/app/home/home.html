@@ -1,5 +1,5 @@
 
-	<div class="container-full">
+	<div class="container-full" style="{{ (imgUrl == '')  ? 'background-image : url(\'/app/assets/img/sky.png\') ' :  'background-image : url(\''+imgUrl+'\') '}}">
 		<nav class="header-links">
 			<ul class="nav nav-pills header-nav-links">
 
@@ -21,10 +21,10 @@
 		</nav>
 		<div class="row">
 			<div class="col-lg-12 text-center v-center">
-				<h1>Animated Banner</h1>
-				<p class="lead">SCHOOL WEBSERVICE</p>
+				<h1>SCHOOL WEBSERVICEr</h1>
+				<p class="lead">Description</p>
 				<br>
-				<form class="col-lg-12" ng-submit="search()">
+				<form class="col-lg-12" ng-submit="search()" style="height: 200px">
 					<div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
 						<input ng-model="query" ng-keyup="$event.keyCode == 13 ? search() : null" type="text" class="center-block form-control input-lg" title="Find your niche" placeholder="Find your niche">
 						<span  class="input-group-btn"><button id="searchButton" class="btn btn-lg btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button></span>

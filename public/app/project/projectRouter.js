@@ -8,6 +8,11 @@ angular.module('project')
         controller: 'ProjectController'
       })
 
+      .when('/category/:category', {
+        templateUrl: '/app/project/project_cat.html',
+        controller: 'ProjectCategoryController'
+      })
+
       .when('/list', {
         templateUrl: '/app/project/project_list.html',
         controller: 'ProjectListController'

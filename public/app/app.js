@@ -30,5 +30,5 @@ angular.module('app', ['auth0','project','home', 'angular-storage', 'angular-jwt
       }
     }
   });
-});
+})
 ;

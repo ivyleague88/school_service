@@ -2,9 +2,12 @@
 		<div class="row">
 			<div class="containter text-center profile">
 				<div ng-show="isAdmin" class="edit">
-					<span class="label {{(user.featured) ? 'label-info' : 'label-default' }} " id="feature" ng-click="feature()">
-						<i class="glyphicon {{(user.featured) ? 'glyphicon-star' : 'glyphicon-star-empty' }}">Featured</i> 
-					</span>
+					<h2>
+						
+						<i ng-click="feature()" class="glyphicon {{(user.featured) ? 'glyphicon-ok-circle text-success' : 'glyphicon-remove-circle' }}"></i> Featured
+					</h2>
+						
+					
 				</div>
 				<img src="{{user.picture}}" width="120" height="120" border="0" class="img-circle">
 				<br /><br />

@@ -1,12 +1,33 @@
 'use strict';
 
 angular.module('project')
-  .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location','Questions','auth','Credentials','Users','SweetAlert','Email', function ($scope, $routeParams, Projects, $location, Questions,auth,Credentials, Users,SweetAlert,Email) {
+  .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location','Questions','auth','Credentials','Users','SweetAlert','Email','Rating','store', function ($scope, $routeParams, Projects, $location, Questions,auth,Credentials, Users,SweetAlert,Email,Rating,store) {
     
     $scope.auth = auth;
 
     $scope.isAdmin = false;
+    $scope.projectFullStars = [];
+    $scope.projectEmptyStars = [1,2,3,4,5];
 
+
+    var getProjectRating = function(projectId){
+      Rating.projectRating({project_id : projectId },function(pr){
+        // console.log("HERE IS THE PROJECT RATING",pr);
+        var projectFullStars = [];
+        for (var i = 0; i < Math.round(pr.value); i++) {
+          projectFullStars.push(i);
+        };
+        $scope.projectFullStars = projectFullStars;
+
+        var projectEmptyStars = [];
+        for (var i = 0; i < (5 - Math.round(pr.value)); i++) {
+          projectEmptyStars.push(i);
+        };
+        $scope.projectEmptyStars = projectEmptyStars;
+
+        $scope.projectPeoplesRating = pr.count;
+      });
+    }
     
 
     $scope.project = Projects.get({id: $routeParams.id },function(){
@@ -93,6 +114,48 @@ angular.module('project')
 
         
 
+        // get the project rating
+        getProjectRating($scope.project._id);
+
+
+        //check if the current user can rate the project
+        if (auth.isAuthenticated) {
+          Rating.checkRated({project_id : $scope.project._id, user_id: store.get('profile')._id } , function(dat){
+            // console.log("DTEAERAE",dat);
+            if (dat.rated == true){
+              $scope.isReadonly = true;
+              $scope.rate = dat.value;
+              $scope.isRated = true;
+            } else {
+              $scope.isRated = false;
+              $scope.isReadonly = false;
+              $scope.rate  = 0;
+              $scope.$watch('rate',function(rate){
+                if ($scope.rateInit == true) {
+                  $scope.rateInit = false;
+                  return;
+                } 
+
+                var rating = new Rating({
+                  project_id : $scope.project._id,
+                  owner_id : $scope.project.user.user_id,
+                  rated_by : store.get('profile')._id,
+                  value :  rate
+                });
+                rating.$save(function(){
+                  // alert("DONE");
+                  getProjectRating($scope.project._id);
+                })
+
+                $scope.isReadonly = true;
+                $scope.isRated = true;
+                
+                SweetAlert.swal("Done!", "You have rated the the owner of the project: " + rate + " stars. \n You cannot rate any more", "success");
+                $scope.isReadonly = true;
+              })
+            }
+          })
+        }
         
 
         // remove if matched people is the owner
@@ -372,6 +435,32 @@ angular.module('project')
       });
 
     }
+
+
+
+    // RATING
+    // $scope.rate = 0;
+
+    $scope.rateInit = true;
+    $scope.max = 5;
+    // $scope.isReadonly = false;
+  
+    $scope.hoveringOver = function(value) {
+      $scope.overStar = value;
+      $scope.percent = 100 * (value / $scope.max);
+    };
+
+
+
+    
+  
+    $scope.ratingStates = [
+      {stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle'},
+      {stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty'},
+      {stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle'},
+      {stateOn: 'glyphicon-heart'},
+      {stateOff: 'glyphicon-off'}
+    ];
 
 
 

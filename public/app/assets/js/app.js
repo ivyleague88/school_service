@@ -30,4 +30,25 @@ $(document).ready(function() {
     $(window).on("resize", function () {
         $(".modal:visible").each(centerModal);
     });
+
+    // var index = 2;
+    // var TOTAL_IMAGES = 3;
+    // window.changeBG = window.setInterval(function(){
+    //     // console.log("USER_LOCATION",USER_LOCATION);
+
+    //     if ( (USER_LOCATION != "") && (USER_LOCATION != undefined)) {
+            
+    //         var image = $(".container-full");
+    //         image.fadeOut(100, function () {
+    //             var img  = "/app/assets/img/bg/"+USER_LOCATION+"/"+index+".jpg";
+    //             image.css("background", "url('" + img + "')");
+    //             image.fadeIn(100);
+    //         });
+    //         index += 1;
+
+    //         if (index > TOTAL_IMAGES) {
+    //             index = 1;
+    //         }
+    //     }
+    // },5000)
 });

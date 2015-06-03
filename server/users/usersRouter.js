@@ -4,6 +4,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('./usersSchema');
 var ObjectId = require('mongoose').Types.ObjectId; 
+var geoip = require('geoip-lite');
 
 /* GET /users listing. */
 router.get('/', function(req, res, next) {
@@ -81,11 +82,26 @@ router.get('/by_id/:user_id', function(req, res, next) {
 
 /* PUT /users/upsert/:user_id */
 router.put('/upsert/:user_id', function(req, res, next) {
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   User.update({ user_id : req.params.user_id}, req.body, {upsert : true} , function (err, post) {
     if (err) return next(err);
     User.findOne({user_id : req.params.user_id},function(err,user){
         if (err) return next(err);
-        res.json(user);
+
+        var newUser = JSON.parse(JSON.stringify(user));
+
+        // ip = "207.97.227.239";
+        ip = "142.4.215.149";
+        newUser.ip = ip;
+        newUser.geo = geoip.lookup(ip);
+
+        if (newUser.geo !== null) {
+          newUser.location = newUser.geo.country;
+        } else {
+          newUser.location = null;
+        }
+
+        res.json(newUser);
     })
   });
 });

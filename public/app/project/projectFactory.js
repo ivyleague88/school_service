@@ -35,6 +35,13 @@ angular.module('project')
       'apply': { method:'POST', url : '/api/email/apply' },
       'invite': { method:'POST', url : '/api/email/invite' }
     });
+  }])
+  .factory('Rating', ['$resource', function($resource){
+
+    return $resource('/api/rating/:id', null, {
+      'checkRated' : { method:'GET', url : '/api/rating/rated/:project_id/rated_by/:user_id' },
+      'projectRating' : { method:'GET', url : '/api/rating/project/:project_id' }
+    });
   }]);
   
 

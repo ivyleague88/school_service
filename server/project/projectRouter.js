@@ -6,10 +6,23 @@ var Project = require('./projectSchema');
 
 /* GET /projects listing. */
 router.get('/', function(req, res, next) {
-  Project.find(function (err, projects) {
+
+
+  if ( (req.query.category != "") && (req.query.category != undefined) )  {
+    var query = Project.find({category : req.query.category});
+  } else {
+    var query = Project.find();
+  }
+  
+
+  query.exec(function (err, post) {
     if (err) return next(err);
-    res.json(projects);
+    res.json(post);
   });
+  // Project.find(function (err, projects) {
+  //   if (err) return next(err);
+  //   res.json(projects);
+  // });
 });
 
 

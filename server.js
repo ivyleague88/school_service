@@ -12,6 +12,7 @@ var projects = require('./server/project/projectRouter');
 var questions = require('./server/questions/questionsRouter');
 var users = require('./server/users/usersRouter');
 var email = require('./server/email/emailRouter');
+var rating = require('./server/rating/ratingRouter');
 
 var mongoose = require('mongoose');
 var databaseURI = 'mongodb://localhost/school';
@@ -53,6 +54,7 @@ app.use('/api/projects', projects);
 app.use('/api/questions', questions);
 app.use('/api/users', users);
 app.use('/api/email', email);
+app.use('/api/rating', rating);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

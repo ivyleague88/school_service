@@ -1,16 +1,16 @@
 
-<h2 class="text-center"> All projects</h2>
+<h2 class="text-center"> {{title}}</h2>
 <div class="container container-main">
 		<div class="row">
 			<div class="col-xl-3 col-md-4 col-sm-6  " ng-repeat="project in projects">
 
 				<div class="thumbnail text-center">
 					<img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
-					<h2 class="project-header"> <i class="glyphicon {{(project.	featured) ? 'glyphicon-ok-circle text-success' : 'ng-hide' }} featured-project"></i> {{project.title}}</h2>
+					<h2 class="project-header"> <i class="glyphicon {{(project.	featured) ? 'glyphicon-star text-warning' : 'ng-hide' }} featured-project"></i> {{project.title}}</h2>
 					<p>{{project.description}}</p>
 	
 					<p>By <a href="/user/#/{{project.user.user_id}}"> {{project.user.name}} </a></p>
-					<p><a class="btn btn-default" href="#/{{project._id}}">View details »</a></p>
+					<p><a class="btn btn-default" href="#/{{project._id}}">View 	details »</a></p>
 
 				</div>
 				

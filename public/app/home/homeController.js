@@ -3,19 +3,64 @@
 
 
 angular.module('home')
-  .controller('HomeController', function (auth,$scope, store, $location,Users,Credentials,Projects) {
+  .controller('HomeController', function (auth,$scope, store, $location,Users,Credentials,Projects,$interval) {
 
     $scope.auth = auth;
 
     console.log("AUTH VARIABLE HERE",$scope.auth);
+    $scope.imgUrl = "";
+
+    var animatedBG = function(location){
+      if (location != null) {
+        $scope.imgUrl = "/app/assets/img/bg/"+location+"/1.jpg";
+      } else {
+        $scope.imgUrl = "";
+      }
+     
+      
+     var index = 2;
+     var totalImage = 3;
+     $interval(function(){
+      $scope.imgUrl = "/app/assets/img/bg/"+location+"/"+index+".jpg";
+
+      index +=1;
+
+      if (index > totalImage) {
+        index = 1;
+      }
+     },10000);
+    }
 
     $scope.login = function(){
-      Credentials.login();
+      Credentials.login(function(){
+        var location = store.get("profile").location;
+
+        if (location != null) {
+          $scope.imgUrl = "/app/assets/img/bg/"+location+"/1.jpg";
+        } else {
+          $scope.imgUrl = "";
+        }
+
+        animatedBG(location);
+      });
     }
 
     $scope.logout = function(){
-      Credentials.logout();
+      Credentials.logout(function(){
+        $scope.location = null;
+      });
     }
+
+    if (auth.isAuthenticated) {
+      var location = store.get("profile").location;
+      animatedBG(location);
+      
+      
+    }
+
+    
+
+
 
     $scope.featuredProjects = Projects.featured();
     
@@ -50,3 +95,5 @@ angular.module('home')
     }
 
 });
+
+
