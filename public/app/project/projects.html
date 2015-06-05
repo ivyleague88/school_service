@@ -42,6 +42,25 @@
 	  </div>
 	</div>
 
+	<!-- Multiple Radios -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="project-visibility">Project Visibility</label>
+	  <div class="col-md-4">
+	  <div class="radio">
+	    <label for="project-visibility-0">
+	      <input type="radio" name="project-visibility" id="project-visibility-0"  value="global" ng-model="project.visibility" >
+	      Global
+	    </label>
+		</div>
+	  <div class="radio">
+	    <label for="project-visibility-1">
+	      <input type="radio" name="project-visibility" id="project-visibility-1"  value="local" ng-model="project.visibility" >
+	      Local
+	    </label>
+		</div>
+	  </div>
+	</div>
+
 	<!-- Textarea -->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="project-summary">Project Summary</label>
@@ -63,7 +82,18 @@
 	  <label class="col-md-4 control-label" for="project-timeline">Effort Required</label>
 	  <div class="col-md-4">
 
-	    <select class="form-control" ng-model="project.effortRequired" ng-options="effort for effort in defaultEffortRequired">
+	  	
+	  		
+	  			<input type="text" class="form-control input-md" ng-model="effortNum" style="width : 60%;display : inline">
+	  	
+
+	  	
+	  			<select class="form-control" ng-model="project.effortRequired" ng-options="effort for effort in defaultEffortRequired" style="width : 38%;display : inline">
+	  		
+
+	  	
+	  	
+	    
 		</select>
 	  </div>
 	</div>
@@ -73,7 +103,7 @@
 	  <label class="col-md-4 control-label" for="project-timeline">Project Posted End Date</label>
 	  <div class="col-md-4">
 
-	    <input type="date" name="project-posted-end-date" id="project-posted-end-date-1" placeholder="yyyy-MM-dd" ng-model="project.postedEndDate" ng-required="true" >
+	    <input type="text" name="project-posted-end-date" id="project-posted-end-date-1" placeholder="DD-MM-YYYY" ng-model="project.postedEndDate" ng-required="true" >
 	  </div>
 	</div>
 
@@ -82,7 +112,7 @@
 	  <label class="col-md-4 control-label" for="project-timeline">Start date</label>
 	  <div class="col-md-4">
 
-	    <input type="date" name="project-start-date" id="project-start-date-1" placeholder="yyyy-MM-dd" ng-model="project.startDate" ng-required="true" >
+	    <input type="text" name="project-start-date" id="project-start-date-1" placeholder="DD-MM-YYYY" ng-model="project.startDate" ng-required="true" >
 	  </div>
 	</div>
 
@@ -91,7 +121,7 @@
 	  <label class="col-md-4 control-label" for="project-timeline">End date</label>
 	  <div class="col-md-4">
 
-	    <input type="date" name="project-end-date" id="project-end-date-1" placeholder="yyyy-MM-dd" ng-model="project.endDate" ng-required="true" >
+	    <input type="text" name="project-end-date" id="project-end-date-1" placeholder="DD-MM-YYYY" ng-model="project.endDate" ng-required="true" >
 	  </div>
 	</div>
 

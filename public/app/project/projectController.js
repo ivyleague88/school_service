@@ -20,14 +20,34 @@ angular.module('project')
     $scope.defaultCategories = [ 'Business', 'Operations', 'IT', 'Security' ];
     $scope.project.category = 'Business';
 
-    $scope.defaultEffortRequired = [ '1 Hour', '1 Day' ];
-    $scope.project.effortRequired = '1 Hour';
+    $scope.defaultEffortRequired = [ 'Hour(s)', 'Day(s)' ];
+    $scope.project.effortRequired = 'Day(s)';
+    $scope.effortNum = "1";
 
     $scope.defaultStatuses = ['Open','In Progress','Completed','Closed'];
 
     $scope.project.chargeable = false;
 
     $scope.isNewProject = true;
+
+
+    $scope.DATE_FORMAT = "DD-MM-YYYY";
+
+    new Pikaday({ 
+      field: document.getElementById('project-posted-end-date-1') ,
+      format  : $scope.DATE_FORMAT
+    });
+
+    new Pikaday({ 
+      field: document.getElementById('project-start-date-1') ,
+      format  : $scope.DATE_FORMAT
+    });
+
+    new Pikaday({ 
+      field: document.getElementById('project-end-date-1') ,
+      format  : $scope.DATE_FORMAT
+    });
+
 
 
     if ($routeParams.id != undefined) {
@@ -52,11 +72,26 @@ angular.module('project')
         }
 
 
-        project.postedEndDate = new Date(project.postedEndDate);
-        project.startDate = new Date(project.startDate);
-        project.endDate = new Date(project.endDate);
+        project.postedEndDate = moment(new Date(project.postedEndDate)).format($scope.DATE_FORMAT);
+        project.startDate = moment(new Date(project.startDate)).format($scope.DATE_FORMAT);
+        project.endDate = moment(new Date(project.endDate)).format($scope.DATE_FORMAT);
+
+
+        if (!project.visibility) {
+          project.visibility = "global";
+        }
+
+
+        var effort = project.effortRequired.split(" ");
+        project.effortRequired = effort[1];
+        $scope.effortNum = effort[0];
+
+        console.log("EDITTED PROJECT",project);
+
         $scope.project = project;
         $scope.isNewProject = false;
+
+
 
 
 
@@ -104,25 +139,60 @@ angular.module('project')
         newProject.skillset = newProject.skillset.split(',');
       }
 
+      // check if the field is a number
+      if ($scope.effortNum.match(/^[0-9]+$/) === null) {
+        swal("Error!","The field should be a number","error");
+        return;
+
+      }
+
+      newProject.effortRequired = $scope.effortNum + " " + newProject.effortRequired;
       
 
       var now = new Date();
       now.setHours(0,0,0,0);
 
-      if (newProject.postedEndDate.getTime() < now.getTime()) {
-        alert("Project Posted End Date has to be greater than today");
-        return;
+
+      console.log("newProject.postedEndDate",newProject.postedEndDate);
+
+      newProject.postedEndDate = moment(newProject.postedEndDate,$scope.DATE_FORMAT).toDate();
+      newProject.startDate = moment(newProject.startDate,$scope.DATE_FORMAT).toDate();
+      newProject.endDate = moment(newProject.endDate,$scope.DATE_FORMAT).toDate();
+
+      // return;
+
+
+      // only check if it is new project
+      if ($scope.isNewProject === true) {
+        if (newProject.postedEndDate.getTime() < now.getTime()) {
+          swal("Invalid Date!","Project Posted End Date has to be greater than today","error");
+          return;
+        }
+  
+        if (newProject.startDate.getTime() < newProject.postedEndDate.getTime()) {
+          swal("Invalid Date!","Start Date has to be after Project Posted End Date","error");
+          return;
+        }
+  
+        if (newProject.endDate.getTime() < newProject.startDate.getTime()) {
+          swal("Invalid Date!","End Date has to be after Start Date","error");
+          return;
+        }
+      } else {
+
+        // if we are editing project
+        if (newProject.startDate.getTime() < newProject.postedEndDate.getTime()) {
+          swal("Invalid Date!","Start Date has to be after Project Posted End Date","error");
+          return;
+        }
+  
+        if (newProject.endDate.getTime() < newProject.startDate.getTime()) {
+          swal("Invalid Date!","End Date has to be after Start Date","error");
+          return;
+        }
       }
 
-      if (newProject.startDate.getTime() < newProject.postedEndDate.getTime()) {
-        alert("Start Date has to be after Project Posted End Date ");
-        return;
-      }
-
-      if (newProject.endDate.getTime() < newProject.startDate.getTime()) {
-        alert("End Date has to be after Start Date ");
-        return;
-      }
+      
 
       console.log(newProject);
 

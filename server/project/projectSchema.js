@@ -18,6 +18,7 @@ var ProjectSchema = new mongoose.Schema({
   invitedUsers : {type : mongoose.Schema.Types.Mixed, default : []},
   selectedUsers : {type : mongoose.Schema.Types.Mixed, default : []},
   status : { type: String, default: 'Open' },
+  visibility : {type : String, default : 'global'},
   createdDate : { type: Date, default: Date.now }
 },{ strict: false });
 

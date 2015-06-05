@@ -38,6 +38,7 @@ angular.module('project')
         }
 
 
+
         if ($scope.auth.profile.email == ADMIN_EMAIL){
           $scope.isOwner = true;
           $scope.isAdmin = true;
@@ -51,12 +52,64 @@ angular.module('project')
           });
 
           // remove all applied users who have been selected by the owner
+          $scope.rateUserInitCount = 0;
           for (var i = 0; i < $scope.project.selectedUsers.length; i++) {
             var userId = $scope.project.selectedUsers[i].user_id;
             $scope.project.appliedUsers = $scope.project.appliedUsers.filter(function(person){
               return person.user_id != userId;
             });
+
+
+            // check if the current logged-in user has been selected for this project
+            if ($scope.auth.profile.user_id == userId){
+              $scope.logginUserSelectedForProject = true;
+            }
+
+
+            // ability to rate the selected people
+            if ($scope.project.selectedUsers[i].rate == undefined){
+              $scope.project.selectedUsers[i].rate = 0;
+              $scope.project.selectedUsers[i].isReadonly = false;
+            } else {
+
+              if ($scope.project.selectedUsers[i].rate == 0) {
+                $scope.project.selectedUsers[i].isReadonly = false;
+              } else {
+                $scope.project.selectedUsers[i].isReadonly = true;
+              }
+              
+            }
+
+
+            $scope.$watch("project.selectedUsers["+i+"].rate",function(rate,a,b){
+                $scope.rateUserInitCount +=1;
+
+                if ($scope.rateUserInitCount <= $scope.project.selectedUsers.length ) {
+                  return;
+                } ;
+
+                // console.log("OOOOOOOOOOOOOO",rate,a,b);
+                
+                SweetAlert.swal("Done!", "You have rated the the user "+ rate + " stars.", "success");
+                
+                // $scope.project.selectedUsers[i].isReadonly = true;
+                // $scope.project.selectedUsers[i].rate = rate;
+
+                for (var i = 0; i < $scope.project.selectedUsers.length; i++) {
+                  if ($scope.project.selectedUsers[i].rate == 0){
+                    $scope.project.selectedUsers[i].isReadonly = false;
+                  } else {
+                    $scope.project.selectedUsers[i].isReadonly = true;
+                  }
+                };
+
+                Projects.update({id: $scope.project._id}, $scope.project);
+                console.log("PROJECT HAS BEEN UPDATED",$scope.project);
+              })
+
           };
+
+          console.log("SELECTED USER",$scope.project.selectedUsers);
   
   
           // remove all matched users who have been applied 
@@ -448,6 +501,16 @@ angular.module('project')
     $scope.hoveringOver = function(value) {
       $scope.overStar = value;
       $scope.percent = 100 * (value / $scope.max);
+
+
+    };
+
+    $scope.hoveringRatingUser = function(value,selectedUserIndex) {
+      $scope.overStar = value;
+      $scope.percent = 100 * (value / $scope.max);
+
+      console.log("RATE USER",value,selectedUserIndex);
+      
     };
 
 

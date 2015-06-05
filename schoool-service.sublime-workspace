@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"effo",
+				"effort"
+			],
+			[
+				"eff",
+				"effort"
+			],
+			[
+				"new",
+				"newProject"
+			],
+			[
+				"date",
+				"DATE_FORMAT"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"is",
+				"isReadonly"
+			],
+			[
 				"fo",
 				"function"
 			],
@@ -42,10 +66,6 @@
 			[
 				"own",
 				"owner"
-			],
-			[
-				"new",
-				"newUser"
 			],
 			[
 				"in",
@@ -494,26 +514,6 @@
 			[
 				"getla",
 				"GetLatestWeeklyDealerSMS"
-			],
-			[
-				"wek",
-				"week_year"
-			],
-			[
-				"EMPL",
-				"EMPLOYEE_ROLE"
-			],
-			[
-				"removemess",
-				"removeMessageFirstLoadingIcon"
-			],
-			[
-				"shoems",
-				"showMessageFirstLoadingIcon"
-			],
-			[
-				"remove",
-				"removeMessageFirstLoadingIcon"
 			]
 		]
 	},
@@ -555,7 +555,7 @@
 			"file": "server/shared/postproject.ejs",
 			"settings":
 			{
-				"buffer_size": 5900,
+				"buffer_size": 6062,
 				"line_ending": "Unix"
 			}
 		},
@@ -611,7 +611,7 @@
 			"file": "public/app/project/project_cat.html",
 			"settings":
 			{
-				"buffer_size": 785,
+				"buffer_size": 806,
 				"line_ending": "Unix"
 			}
 		},
@@ -627,7 +627,7 @@
 			"file": "public/app/project/projectDetail.html",
 			"settings":
 			{
-				"buffer_size": 14281,
+				"buffer_size": 14695,
 				"line_ending": "Unix"
 			}
 		},
@@ -635,15 +635,7 @@
 			"file": "public/app/project/project_list.html",
 			"settings":
 			{
-				"buffer_size": 792,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/projectListController.js",
-			"settings":
-			{
-				"buffer_size": 242,
+				"buffer_size": 813,
 				"line_ending": "Unix"
 			}
 		},
@@ -652,6 +644,14 @@
 			"settings":
 			{
 				"buffer_size": 605,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/search/list.html",
+			"settings":
+			{
+				"buffer_size": 743,
 				"line_ending": "Unix"
 			}
 		},
@@ -699,7 +699,23 @@
 			"file": "public/app/project/projectDetailController.js",
 			"settings":
 			{
-				"buffer_size": 14337,
+				"buffer_size": 16537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/project/projectController.js",
+			"settings":
+			{
+				"buffer_size": 6721,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/project/projects.html",
+			"settings":
+			{
+				"buffer_size": 5189,
 				"line_ending": "Unix"
 			}
 		},
@@ -715,7 +731,7 @@
 			"file": "public/app/home/home.html",
 			"settings":
 			{
-				"buffer_size": 6040,
+				"buffer_size": 6139,
 				"line_ending": "Unix"
 			}
 		},
@@ -731,8 +747,16 @@
 			"file": "public/app/assets/css/style.css",
 			"settings":
 			{
-				"buffer_size": 7863,
+				"buffer_size": 11989,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/app/user/profile.html",
+			"settings":
+			{
+				"buffer_size": 3100,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -1192,6 +1216,7 @@
 	],
 	"file_history":
 	[
+		"/Users/anbinh/www/school_service/server/project/projectSchema.js",
 		"/Users/anbinh/www/school_service/server/shared/postproject.ejs",
 		"/Users/anbinh/www/school_service/public/app/user/list.html",
 		"/Users/anbinh/www/school_service/server/shared/search.ejs",
@@ -1220,7 +1245,6 @@
 		"/Users/anbinh/www/school_service/public/app/user/profile.html",
 		"/Users/anbinh/www/school_service/public/app/home/home.html",
 		"/Users/anbinh/www/school_service/server/email/views/apply.ejs",
-		"/Users/anbinh/www/school_service/server/project/projectSchema.js",
 		"/Users/anbinh/www/school_service/public/app/project/projectController.js",
 		"/Users/anbinh/www/school_service/public/app/user/userListController.js",
 		"/Users/anbinh/www/school_service/public/app/user/userRouter.js",
@@ -1338,6 +1362,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Error!",
+			"Error",
+			"visibility",
+			"Visibility",
+			"visibility",
+			"false",
+			"true",
+			"chargeable",
+			"Chargeable",
+			"chargeable",
+			"category}}",
+			"yyyy-MM-dd",
+			"moement",
+			"new Date",
+			"postedEndDate",
+			"\"DD-MM-YYYY\"",
+			"project",
+			"rateInit",
+			"isOwner",
 			"email",
 			"ProjectSchema",
 			"Question",
@@ -1446,26 +1489,7 @@
 			".modal.car-details .frame",
 			".edit-vehicle",
 			".edit-vehicle, .view-vehicle",
-			".modal.car-details.show-dealer",
-			".modal.car-details",
-			"png",
-			".year-input",
-			"ul.images",
-			".edit-vehicle .year-input",
-			".modal-overlay",
-			"#card .front, #card .back",
-			"60px",
-			".vehicle-single .car-details",
-			".modal.car-details .frame",
-			"listings",
-			"html.rtl div.home.bg2",
-			"removeLoadingIndicator",
-			"showLoadingIndicator",
-			"/mycars",
-			"/performance",
-			"bulk-ntf",
-			"/weights",
-			"/models"
+			".modal.car-details.show-dealer"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1548,7 +1572,7 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 23,
 			"sheets":
 			[
 				{
@@ -1576,7 +1600,7 @@
 						"translation.y": 520.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -1606,7 +1630,7 @@
 						"translation.y": 425.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1636,7 +1660,7 @@
 						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -1662,11 +1686,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 248.0,
+						"translation.x": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1675,15 +1699,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5900,
+						"buffer_size": 6062,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5052,
-								4946
+								984,
+								984
 							]
 						],
 						"settings":
@@ -1691,7 +1715,7 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1950.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 11,
@@ -1722,7 +1746,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1750,7 +1774,7 @@
 						"translation.y": 1831.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1779,7 +1803,7 @@
 						"translation.y": 2363.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1808,7 +1832,7 @@
 						"translation.y": 2325.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1838,7 +1862,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
@@ -1866,7 +1890,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
@@ -1875,15 +1899,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 785,
+						"buffer_size": 806,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33,
-								33
+								513,
+								513
 							]
 						],
 						"settings":
@@ -1895,7 +1919,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1921,11 +1945,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 750.0,
-						"translation.y": 1227.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -1934,15 +1958,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14281,
+						"buffer_size": 14695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12875,
-								12896
+								5946,
+								5946
 							]
 						],
 						"settings":
@@ -1951,10 +1975,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5142.0,
+						"translation.y": 2184.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1963,15 +1987,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 792,
+						"buffer_size": 813,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								682,
-								682
+								521,
+								521
 							]
 						],
 						"settings":
@@ -1983,39 +2007,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 15,
-					"file": "public/app/project/projectListController.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 242,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
 					"file": "public/app/user/list.html",
 					"semi_transient": false,
 					"settings":
@@ -2040,7 +2036,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "public/app/search/list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								449,
+								449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -2069,7 +2094,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -2099,7 +2124,7 @@
 						"translation.y": 182.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -2126,10 +2151,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 158.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
@@ -2157,7 +2182,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -2184,7 +2209,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 369.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 14,
@@ -2196,15 +2221,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14337,
+						"buffer_size": 16537,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								919,
-								919
+								2819,
+								2819
 							]
 						],
 						"settings":
@@ -2217,11 +2242,70 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 23,
+					"file": "public/app/project/projectController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5053,
+								5053
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3084.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "public/app/project/projects.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3267,
+								3276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1758.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
 					"file": "public/app/app.js",
 					"semi_transient": false,
 					"settings":
@@ -2244,27 +2328,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": "public/app/home/home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6040,
+						"buffer_size": 6139,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								968,
-								968
+								2268,
+								2268
 							]
 						],
 						"settings":
@@ -2273,14 +2357,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 276.0,
+						"translation.y": 1261.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 27,
 					"file": "server/users/usersRouter.js",
 					"semi_transient": false,
 					"settings":
@@ -2306,24 +2390,24 @@
 						"translation.y": 1453.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 28,
 					"file": "public/app/assets/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7863,
+						"buffer_size": 11989,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2617,
-								2601
+								11985,
+								11985
 							]
 						],
 						"settings":
@@ -2333,10 +2417,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2312.0,
+						"translation.y": 12224.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "public/app/user/profile.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1515,
+								1515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1071.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -2436,7 +2549,11 @@
 		[
 			[
 				"style",
-				"css/style.css"
+				"public/app/assets/css/style.css"
+			],
+			[
+				"sty",
+				"public/app/assets/css/style.css"
 			],
 			[
 				"",
@@ -2941,10 +3058,6 @@
 			[
 				"lfsong",
 				"golang/src/dna/lf/song.go"
-			],
-			[
-				"lyrc",
-				"golang/lyricfinds.sh"
 			]
 		],
 		"width": 0.0

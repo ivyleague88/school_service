@@ -54,13 +54,13 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-6 col-sm-6 text-center project {{ (projectOwnerSelected) ? 'active thumbnail' : '' }}" ng-click="selectProjectOwner()" >
+			<div class="col-md-6 col-sm-6 text-center project {{ (projectOwnerSelected) ? 'active thumbnail' : '' }} {{ (projectSeekerSelected) ? 'p-inactive' : '' }}" ng-click="selectProjectOwner()" >
 				<img class="img-rounded" width="200px" src="/app/assets/png/case.png">
 				<h2>PROJECT OWNER</h2>
 				<!-- <p>This is for a project owner</p> -->
 				
 			</div>
-			<div class="col-md-6 col-sm-6 text-center project {{ (projectSeekerSelected) ? 'active thumbnail' : '' }}" ng-click="selectProjectSeeker()">
+			<div class="col-md-6 col-sm-6 text-center project {{ (projectSeekerSelected) ? 'active thumbnail' : '' }} {{ (projectOwnerSelected ) ? 'p-inactive' : '' }}" ng-click="selectProjectSeeker()">
 				<img class="img-rounded" width="200px" src="/app/assets/png/wooden-sign.png">
 				<h2>PROJECT SEEKER</h2>
 				<!-- <p>This is for a project seeker</p> -->

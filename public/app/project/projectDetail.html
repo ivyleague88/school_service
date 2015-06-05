@@ -19,9 +19,13 @@
 
 			</h2>
 
-
-			{{ (isRated == true) ? 'You have rated this project\'s owner' : 'Rate this project\'s owner:'}} <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+			<div ng-show="logginUserSelectedForProject">
+				
+				{{ (isRated == true) ? 'You have rated this project\'s owner' : 'Rate this project\'s owner:'}} <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
 				<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+
+			</div>
+			
 		</div>
 	    <div class="row">
 	        <div class="col-md-4">
@@ -98,13 +102,18 @@
 									<div class="col-md-6">{{ project.endDate | date:'yyyy/MM/dd'}}</div>
 								</div>
 
+								<div class="row">
+									<div class="col-md-6"><strong>Visibility</strong></div>
+									<div class="col-md-6">{{ project.visibility | uppercase}}</div>
+								</div>
+
 								
 	                          </div>
 	                        </div>
 	                      </div>
 
 	                <!-- MATCHED PEOLE -->
-	                <div class="panel panel-default">
+	                <div class="panel panel-default" ng-show="isOwner">
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
 	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#matchedPeople" aria-expanded="false" aria-controls="matchedPeople">
@@ -127,7 +136,7 @@
 
 
 	                <!-- APPLIED PEOLE -->
-	                <div class="panel panel-default">
+	                <div class="panel panel-default" ng-show="isOwner">
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
 	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#appliedPeople" aria-expanded="false" aria-controls="appliedPeople">
@@ -150,7 +159,7 @@
 
 
 	                <!-- SELECTED PEOLE -->
-	                <div class="panel panel-default">
+	                <div class="panel panel-default" ng-show="isOwner || logginUserSelectedForProject">
 	                    <!--wrap panel heading in span to trigger image change as well as collapse -->
 	                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
 	                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#selectedPeople" aria-expanded="false" aria-controls="selectedPeople">
@@ -162,7 +171,11 @@
 	                          <div class="panel-body">
 	                          <!-- tab content goes here -->
 								<div class="row" ng-repeat="user in project.selectedUsers">
-									<div class="col-md-12"><a href="/user/#/{{user.user_id}}"><strong>{{user.name}}</strong></a></div>
+									<div class="col-md-6"><a href="/user/#/{{user.user_id}}"><strong>{{user.name}}</strong></a></div>
+
+									<div class="col-md-6" ng-show="isOwner">
+										<rating ng-model="user.rate" max="max" readonly="user.isReadonly" on-hover="hoveringRatingUser(value,$index)" on-leave="overStar = null"></rating>
+									</div>
 									
 								</div>
 								
@@ -211,16 +224,16 @@
 	                        <div class="tab-featured-image">
 	                            <div class="tab-content">
 	                                <div class="tab-pane fade in active" id="tab1">
-	                                        <img src="https://ununsplash.imgix.net/photo-1417024321782-1375735f8987?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950" class="img img-responsive">
+	                                        <img src="/app/assets/img/details/{{project.category}}.jpg" class="img img-responsive">
 	                                </div>
 	                                <div class="tab-pane fade" id="tab2">
-	                                        <img src="https://unsplash.imgix.net/uploads/1411724908903377d4696/2e9b0cb2?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950" class="img img-responsive">
+	                                        <img src="/app/assets/img/details/{{project.category}}.jpg" class="img img-responsive">
 	                                </div>
 	                                <div class="tab-pane fade" id="tab3">
-	                                        <img src="https://ununsplash.imgix.net/photo-1422479516648-9b1f0b6e8da8?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950" class="img img-responsive">
+	                                        <img src="/app/assets/img/details/{{project.category}}.jpg" class="img img-responsive">
 	                                </div>
 	                                <div class="tab-pane fade" id="tab4">
-	                                        <img src="http://www.placehold.it/950x650" class="img img-responsive">
+	                                        <img src="/app/assets/img/details/{{project.category}}.jpg" class="img img-responsive">
 	                                </div>
 	                            </div>
 	                        </div>
