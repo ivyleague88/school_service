@@ -16,7 +16,8 @@ router.get('/project', function(req, res) {
 
 /* GET profile page. */
 router.get('/my_profile', function(req, res) {
-  res.render('profile', {  });
+
+  res.render('profile', { });
 });
 
 router.get('/user', function(req, res) {

@@ -68,6 +68,7 @@ angular.module('project')
 
         if ($scope.isOwner == false){
           alert("You do not have authorization to edit this project");
+          // swal("Unauthorized Access!","You do not have authorization to edit this project","error");
           window.location = '/';
         }
 
