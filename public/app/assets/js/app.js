@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".login-btn").click(function(){
+    $(".login-btn").click(function() {
         $("#modal-login").modal("show");
         // Ideally show the person from SSL and prepopulate
     });
@@ -13,21 +13,21 @@ $(document).ready(function() {
     }
 
     $(".modal").on("show.bs.modal", centerModal);
-    $(".home").each(function(){
-        $(this).click(function(){
+    $(".home").each(function() {
+        $(this).click(function() {
             window.location.href = "/";
         });
     });
-    $("#editProfile").click(function(){
+    $("#editProfile").click(function() {
         window.location.href = "./profileEdit.html";
     });
-    $("#editProfileDone").click(function(){
+    $("#editProfileDone").click(function() {
         window.location.href = "./profile.html";
     });
-   
-    
 
-    $(window).on("resize", function () {
+
+
+    $(window).on("resize", function() {
         $(".modal:visible").each(centerModal);
     });
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
     //     // console.log("USER_LOCATION",USER_LOCATION);
 
     //     if ( (USER_LOCATION != "") && (USER_LOCATION != undefined)) {
-            
+
     //         var image = $(".container-full");
     //         image.fadeOut(100, function () {
     //             var img  = "/app/assets/img/bg/"+USER_LOCATION+"/"+index+".jpg";

@@ -1,17 +1,15 @@
 <div class="container container-main">
-		<div class="row">
-			<div class="col-md-4 text-center" ng-repeat="project in projects">
-				<div class="thumbnail">
-					<img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
-					<h2 class="project-header"><i class="glyphicon {{(project.	featured) ? 'glyphicon-star text-warning' : 'ng-hide' }} featured-project"></i>{{project.title}}</h2>
-					<p class="project-desc">{{project.description}}</p>
-
-					<p>By <a href="/user/#/{{project.user.user_id}}"> {{project.user.name}} </a></p>
-					<p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
-				</div>
-			</div>
-		</div><!-- /.row -->
-
-		<hr class="featurette-divider">
-
+    <div class="row">
+        <div class="col-md-4 text-center" ng-repeat="project in projects">
+            <div class="thumbnail">
+                <img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
+                <h2 class="project-header"><i class="glyphicon {{(project.	featured) ? 'glyphicon-star text-warning' : 'ng-hide' }} featured-project"></i>{{project.title}}</h2>
+                <p class="project-desc">{{project.description}}</p>
+                <p>By <a href="/user/#/{{project.user.user_id}}"> {{project.user.name}} </a></p>
+                <p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr class="featurette-divider">
 </div>

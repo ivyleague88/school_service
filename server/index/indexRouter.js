@@ -5,27 +5,29 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'School Service App' });
+    res.render('index', {
+        title: 'School Service App'
+    });
 });
 
 
 /* GET project page. */
 router.get('/project', function(req, res) {
-  res.render('postproject', {  });
+    res.render('postproject', {});
 });
 
 /* GET profile page. */
 router.get('/my_profile', function(req, res) {
 
-  res.render('profile', { });
+    res.render('profile', {});
 });
 
 router.get('/user', function(req, res) {
-  res.render('user', {  });
+    res.render('user', {});
 });
 
 router.get('/search', function(req, res) {
-  res.render('search', {  });
+    res.render('search', {});
 });
 
 

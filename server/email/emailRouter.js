@@ -21,80 +21,84 @@ var transporter = nodemailer.createTransport({
 
 /* GET /projects listing. */
 router.post('/apply', function(req, res, next) {
-  // Project.find(function (err, projects) {
-  //   if (err) return next(err);
-  //   res.json(projects);
-  // });
+    // Project.find(function (err, projects) {
+    //   if (err) return next(err);
+    //   res.json(projects);
+    // });
     // res.json({ab : "anbinh"});
 
-  var dat = req.body;
+    var dat = req.body;
 
-  console.log("REQUEST",dat);
+    console.log("REQUEST", dat);
 
-  res.render('emails/apply', dat, function(err, final_html) {
-    if (err) throw err;
+    res.render('emails/apply', dat, function(err, final_html) {
+        if (err) throw err;
 
-    // setup e-mail data with unicode symbols
-    var mailOptions = {
-        from: 'School WebService ✔ <schoolservice2@gmail.com>', // sender address
-        to: dat.owner_email, // list of receivers
-        subject: 'New user applying for the project - ' + dat.project_name, // Subject line
-        text: 'Hello world ✔', // plaintext body
-        html: final_html // html body
-    };
+        // setup e-mail data with unicode symbols
+        var mailOptions = {
+            from: 'School WebService ✔ <schoolservice2@gmail.com>', // sender address
+            to: dat.owner_email, // list of receivers
+            subject: 'New user applying for the project - ' + dat.project_name, // Subject line
+            text: 'Hello world ✔', // plaintext body
+            html: final_html // html body
+        };
 
-    transporter.sendMail(mailOptions, function(error, info){
-      if(error){
-          return console.log(error);
-      }
-      console.log('Message sent: ' + info.response);
-  
-      res.json({ab : "anbinh"});
-  
-    });
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+                return console.log(error);
+            }
+            console.log('Message sent: ' + info.response);
 
-  })
+            res.json({
+                ab: "anbinh"
+            });
 
-  
+        });
+
+    })
+
+
 
 });
 
 router.post('/invite', function(req, res, next) {
-  // Project.find(function (err, projects) {
-  //   if (err) return next(err);
-  //   res.json(projects);
-  // });
+    // Project.find(function (err, projects) {
+    //   if (err) return next(err);
+    //   res.json(projects);
+    // });
     // res.json({ab : "anbinh"});
 
-  var dat = req.body;
+    var dat = req.body;
 
-  console.log("REQUEST",dat);
+    console.log("REQUEST", dat);
 
-  res.render('emails/invite', dat, function(err, final_html) {
-    if (err) throw err;
+    res.render('emails/invite', dat, function(err, final_html) {
+        if (err) throw err;
 
-    // setup e-mail data with unicode symbols
-    var mailOptions = {
-        from: 'School WebService ✔ <schoolservice2@gmail.com>', // sender address
-        to: dat.user_email, // list of receivers
-        subject: 'New invitation for the project - ' + dat.project_name, // Subject line
-        text: 'Hello world ✔', // plaintext body
-        html: final_html // html body
-    };
+        // setup e-mail data with unicode symbols
+        var mailOptions = {
+            from: 'School WebService ✔ <schoolservice2@gmail.com>', // sender address
+            to: dat.user_email, // list of receivers
+            subject: 'New invitation for the project - ' + dat.project_name, // Subject line
+            text: 'Hello world ✔', // plaintext body
+            html: final_html // html body
+        };
 
-    transporter.sendMail(mailOptions, function(error, info){
-      if(error){
-          return console.log(error);
-      }
-      console.log('Message sent: ' + info.response);
-  
-      res.json({ab : "anbinh"});
-  
-    });
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+                return console.log(error);
+            }
+            console.log('Message sent: ' + info.response);
 
-  })
+            res.json({
+                ab: "anbinh"
+            });
 
-  
+        });
+
+    })
+
+
 
 });
 

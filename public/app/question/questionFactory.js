@@ -3,17 +3,17 @@
 
 
 angular.module('project')
-  
 
-  .factory('Questions', ['$resource', function($resource){
+.factory('Questions', ['$resource',
+    function($resource) {
 
-    return $resource('/api/questions/:id', null, {
-      'update': { method:'PUT' },
-      'get' :  {method : 'GET' }
-    });
-  }]);
-
-
-
-
-
+        return $resource('/api/questions/:id', null, {
+            'update': {
+                method: 'PUT'
+            },
+            'get': {
+                method: 'GET'
+            }
+        });
+    }
+]);

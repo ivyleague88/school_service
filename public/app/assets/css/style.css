@@ -1,289 +1,288 @@
-html,body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 .container-full h1 {
-  font-size: 80px;
-  color: #FFF;
+    font-size: 80px;
+    color: #FFF;
 }
 
 .container-full .lead {
-  color: #FFF;
+    color: #FFF;
 }
-
 /* Custom container */
+
 .container-full {
-  margin: 0 auto;
-  width: 100%;
-  min-height: 65%;
-  /*background-color: #110022;*/
-  background-image: url("../img/sky.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
-  color: #eee;
-  overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 65%;
+    /*background-color: #110022;*/
+    
+    background-image: url("../img/sky.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: #eee;
+    overflow: hidden;
 }
 
 .v-center {
-  margin-top: 200px;
-  padding-bottom: 50px;
+    margin-top: 200px;
+    padding-bottom: 50px;
 }
 
 .container-main {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    margin: 80px 0;
+    /* Space out the Bootstrap <hr> more */
 }
 
 .featurette-divider-sm {
-  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+    margin: 40px 0;
+    /* Space out the Bootstrap <hr> more */
 }
 
 .featurette {
-  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
-  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    padding-top: 120px;
+    /* Vertically center images part 1: add padding above and below text. */
+    
+    overflow: hidden;
+    /* Vertically center images part 2: clear their floats. */
 }
 
 .featurette-image {
-  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    margin-top: -120px;
+    /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
 }
-
 /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+
 .featurette-image.pull-left {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .featurette-image.pull-right {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 
 .featurette-header {
-  text-align: center;
+    text-align: center;
 }
 
 .featurette-heading {
-  font-size: 50px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .footer {
-  margin-top: 50px;
-  padding-top: 50px;
-  min-height: 150px;
-  background-color: #110022;
-  text-align: center;
-  color: #DDCCEE;
+    margin-top: 50px;
+    padding-top: 50px;
+    min-height: 150px;
+    background-color: #110022;
+    text-align: center;
+    color: #DDCCEE;
 }
 
 .header-links {
-  position: absolute;
-  width: 100%;
-  margin: 25px auto 0;
-  padding: 6px 12px;
-  line-height: 1.428571429;
-  color: white;
-  text-align: right;
+    position: absolute;
+    width: 100%;
+    margin: 25px auto 0;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    color: white;
+    text-align: right;
 }
 
 .header-nav-links {
-  float: right;
+    float: right;
 }
 
-.home:hover, 
+.home:hover,
 .header-nav-links a {
-  color: #DDCCEE;
+    color: #DDCCEE;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #DDCCEE;
+    color: #DDCCEE;
 }
 
-.home, 
+.home,
 .header-nav-links > li > a:hover,
 .header-nav-links > li > a:active {
-  background-color: transparent;
-  color: #eee;
+    background-color: transparent;
+    color: #eee;
 }
 
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-  color: #eee;
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #eee;
 }
 
 .navbar-default .navbar-brand {
-  color: #eee;
+    color: #eee;
 }
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #dce;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #dce;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-  color: #FFF;
-  background-color: #428BCA
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #FFF;
+    background-color: #428BCA
 }
 
 .navbar-default .navbar-collapse {
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .navbar-nav>li>a {
-  padding-top: 5px;
-  padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-
 .navbar-form {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 .featured-project {
-  position: absolute;
-  right: 20px;
-  top: 5px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
 }
 
-
-
-
 .header-nav-links > li > a {
-  padding: 5px 15px;
+    padding: 5px 15px;
 }
 
 .header-nav-links > li.active > a:hover,
 .header-nav-links > li.active > a:active {
-  background-color: #3276b1;
-  border-color: #285e8e;
+    background-color: #3276b1;
+    border-color: #285e8e;
 }
 
 .form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
 }
 
 .form-signin .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .form-signin .form-control:focus {
-  z-index: 2;
+    z-index: 2;
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .profile-img {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 10px;
-  display: block;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 50%;
 }
 
 .navbar-header {
-
-  background-color: #110022;
-  color: #eee;
-
+    background-color: #110022;
+    color: #eee;
 }
 
 .navbar-collapse {
-
-  background-color: #110022;
-  color: #eee;
-
+    background-color: #110022;
+    color: #eee;
 }
 
-
 .home {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .edit {
-  position: absolute;
-  cursor: pointer;
+    position: absolute;
+    cursor: pointer;
 }
 
 .edit span.label {
-  padding: 10px;
+    padding: 10px;
 }
 
 .profile-list .list-inline > li {
-  padding: 5px;
+    padding: 5px;
 }
 
 .profile-list,
 .profile-list > ul {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 span.label {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .badge-danger {
-  background-color: #d9534f !important;
+    background-color: #d9534f !important;
 }
 
 .panel-heading:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
+
 .panel-heading {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;    
+    user-select: none;
 }
 
 .side-tab:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .panel.panel-default {
-  border: none;
-  box-shadow: none !important;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+    border: none;
+    box-shadow: none !important;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .panel-heading {
-  border: none;
-  background-color: #eee;
+    border: none;
+    background-color: #eee;
 }
 
 .panel-body {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 .panel-title {
-  font-weight: 400;
+    font-weight: 400;
 }
-
 /*----------------------------------
     Macbook pro mockup from:
     http://jaredhardy.com/minimal-devices/
@@ -291,124 +290,116 @@ span.label {
 ----------------------------------*/
 
 .md-macbook-pro {
-  display: block;
-  width: 55.3125em;
-  height: 31.875em;
-  font-size: 13px;
-  margin: 0 auto;
-
-  @media (max-width:1199px){
-    font-size: 11px;
-  }
-  @media (max-width:1024px){
-    font-size: 10px;
-  }
-
-  @media (max-width:767px){
-    font-size: 7px;
-  }
-
-  @media (max-width:320px){
-    font-size: 5px;
-  }
-
+    display: block;
+    width: 55.3125em;
+    height: 31.875em;
+    font-size: 13px;
+    margin: 0 auto;
+    @media (max-width: 1199px) {
+        font-size: 11px;
+    }
+    @media (max-width: 1024px) {
+        font-size: 10px;
+    }
+    @media (max-width: 767px) {
+        font-size: 7px;
+    }
+    @media (max-width: 320px) {
+        font-size: 5px;
+    }
 }
 
 .md-macbook-pro .md-lid {
-  width: 45em;
-  height: 30.625em;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  border-radius: 1.875em;
-  border: solid 0.1875em #cdced1;
-  background: #131313;
+    width: 45em;
+    height: 30.625em;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 1.875em;
+    border: solid 0.1875em #cdced1;
+    background: #131313;
 }
 
 .md-macbook-pro .md-camera {
-  width: 0.375em;
-  height: 0.375em;
-  margin: 0 auto;
-  position: relative;
-  top: 1.0625em;
-  background: #000;
-  border-radius: 100%;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+    width: 0.375em;
+    height: 0.375em;
+    margin: 0 auto;
+    position: relative;
+    top: 1.0625em;
+    background: #000;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .md-macbook-pro .md-camera:after {
-  content: "";
-  display: block;
-  width: 0.125em;
-  height: 0.125em;
-  position: absolute;
-  left: 0.125em;
-  top: 0.0625em;
-  background: #353542;
-  border-radius: 100%;
+    content: "";
+    display: block;
+    width: 0.125em;
+    height: 0.125em;
+    position: absolute;
+    left: 0.125em;
+    top: 0.0625em;
+    background: #353542;
+    border-radius: 100%;
 }
 
 .md-macbook-pro .md-screen {
-  width: 42.25em;
-  height: 26.375em;
-  margin: 0 auto;
-  position: relative;
-  top: 2.0625em;
-  // background: #1d1d1d;
-  background: #fff;
-  overflow: hidden;
+    width: 42.25em;
+    height: 26.375em;
+    margin: 0 auto;
+    position: relative;
+    top: 2.0625em;
+    // background: #1d1d1d;
+    background: #fff;
+    overflow: hidden;
 }
 
 .md-macbook-pro .md-screen img {
-  width: 100%;
+    width: 100%;
 }
 
 .md-macbook-pro .md-base {
-  width: 100%;
-  height: 0.9375em;
-  position: relative;
-  top: -0.75em;
-  background: #c6c7ca;
+    width: 100%;
+    height: 0.9375em;
+    position: relative;
+    top: -0.75em;
+    background: #c6c7ca;
 }
 
 .md-macbook-pro .md-base:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0.5em;
-  margin: 0 auto;
-  position: relative;
-  bottom: -0.1875em;
-  background: #b9babe;
-  border-radius: 0 0 1.25em 1.25em;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.5em;
+    margin: 0 auto;
+    position: relative;
+    bottom: -0.1875em;
+    background: #b9babe;
+    border-radius: 0 0 1.25em 1.25em;
 }
 
 .md-macbook-pro .md-base:before {
-  content: "";
-  display: block;
-  width: 7.6875em;
-  height: 0.625em;
-  margin: 0 auto;
-  position: relative;
-  background: #a6a8ad;
-  border-radius: 0 0 0.625em 0.625em;
+    content: "";
+    display: block;
+    width: 7.6875em;
+    height: 0.625em;
+    margin: 0 auto;
+    position: relative;
+    background: #a6a8ad;
+    border-radius: 0 0 0.625em 0.625em;
 }
 
 .md-macbook-pro.md-glare .md-lid:after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 0 1.25em 0 0;
-  background: -webkit-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
-  background: -moz-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
-  background: -o-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
-  background: linear-gradient(53deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 1.25em 0 0;
+    background: linear-gradient(53deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
 }
-
 /* IE8 Fixes */
 
 .list-inline {
@@ -422,49 +413,43 @@ span.label {
     border-right: none;
 }
 
-
 .project:hover {
-  color :#4aa3df;
-  cursor: pointer;
+    color: #4aa3df;
+    cursor: pointer;
 }
 
-
-
 .project.active {
-  color :#16a085;
+    color: #16a085;
 }
 
 .project.p-inactive {
-  color : grey;
+    color: grey;
 }
-
 
 .seeker-active,
-.owner-active  {
-  max-height: 500px;
-  opacity: 1;
-  /*transition: all 0.5s ease-in;*/
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+.owner-active {
+    max-height: 500px;
+    opacity: 1;
+    /*transition: all 0.5s ease-in;*/
+    
+    transition: all linear 0.5s;
 }
-
 
 .seeker-inactive,
-.owner-inactive  {
-  max-height: 0;  overflow: hidden;
-  opacity: 0;
+.owner-inactive {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
 }
 
-.user-header, 
+.user-header,
 .project-header {
-  min-height: 70px;
-  overflow: hidden;
+    min-height: 70px;
+    overflow: hidden;
 }
-
-
 /*PICKADAY CSS*/
-@charset "UTF-8";
 
+@charset "UTF-8";
 /*!
  * Pikaday
  * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
@@ -480,18 +465,24 @@ span.label {
     border-bottom-color: #bbb;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 /*
 clear child float (pika-lendar), using the famous micro clearfix hack
 http://nicolasgallagher.com/micro-clearfix-hack/
 */
+
 .pika-single:before,
 .pika-single:after {
     content: " ";
     display: table;
 }
-.pika-single:after { clear: both }
-.pika-single { *zoom: 1 }
+
+.pika-single:after {
+    clear: both
+}
+
+.pika-single {
+    *zoom: 1
+}
 
 .pika-single.is-hidden {
     display: none;
@@ -499,7 +490,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .pika-single.is-bound {
     position: absolute;
-    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .5);
 }
 
 .pika-lendar {
@@ -526,6 +517,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     font-weight: bold;
     background-color: #fff;
 }
+
 .pika-title select {
     cursor: pointer;
     position: absolute;
@@ -548,6 +540,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     width: 20px;
     height: 30px;
     /* hide text using text-indent trick, using width value (it's enough) */
+    
     text-indent: 20px;
     white-space: nowrap;
     overflow: hidden;
@@ -659,19 +652,16 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     box-shadow: none !important;
     border-radius: 3px !important;
 }
-
 /* styling for abbr */
+
 .pika-table abbr {
     border-bottom: none;
     cursor: help;
 }
-
 /*END OF PICKADAY*/
 
-
 .project-desc {
-  min-height: 100px;
-  height: 100px;
-  overflow: scroll;
+    min-height: 100px;
+    height: 100px;
+    overflow: scroll;
 }
-
