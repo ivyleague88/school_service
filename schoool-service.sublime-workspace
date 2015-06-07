@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"bs3-col",
+				"bs3-col:6	bs3-col-6"
+			],
+			[
+				"bs3-",
+				"bs3-jumbotron	bs3-jumbotron"
+			],
+			[
+				"bs3-pa",
+				"bs3-pagination	bs3-pagination"
+			],
+			[
+				"bs3-bu",
+				"bs3-button:default	bs3-button-default"
+			],
+			[
+				"appe",
+				"appendTo	.appendTo()"
+			],
+			[
+				"read",
+				"ready	document.ready - $(function(){})"
+			],
+			[
 				"effo",
 				"effort"
 			],
@@ -490,224 +514,34 @@
 			[
 				"assign",
 				"assigned_dealers"
-			],
-			[
-				"conte",
-				"contact_me"
-			],
-			[
-				"Valid",
-				"ValidateUser"
-			],
-			[
-				"week",
-				"weekly_sms"
-			],
-			[
-				"send",
-				"SendGA"
-			],
-			[
-				"deaer",
-				"dealers"
-			],
-			[
-				"getla",
-				"GetLatestWeeklyDealerSMS"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "server/shared/index.ejs",
-			"settings":
-			{
-				"buffer_size": 2506,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "public/app/assets/js/app.js",
 			"settings":
 			{
-				"buffer_size": 1653,
+				"buffer_size": 1639,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/app/home/homeFactory.js",
+			"contents": "Package Control Messages\n========================\n\nBootstrap 3 Snippets:\n--------------------\n\n  ============================================================\n  Thank you for installing Bootstrap 3 Snippets\n  ============================================================\n  Follow me on Twitter: @JasonMortonNZ\n  ------------------------------------------------------------\n  \n  Bootstrap 3 snippets is a selection of snippets\n  that will greatly improve your workflow.\n  \n  This package is compatible with both Sublime\n  Text versions 2 & 3.\n  \n  Documentation, examples & issue filing can be found here:\n  https://github.com/JasonMortonNZ/bs3-sublime-plugin\n  \n  ",
 			"settings":
 			{
-				"buffer_size": 1544,
-				"line_ending": "Unix"
+				"buffer_size": 662,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
 			}
 		},
 		{
-			"file": "public/app/home/homeController.js",
+			"file": "public/app/user/profileEdit.html",
 			"settings":
 			{
-				"buffer_size": 2487,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/shared/postproject.ejs",
-			"settings":
-			{
-				"buffer_size": 6062,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/project.js",
-			"settings":
-			{
-				"buffer_size": 108,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/shared/profile.ejs",
-			"settings":
-			{
-				"buffer_size": 5627,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/shared/search.ejs",
-			"settings":
-			{
-				"buffer_size": 6500,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/shared/user.ejs",
-			"settings":
-			{
-				"buffer_size": 6460,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/projectRouter.js",
-			"settings":
-			{
-				"buffer_size": 780,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/projectCategoryController.js",
-			"settings":
-			{
-				"buffer_size": 442,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/project_cat.html",
-			"settings":
-			{
-				"buffer_size": 806,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/project/projectRouter.js",
-			"settings":
-			{
-				"buffer_size": 3487,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/projectDetail.html",
-			"settings":
-			{
-				"buffer_size": 14695,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/project_list.html",
-			"settings":
-			{
-				"buffer_size": 813,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/user/list.html",
-			"settings":
-			{
-				"buffer_size": 605,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/search/list.html",
-			"settings":
-			{
-				"buffer_size": 743,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/user/user.html",
-			"settings":
-			{
-				"buffer_size": 2045,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/rating/ratingRouter.js",
-			"settings":
-			{
-				"buffer_size": 1949,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server.js",
-			"settings":
-			{
-				"buffer_size": 2341,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/project/projectSchema.js",
-			"settings":
-			{
-				"buffer_size": 928,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/rating/ratingSchema.js",
-			"settings":
-			{
-				"buffer_size": 384,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/projectFactory.js",
-			"settings":
-			{
-				"buffer_size": 1841,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/project/projectDetailController.js",
-			"settings":
-			{
-				"buffer_size": 21396,
+				"buffer_size": 1993,
 				"line_ending": "Unix"
 			}
 		},
@@ -720,58 +554,29 @@
 			}
 		},
 		{
-			"file": "public/app/project/projects.html",
+			"contents": "'use strict';\n\nvar express = require('express');\nvar router = express.Router();\nvar Question = require('./questionsSchema');\nvar ObjectId = require('mongoose').Types.ObjectId;\n\n/* GET /questions listing. */\nrouter.get('/', function(req, res, next) {\n    // console.log(req);\n    ;\n    Question.find({\n        project_id: new ObjectId(req.query.project_id)\n    }, null, {\n        sort: {\n            _id: -1,\n        }\n    }, function(err, questions) {\n        if (err) return next(err);\n        res.json(questions);\n    });\n});\n\n/* POST /questions */\nrouter.post('/', function(req, res, next) {\n    Question.create(req.body, function(err, post) {\n        if (err) return next(err);\n        res.json(post);\n    });\n});\n\n/* GET /questions/id */\nrouter.get('/:id', function(req, res, next) {\n    Question.findById(req.params.id, function(err, post) {\n        if (err) return next(err);\n        res.json(post);\n    });\n});\n\n/* PUT /questions/:id */\nrouter.put('/:id', function(req, res, next) {\n    Question.findByIdAndUpdate(req.params.id, req.body, function(err, post) {\n        if (err) return next(err);\n        res.json(post);\n    });\n});\n\n/* DELETE /questions/:id */\nrouter.delete('/:id', function(req, res, next) {\n    Question.findByIdAndRemove(req.params.id, req.body, function(err, post) {\n        if (err) return next(err);\n        res.json(post);\n    });\n});\n\nmodule.exports = router;",
+			"file": "server/questions/questionsRouter.js",
+			"file_size": 1392,
+			"file_write_time": 130780856110000000,
 			"settings":
 			{
-				"buffer_size": 5189,
+				"buffer_size": 1392,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/app/app.js",
+			"file": "public/app/project/test/unit/todoDetailControlleSpec.js",
 			"settings":
 			{
-				"buffer_size": 977,
+				"buffer_size": 2166,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/app/home/home.html",
+			"file": "public/app/project/project_cat.html",
 			"settings":
 			{
-				"buffer_size": 6139,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/index/indexRouter.js",
-			"settings":
-			{
-				"buffer_size": 594,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/users/usersRouter.js",
-			"settings":
-			{
-				"buffer_size": 2941,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/assets/css/style.css",
-			"settings":
-			{
-				"buffer_size": 11458,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/app/user/profile.html",
-			"settings":
-			{
-				"buffer_size": 3100,
+				"buffer_size": 893,
 				"line_ending": "Unix"
 			}
 		}
@@ -784,9 +589,113 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "ins",
+		"last_filter": "insta",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"gitgr",
+				"Git: Graph All"
+			],
+			[
+				"setshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"git",
+				"Set Syntax: Git Graph"
+			],
+			[
+				"gitpushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"gitpucu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"gitquic",
+				"Git: Quick Commit"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"GIT",
+				"Git: Add..."
+			],
+			[
+				"GIT CONFI",
+				"Git: Log Current File"
+			],
+			[
+				"GIT PUSH ",
+				"Git: Push Current Branch"
+			],
+			[
+				"GITP",
+				"Git: Push"
+			],
+			[
+				"GIT STA",
+				"Git: Status"
+			],
+			[
+				"GITPUS",
+				"Git: Push"
+			],
+			[
+				"PUSH",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"gitadd",
+				"Git: Add..."
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"auto",
+				"Autoprefix CSS"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"be",
+				"Javascript Beautify"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -794,18 +703,6 @@
 			[
 				"aut",
 				"Autoprefix CSS"
-			],
-			[
-				"auto",
-				"Autoprefix CSS"
-			],
-			[
-				"be",
-				"Javascript Beautify"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"form",
@@ -893,10 +790,6 @@
 			],
 			[
 				"rmove",
-				"Package Control: Remove Package"
-			],
-			[
-				"remove",
 				"Package Control: Remove Package"
 			],
 			[
@@ -1200,7 +1093,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 457.0
+		"width": 601.0
 	},
 	"console":
 	{
@@ -1229,6 +1122,8 @@
 		"/Users/anbinh/www/school_service/public/app/assets/js",
 		"/Users/anbinh/www/school_service/public/app/home",
 		"/Users/anbinh/www/school_service/public/app/project",
+		"/Users/anbinh/www/school_service/public/app/project/test",
+		"/Users/anbinh/www/school_service/public/app/project/test/unit",
 		"/Users/anbinh/www/school_service/public/app/question",
 		"/Users/anbinh/www/school_service/public/app/search",
 		"/Users/anbinh/www/school_service/public/app/user",
@@ -1236,6 +1131,7 @@
 		"/Users/anbinh/www/school_service/server/email",
 		"/Users/anbinh/www/school_service/server/index",
 		"/Users/anbinh/www/school_service/server/project",
+		"/Users/anbinh/www/school_service/server/project/tests",
 		"/Users/anbinh/www/school_service/server/questions",
 		"/Users/anbinh/www/school_service/server/rating",
 		"/Users/anbinh/www/school_service/server/shared",
@@ -1244,56 +1140,70 @@
 	],
 	"file_history":
 	[
-		"/Users/anbinh/www/school_service/server/project/projectSchema.js",
-		"/Users/anbinh/www/school_service/server/shared/postproject.ejs",
-		"/Users/anbinh/www/school_service/public/app/user/list.html",
-		"/Users/anbinh/www/school_service/server/shared/search.ejs",
-		"/Users/anbinh/www/school_service/server/users/usersSchema.js",
-		"/Users/anbinh/www/school_service/server/questions/questionsSchema.js",
-		"/Users/anbinh/www/school_service/public/app/home/homeController.js",
-		"/Users/anbinh/www/school_service/server/shared/user.ejs",
-		"/Users/anbinh/www/school_service/public/app/search/list.html",
-		"/Users/anbinh/www/school_service/public/app/project/projectDetail.html",
-		"/Users/anbinh/www/school_service/public/app/user/profileController.js",
-		"/Users/anbinh/www/school_service/public/app/project/projectFactory.js",
-		"/Users/anbinh/www/school_service/public/app/project/project.js",
-		"/Users/anbinh/www/school_service/public/app/user/profileEditController.js",
-		"/Users/anbinh/www/school_service/public/app/user/userController.js",
-		"/Users/anbinh/www/school_service/server/shared/emails/apply.ejs",
-		"/Users/anbinh/www/school_service/server/shared/emails/invite.ejs",
-		"/Users/anbinh/www/school_service/server/email/emailRouter.js",
-		"/Users/anbinh/www/school_service/server.js",
-		"/Users/anbinh/www/school_service/public/app/app.js",
-		"/Users/anbinh/www/school_service/package.json",
-		"/Users/anbinh/www/school_service/public/app/project/projectDetailController.js",
-		"/Users/anbinh/www/school_service/server/shared/profile.ejs",
-		"/Users/anbinh/www/school_service/public/app/project/project_list.html",
-		"/Users/anbinh/www/school_service/server/project/projectRouter.js",
-		"/Users/anbinh/www/school_service/public/app/user/user.html",
+		"/Users/anbinh/www/school_service/test.json",
+		"/Users/anbinh/www/school_service/public/app/project/test/unit/todoControllersSpec.js",
+		"/Users/anbinh/Library/Application Support/Sublime Text 3/Packages/GoSublime/USAGE.md",
+		"/Users/anbinh/www/school_service/public/app/user/profileEdit.html",
 		"/Users/anbinh/www/school_service/public/app/user/profile.html",
-		"/Users/anbinh/www/school_service/public/app/home/home.html",
-		"/Users/anbinh/www/school_service/server/email/views/apply.ejs",
-		"/Users/anbinh/www/school_service/public/app/project/projectController.js",
-		"/Users/anbinh/www/school_service/public/app/user/userListController.js",
-		"/Users/anbinh/www/school_service/public/app/user/userRouter.js",
+		"/Users/anbinh/www/school_service/public/app/assets/css/style.css",
 		"/Users/anbinh/www/school_service/server/users/usersRouter.js",
+		"/Users/anbinh/www/school_service/server/index/indexRouter.js",
+		"/Users/anbinh/www/school_service/public/app/home/home.html",
+		"/Users/anbinh/www/school_service/public/app/app.js",
+		"/Users/anbinh/www/school_service/public/app/project/projects.html",
+		"/Users/anbinh/www/school_service/public/app/assets/index.html",
+		"/Users/anbinh/www/school_service/public/app/assets/postproject.html",
+		"/Users/anbinh/www/school_service/public/app/assets/projectdetails.html",
+		"/Users/anbinh/www/school_service/public/app/assets/profileEdit.html",
+		"/Users/anbinh/www/school_service/public/app/assets/profile.html",
+		"/Users/anbinh/www/school_service/public/app/assets/empty.html",
+		"/Users/anbinh/www/school_service/public/app/project/projectController.js",
+		"/Users/anbinh/www/school_service/public/app/project/projectDetailController.js",
+		"/Users/anbinh/www/school_service/public/app/project/projectFactory.js",
+		"/Users/anbinh/www/school_service/server/rating/ratingSchema.js",
+		"/Users/anbinh/www/school_service/server/project/projectSchema.js",
+		"/Users/anbinh/www/school_service/server.js",
+		"/Users/anbinh/www/school_service/server/questions/questionsRouter.js",
+		"/Users/anbinh/www/school_service/server/questions/questionsSchema.js",
+		"/Users/anbinh/www/school_service/server/rating/ratingRouter.js",
+		"/Users/anbinh/www/school_service/public/app/user/user.html",
+		"/Users/anbinh/www/school_service/public/app/search/list.html",
+		"/Users/anbinh/www/school_service/public/app/user/list.html",
+		"/Users/anbinh/www/school_service/public/app/project/project_list.html",
+		"/Users/anbinh/www/school_service/public/app/project/projectDetail.html",
+		"/Users/anbinh/www/school_service/server/project/projectRouter.js",
+		"/Users/anbinh/www/school_service/public/app/project/project_cat.html",
+		"/Users/anbinh/www/school_service/public/app/project/projectCategoryController.js",
+		"/Users/anbinh/www/school_service/public/app/home/homeRouter.js",
+		"/Users/anbinh/www/school_service/server/email/emailRouter.js",
 		"/Users/anbinh/www/school_service/public/app/search/searchRouter.js",
 		"/Users/anbinh/www/school_service/public/app/search/searchController.js",
-		"/Users/anbinh/www/school_service/server/index/indexRouter.js",
-		"/Users/anbinh/www/school_service/public/app/home/homeFactory.js",
-		"/Users/anbinh/www/school_service/public/app/project/projectListController.js",
-		"/Users/anbinh/www/school_service/public/app/project/projects.html",
-		"/Users/anbinh/www/school_service/public/app/user/profileEdit.html",
+		"/Users/anbinh/www/school_service/public/app/user/userRouter.js",
+		"/Users/anbinh/www/school_service/public/app/user/userListController.js",
+		"/Users/anbinh/www/school_service/public/app/user/userController.js",
 		"/Users/anbinh/www/school_service/public/app/user/profileRouter.js",
+		"/Users/anbinh/www/school_service/public/app/user/profileEditController.js",
+		"/Users/anbinh/www/school_service/public/app/question/questionFactory.js",
+		"/Users/anbinh/www/school_service/public/app/project/projectRouter.js",
+		"/Users/anbinh/www/school_service/server/shared/user.ejs",
+		"/Users/anbinh/www/school_service/server/shared/search.ejs",
+		"/Users/anbinh/www/school_service/server/shared/profile.ejs",
+		"/Users/anbinh/www/school_service/public/app/project/project.js",
+		"/Users/anbinh/www/school_service/server/shared/postproject.ejs",
+		"/Users/anbinh/www/school_service/public/app/home/home.js",
+		"/Users/anbinh/www/school_service/public/app/home/homeController.js",
+		"/Users/anbinh/www/school_service/public/app/home/homeFactory.js",
+		"/Users/anbinh/www/school_service/public/app/assets/js/app.js",
+		"/Users/anbinh/www/school_service/server/shared/index.ejs",
+		"/Users/anbinh/www/school_service/server/users/usersSchema.js",
+		"/Users/anbinh/www/school_service/public/app/user/profileController.js",
+		"/Users/anbinh/www/school_service/server/shared/emails/apply.ejs",
+		"/Users/anbinh/www/school_service/server/shared/emails/invite.ejs",
+		"/Users/anbinh/www/school_service/package.json",
+		"/Users/anbinh/www/school_service/server/email/views/apply.ejs",
+		"/Users/anbinh/www/school_service/public/app/project/projectListController.js",
 		"/Users/anbinh/www/school_service/public/app/user/userEditController.js",
 		"/Users/anbinh/www/school_service/public/app/user/userFactory.js",
-		"/Users/anbinh/www/school_service/public/app/assets/profile.html",
-		"/Users/anbinh/www/school_service/public/app/assets/profileEdit.html",
-		"/Users/anbinh/www/school_service/public/app/home/home.js",
-		"/Users/anbinh/www/school_service/public/app/home/homeRouter.js",
-		"/Users/anbinh/www/school_service/server/shared/index.ejs",
-		"/Users/anbinh/www/school_service/public/app/assets/index.html",
-		"/Users/anbinh/www/school_service/public/app/project/projectRouter.js",
 		"/Users/anbinh/www/auth0-angular-sample/app.js",
 		"/Users/anbinh/Downloads/auth0-angular-sample/index.html",
 		"/Users/anbinh/Downloads/auth0-angular-sample/home/home.js",
@@ -1302,11 +1212,7 @@
 		"/Users/anbinh/www/auth0-angular-sample/auth0-variables.js",
 		"/Users/anbinh/Downloads/node-auth0-sample/Procfile",
 		"/Users/anbinh/www/school_service/public/app/home/loginController.js",
-		"/Users/anbinh/www/school_service/server/questions/questionsRouter.js",
-		"/Users/anbinh/www/school_service/public/app/assets/projectdetails.html",
 		"/Users/anbinh/www/school_service/server/shared/index.ejs1",
-		"/Users/anbinh/www/school_service/public/app/assets/js/app.js",
-		"/Users/anbinh/www/school_service/public/app/question/questionFactory.js",
 		"/Users/anbinh/www/school_service/public/app/project/todoRouter.js",
 		"/Users/anbinh/www/school_service/public/app/project/todoController.js",
 		"/Users/anbinh/www/school_service/public/app/project/todoDetail.html",
@@ -1323,7 +1229,6 @@
 		"/Users/anbinh/www/AWM/js/views/ui/sidebar.js",
 		"/Users/anbinh/www/AWM/api/v2/index.php",
 		"/Users/anbinh/www/AWM/js/views/vehicles/list.js",
-		"/Users/anbinh/Library/Application Support/Sublime Text 3/Packages/GoSublime/USAGE.md",
 		"/Users/anbinh/www/AWM/js/views/users/performance.js",
 		"/Users/anbinh/www/AWM/scripts/action_filling.php",
 		"/Users/anbinh/www/AWM/api/v2/mongo/actions/actions.php",
@@ -1362,20 +1267,11 @@
 		"/Users/anbinh/www/AWM/api/v2/mongo/bulkntf/bulkntf.php",
 		"/Users/anbinh/www/AWM/scripts/bulk_ntf.php",
 		"/Users/anbinh/www/AWM/api/v2/mongo/vehicles/api.php",
-		"/Users/anbinh/www/AWM/js/langtrans.html",
-		"/Users/anbinh/www/AWM/js/main.js",
-		"/Users/anbinh/www/AWM/js/views/vehicles/single.js",
-		"/Users/anbinh/www/AWM/index.php",
-		"/Users/anbinh/www/AWM/api/v2/mongo/models/api.php",
-		"/Users/anbinh/www/AWM/js/templates/stats/list.html",
-		"/Users/anbinh/www/AWM/js/views/messages/detail.js",
-		"/Users/anbinh/www/AWM/api/v2/mongo/stats/stats.php",
-		"/Users/anbinh/www/AWM/api/v2/mongo/users/auth.php",
-		"/Users/anbinh/www/AWM/js/views/vehicles/new.js"
+		"/Users/anbinh/www/AWM/js/langtrans.html"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -1390,6 +1286,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Email",
+			"Projects",
+			"asd",
+			"=",
+			"/",
+			"<div><",
+			"=\"\">",
 			"\"",
 			".user-header, .project-header",
 			"project",
@@ -1510,14 +1413,7 @@
 			"todo",
 			"Todos",
 			"todo",
-			"style=\"height : 80px;width : 385px\"",
-			"\"listing mploy\"",
-			"style=\"height : 130px;width: 385px;\"",
-			".modal.car-details p",
-			"#card .back",
-			"#card .front,",
-			".owl-carousel",
-			".modal.car-details .frame"
+			"style=\"height : 80px;width : 385px\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1600,712 +1496,225 @@
 	"groups":
 	[
 		{
-			"selected": 24,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/shared/index.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1935,
-								1935
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 520.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 28,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "public/app/assets/js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1653,
+						"buffer_size": 1639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								985,
-								985
+								848,
+								848
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 467.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "public/app/home/homeFactory.js",
+					"buffer": 1,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1544,
+						"buffer_size": 662,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1368,
-								1368
+								662,
+								662
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"BracketHighlighterBusy": false,
+							"auto_indent": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"default_dir": "/Users/anbinh/www/school_service",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 581.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/app/home/homeController.js",
+					"buffer": 2,
+					"file": "public/app/user/profileEdit.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2487,
+						"buffer_size": 1993,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1275,
-								1275
+								1658,
+								1658
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1265.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "server/shared/postproject.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6062,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6019,
-								6032
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2097.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/app/project/project.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 108,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								103,
-								103
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 30,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "server/shared/profile.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2232,
-								2232
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 763.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "server/shared/search.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5861,
-								5861
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2363.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 27,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "server/shared/user.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6460,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5767,
-								5767
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2325.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 26,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "public/app/project/projectRouter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 780,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								163,
-								170
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "public/app/project/projectCategoryController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 442,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								422,
-								422
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "public/app/project/project_cat.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 806,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								513,
-								513
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "server/project/projectRouter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3487,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								94,
-								101
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1484.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "public/app/project/projectDetail.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5946,
-								5946
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2184.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 24,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "public/app/project/project_list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 813,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								521,
-								521
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "public/app/user/list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 605,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								437,
-								437
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "public/app/search/list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 743,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								449,
-								449
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "public/app/user/user.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								335,
-								335
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "server/rating/ratingRouter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1949,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								915,
-								915
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1645,
-								1645
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1147.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "server/project/projectSchema.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 928,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								912,
-								925
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "server/rating/ratingSchema.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								366,
-								366
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 29,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "public/app/project/projectFactory.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1841,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								282,
-								287
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 81.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "public/app/project/projectDetailController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21396,
-								21396
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 597.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
+					"buffer": 3,
 					"file": "public/app/project/projectController.js",
 					"semi_transient": false,
 					"settings":
@@ -2317,229 +1726,351 @@
 						"selection":
 						[
 							[
-								8443,
-								8443
+								2094,
+								2179
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 9.0,
-						"translation.y": 4475.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "public/app/project/projects.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5189,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								595,
-								595
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1143.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
-					"file": "public/app/app.js",
+					"buffer": 4,
+					"file": "server/questions/questionsRouter.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 977,
+						"buffer_size": 1392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								975,
-								975
+								344,
+								354
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "public/app/home/home.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6139,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"BracketHighlighterBusy": false,
+							"bh_regions":
 							[
-								4029,
-								4063
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2565.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "server/index/indexRouter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 594,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								283,
-								294
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "server/users/usersRouter.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2941,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2233,
-								2233
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1453.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 31,
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "public/app/assets/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11267,
-								11267
-							]
-						],
-						"settings":
-						{
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10546.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
-					"file": "public/app/user/profile.html",
-					"semi_transient": false,
+					"buffer": 5,
+					"file": "public/app/project/test/unit/todoDetailControlleSpec.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3100,
+						"buffer_size": 2166,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1515,
-								1515
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1071.0,
+						"translation.y": 110.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/app/project/project_cat.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								893,
+								893
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -2623,6 +2154,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 122.0
 	},
 	"pinned_build_system": "",
 	"project": "schoool-service.sublime-project",

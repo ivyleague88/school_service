@@ -27,6 +27,7 @@ $(document).ready(function() {
 
 
 
+
     $(window).on("resize", function() {
         $(".modal:visible").each(centerModal);
     });
