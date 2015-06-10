@@ -12,6 +12,16 @@
             <br />
             <h1 class="media-heading"> {{ auth.profile.name}}<small>{{user.role}}</small></h1>.
         </div>
+        <!-- I am actively looking for a project -->
+        <hr class="featurette-divider-sm">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="" ng-model="status"> I am actively looking for a project
+                <span ng-click="save()" class="label label-success" style="margin-right: 10px">
+                        <i class="glyphicon glyphicon-ok"></i> Save
+                    </span>
+            </label>
+        </div>
         <hr class="featurette-divider-sm">
         <h2>My Skills <small>(separated by commas)</small></h2>
         <div class="row">

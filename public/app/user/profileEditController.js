@@ -29,13 +29,19 @@ angular.module('project')
                 $scope.skills = user.skills.join(',');
                 $scope.interests = user.interests.join(',');
                 $scope.user = user;
+                $scope.status = user.status;
+
+                console.log("USER", user);
             })
 
 
             $scope.save = function() {
                 user.skills = $scope.skills.split(",");
                 user.interests = $scope.interests.split(",");
-                console.log(user);
+                user.status = $scope.status;
+
+                $scope.status = !$scope.status;
+
 
                 Users.update({
                     id: user._id

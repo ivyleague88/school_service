@@ -4,7 +4,7 @@ angular.module('project')
         function($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: '/app/project/projects.html',
+                    templateUrl: '/app/project/project.html',
                     controller: 'ProjectController'
                 })
 
@@ -19,7 +19,7 @@ angular.module('project')
             })
 
             .when('/edit/:id', {
-                templateUrl: '/app/project/projects.html',
+                templateUrl: '/app/project/project.html',
                 controller: 'ProjectController'
             })
 

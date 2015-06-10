@@ -21,9 +21,15 @@ angular.module('project')
             $scope.defaultCategories = ['Business', 'Operations', 'IT', 'Security'];
             $scope.project.category = 'Business';
 
+            $scope.defaultSkillCategories = ['Technical', 'Soft Skills', 'Project Management'];
+            $scope.project.skillCategory = 'Technical';
+
             $scope.defaultEffortRequired = ['Hour(s)', 'Day(s)'];
             $scope.project.effortRequired = 'Day(s)';
             $scope.effortNum = '1';
+
+            $scope.defaultTimeAvailability = ['Day', 'Week', 'Month'];
+            $scope.project.timeAvailability = 'Day';
 
             $scope.defaultStatuses = ['Open', 'In Progress', 'Completed', 'Closed'];
 
@@ -50,7 +56,6 @@ angular.module('project')
             });
 
 
-
             if ($routeParams.id !== undefined) {
                 var project = Projects.get({
                     id: $routeParams.id
@@ -60,9 +65,6 @@ angular.module('project')
                         $scope.isOwner = true;
                     } else {
                         $scope.isOwner = false;
-
-
-
                     }
 
                     if ($scope.auth.profile.email === ADMIN_EMAIL) {
@@ -75,30 +77,27 @@ angular.module('project')
                         window.location = '/';
                     }
 
-
                     project.postedEndDate = moment(new Date(project.postedEndDate)).format($scope.DATE_FORMAT);
                     project.startDate = moment(new Date(project.startDate)).format($scope.DATE_FORMAT);
                     project.endDate = moment(new Date(project.endDate)).format($scope.DATE_FORMAT);
-
 
                     if (!project.visibility) {
                         project.visibility = 'global';
                     }
 
-
                     var effort = project.effortRequired.split(' ');
                     project.effortRequired = effort[1];
                     $scope.effortNum = effort[0];
 
-                    console.log('EDITTED PROJECT', project);
+                    var timeAvail = project.timeAvailability.split(' per ');
+                    $scope.hoursAvail = timeAvail[0].replace("hours", '').trim();
+                    project.timeAvailability = timeAvail[1].trim();
+
+                    console.log('EDITTED PROJECT', project, timeAvail[1]);
+                    console.log("EDIT", timeAvail[1].trim(), 'XXXX');
 
                     $scope.project = project;
                     $scope.isNewProject = false;
-
-
-
-
-
                 });
 
 
@@ -155,6 +154,11 @@ angular.module('project')
                 }
 
                 newProject.effortRequired = $scope.effortNum + ' ' + newProject.effortRequired;
+                newProject.timeAvailability = $scope.hoursAvail + " hours per " + newProject.timeAvailability;
+
+
+                console.log("NEW PROJECT", newProject);
+                // return;
 
 
                 var now = new Date();
@@ -200,10 +204,7 @@ angular.module('project')
                     }
                 }
 
-
-
                 console.log(newProject);
-
 
                 newProject.user = {
                     user_id: auth.profile.user_id,
@@ -225,17 +226,7 @@ angular.module('project')
                     console.log('PROJECT HAS BEEN UPDATED', project);
                     $location.url('/' + project._id);
                 }
-
-
-
-
-
             };
-
-
-
-
-
         }
     ])
 
@@ -254,17 +245,12 @@ angular.module('project')
             }
         });
 
-
-
         $scope.login = Credentials.login;
         $scope.logout = Credentials.logout;
-
 
         $scope.search = function() {
             window.location = '/search/#/?q=' + $scope.query;
         };
-
-
 
     }
 ]);

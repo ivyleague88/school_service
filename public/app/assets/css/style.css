@@ -427,6 +427,7 @@ span.label {
 
 .project.active {
     color: #16a085;
+    background-color: #F0F0F0;
 }
 
 .project.p-inactive {
@@ -760,10 +761,16 @@ video#bgvid {
 }
 
 .thumbnail {
-    background-color: #F0F0F0;
+    /*background-color: #F0F0F0;*/
+    padding: 40px;
 }
 
 .not-bold-container {
       margin-top: 50px;
   padding-bottom: 80px;
+}
+
+.time-avail {
+    background-color: white;
+    border: 0px;
 }

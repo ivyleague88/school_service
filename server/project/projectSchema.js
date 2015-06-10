@@ -10,7 +10,15 @@ var ProjectSchema = new mongoose.Schema({
     skillset: Array,
     effortRequired: {
         type: String,
-        default: '1 Hour'
+        default: '1 Hour(s)'
+    },
+    skillCategory: {
+        type: String,
+        default: 'Technical'
+    },
+    timeAvailability: {
+        type: String,
+        default: '10 hours per Day'
     },
     postedEndDate: {
         type: Date,

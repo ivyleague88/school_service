@@ -3,8 +3,8 @@
         <div class="containter text-center profile">
             <div class="edit">
                 <span class="label label-danger" id="editProfile" ng-click="editProfile()">
-					<i class="glyphicon glyphicon-cog"></i> Edit Profile
-				</span>
+                    <i class="glyphicon glyphicon-cog"></i> Edit Profile
+                </span>
             </div>
             <img src="{{auth.profile.picture}}" width="120" height="120" border="0" class="img-circle">
             <br />
@@ -22,6 +22,14 @@
                     <strong>Interests:</strong>
                     <ul class="list-inline">
                         <li ng-repeat="interest in user.interests"><span class="label label-success">{{interest}}</span></li>
+                    </ul>
+                </div>
+                <div class="profile-list">
+                    <strong>I am actively looking for a project:</strong>
+                    <ul class="list-inline">
+                        <li>
+                            {{(user.status) ? "YES" : "NO" }}&nbsp;
+                        </li>
                     </ul>
                 </div>
                 <br />
