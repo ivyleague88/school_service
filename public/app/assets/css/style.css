@@ -3,12 +3,12 @@ body {
     height: 100%;
 }
 
-.container-full h1 {
+.container.header h1 {
     font-size: 80px;
     color: #FFF;
 }
 
-.container-full .lead {
+.container.header .lead {
     color: #FFF;
 }
 /* Custom container */
@@ -16,24 +16,27 @@ body {
 .container-full {
     margin: 0 auto;
     width: 100%;
-    min-height: 65%;
+    min-height: 600px;
     /*background-color: #110022;*/
-    
-    background-image: url("../img/sky.png");
+    /*background-image: url("../img/sky.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center top;*/
+    
     color: #eee;
     overflow: hidden;
 }
 
 .v-center {
-    margin-top: 200px;
+    margin-top: 150px;
     padding-bottom: 50px;
+    position: absolute;
+    z-index: 2;
 }
 
 .container-main {
     margin-top: 100px;
+    padding-bottom: 80px;
 }
 
 .featurette-divider {
@@ -80,7 +83,7 @@ body {
 }
 
 .footer {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     padding-top: 50px;
     min-height: 150px;
     background-color: #110022;
@@ -96,6 +99,7 @@ body {
     line-height: 1.428571429;
     color: white;
     text-align: right;
+    z-index: 2;
 }
 
 .header-nav-links {
@@ -413,6 +417,9 @@ span.label {
     border-right: none;
 }
 
+.project {
+    padding: 30px;
+}
 .project:hover {
     color: #4aa3df;
     cursor: pointer;
@@ -664,4 +671,99 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     min-height: 100px;
     height: 100px;
     overflow: scroll;
+}
+/*CATEGORY OVERLAY*/
+
+div.row div.category {
+    padding: 20px;
+}
+
+div.row div.category .category-overlay {
+    max-height: 0;
+    height: 0;
+    overflow-y: hidden;
+}
+
+div.row div.category:hover .category-overlay {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inherit;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-left: 20px;
+    max-height: 100%;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.cat-overlay-title {
+    color: white;
+}
+
+.cat-overlay-title:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.cat-overlay-title:visited {
+    color: white;
+    text-decoration: none;
+}
+/*END OF CATEGORY OVERLAY*/
+
+video#bgvid {
+    /*position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(/app/assets/img/background.jpg) no-repeat;
+    background-size: cover;*/
+    min-width: 100%;
+    /*min-height: 100%;*/
+    width: auto;
+    height: auto;
+    top: 0px;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+    background: url(/app/assets/img/sky.png) no-repeat;
+    background-size: cover;
+}
+
+.container.header {
+    position: relative;
+    min-height: 550px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+      overflow-y: hidden;
+}
+
+.bold-container {
+    background-color: #F5F4F4;
+    width: 100%;
+    padding : 40px;
+}
+
+.thumbnail {
+    background-color: #F0F0F0;
+}
+
+.not-bold-container {
+      margin-top: 50px;
+  padding-bottom: 80px;
 }
