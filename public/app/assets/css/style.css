@@ -695,9 +695,11 @@ div.row div.category:hover .category-overlay {
     display: inherit;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
+    text-align: left;
     cursor: pointer;
     padding-top: 20px;
     padding-left: 20px;
+    padding-right: 20px;
     max-height: 100%;
     transition-property: all;
     transition-duration: .5s;

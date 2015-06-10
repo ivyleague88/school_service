@@ -107,4 +107,8 @@ angular.module('home')
             window.location = "/search/#/?q=" + $scope.query;
         }
 
+        $scope.go = function(path) {
+            window.location = path;
+        };
+
     });
