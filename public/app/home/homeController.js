@@ -4,7 +4,7 @@
 angular.module('home')
     .controller('HomeController', function(auth, $scope, store, $location, Users, Credentials, Projects, $interval) {
 
-        $scope.auth = auth;
+        $scope.auth = Credentials.auth();
 
         console.log("AUTH VARIABLE HERE", $scope.auth);
         $scope.videoUrl = "/app/assets/video/BANNER_VANCOUVER.mp4";
@@ -110,5 +110,8 @@ angular.module('home')
         $scope.go = function(path) {
             window.location = path;
         };
+
+
+
 
     });

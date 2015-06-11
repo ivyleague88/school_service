@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('project')
-    .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location', 'Questions', 'auth', 'Credentials', 'Users', 'SweetAlert', 'Email', 'Rating', 'store',
-        function($scope, $routeParams, Projects, $location, Questions, auth, Credentials, Users, SweetAlert, Email, Rating, store) {
+    .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location', 'Questions', 'Credentials', 'Users', 'SweetAlert', 'Email', 'Rating', 'store',
+        function($scope, $routeParams, Projects, $location, Questions, Credentials, Users, SweetAlert, Email, Rating, store) {
 
-            $scope.auth = auth;
+            $scope.auth = Credentials.auth();
 
             $scope.isAdmin = false;
             $scope.projectFullStars = [];
@@ -181,7 +181,7 @@ angular.module('project')
 
 
                 //check if the current user can rate the project
-                if (auth.isAuthenticated) {
+                if ($scope.auth.isAuthenticated) {
                     Rating.checkRated({
                         project_id: $scope.project._id,
                         user_id: store.get('profile')._id

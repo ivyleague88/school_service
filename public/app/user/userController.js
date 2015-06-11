@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('project')
-    .controller('UserController', ['$scope', 'Users', '$location', '$routeParams', 'auth', 'Credentials', 'Projects', 'SweetAlert',
-        function($scope, Users, $location, $routeParams, auth, Credentials, Projects, SweetAlert) {
+    .controller('UserController', ['$scope', 'Users', '$location', '$routeParams', 'Credentials', 'Projects', 'SweetAlert',
+        function($scope, Users, $location, $routeParams, Credentials, Projects, SweetAlert) {
 
-            $scope.auth = auth;
 
+
+            $scope.auth = Credentials.auth()
             $scope.isAdmin = false;
 
             $scope.$watch('auth.profile', function() {

@@ -1,57 +1,67 @@
 'use strict';
 
 angular.module('project')
-  .controller('ProfileController', ['$scope', 'Users','$location','$routeParams','auth','Credentials','Projects', function ($scope, Users,$location,$routeParams,auth,Credentials,Projects) {
+    .controller('ProfileController', ['$scope', 'Users', '$location', '$routeParams', 'Credentials', 'Projects',
+        function($scope, Users, $location, $routeParams, Credentials, Projects) {
 
 
-    $scope.auth = auth;
+            $scope.auth = Credentials.auth();
 
-    if (!auth.isAuthenticated) {
-      Credentials.login();
-      return;
-    }
+            if (!$scope.auth.isAuthenticated) {
+                Credentials.login();
+                return;
+            }
 
-    $scope.userId = auth.profile.user_id;
-
-
-    var user = Users.getByUserId({user_id : $scope.userId},function(){
-
-      // set default value
-      if (!user.skills) {
-        user.skills = [];
-      }
-      if (!user.interests){
-        user.interests = [];
-      }
-      
-      $scope.user = user;
-    })
-
-    var projects = Projects.getByUserId({user_id : $scope.userId},function(){
-      // console.log("USER PROJECT",projects);
-
-      $scope.projects = projects;
-    });
+            $scope.userId = $scope.auth.profile.user_id;
 
 
-    var completedProjects = Projects.getCompletedProjectsByUserId({user_id : $scope.userId},function(){
-      // console.log("USER PROJECT",projects);
+            var user = Users.getByUserId({
+                user_id: $scope.userId
+            }, function() {
 
-      $scope.completedProjects = completedProjects;
-    });
+                // set default value
+                if (!user.skills) {
+                    user.skills = [];
+                }
+                if (!user.interests) {
+                    user.interests = [];
+                }
 
-    $scope.invitedProjects = Projects.invited({id : $scope.userId});
+                $scope.user = user;
+            })
+
+            var projects = Projects.getByUserId({
+                user_id: $scope.userId
+            }, function() {
+                // console.log("USER PROJECT",projects);
+
+                $scope.projects = projects;
+            });
+
+
+            var completedProjects = Projects.getCompletedProjectsByUserId({
+                user_id: $scope.userId
+            }, function() {
+                // console.log("USER PROJECT",projects);
+
+                $scope.completedProjects = completedProjects;
+            });
+
+            $scope.invitedProjects = Projects.invited({
+                id: $scope.userId
+            });
 
 
 
-    $scope.editProfile  = function(){
-      $location.path("/edit");
-    }
+            $scope.editProfile = function() {
+                $location.path("/edit");
+            }
 
 
 
 
 
-  }])
+        }
+    ])
 
 ;

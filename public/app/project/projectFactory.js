@@ -53,6 +53,10 @@ angular.module('project')
                 'update': {
                     method: 'PUT'
                 },
+                'login': {
+                    method: 'POST',
+                    'url': '/api/users/login',
+                },
                 'get': {
                     method: 'GET'
                 },

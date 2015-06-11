@@ -1,18 +1,21 @@
 'use strict';
 
 angular.module('project')
-    .controller('ProjectController', ['$scope', 'Projects', '$location', '$routeParams', 'auth', 'Credentials',
-        function($scope, Projects, $location, $routeParams, auth, Credentials) {
+    .controller('ProjectController', ['$scope', 'Projects', '$location', '$routeParams', 'Credentials',
+
+        function($scope, Projects, $location, $routeParams, Credentials) {
 
 
-            $scope.auth = auth;
 
-            if (!auth.isAuthenticated) {
+
+            $scope.auth = Credentials.auth();
+
+            if (!$scope.auth.isAuthenticated) {
                 Credentials.login();
                 return;
             }
 
-            console.log(auth.profile);
+            console.log($scope.auth.profile);
 
             $scope.editing = [];
 
@@ -204,8 +207,8 @@ angular.module('project')
                 console.log(newProject);
 
                 newProject.user = {
-                    user_id: auth.profile.user_id,
-                    name: auth.profile.name,
+                    user_id: $scope.auth.profile.user_id,
+                    name: $scope.auth.profile.name,
                 };
 
                 var project = new Projects(newProject);
@@ -227,12 +230,16 @@ angular.module('project')
         }
     ])
 
-.controller('HeaderController', ['$scope', 'Projects', '$location', '$routeParams', 'auth', 'Credentials',
-    function($scope, Projects, $location, $routeParams, auth, Credentials) {
+.controller('HeaderController', ['$scope', 'Projects', '$location', '$routeParams', 'Credentials',
+    function($scope, Projects, $location, $routeParams, Credentials) {
 
-        console.log('HEADER', auth);
 
-        $scope.auth = auth;
+        console.log("MMMEEEEE");
+
+        $scope.auth = Credentials.auth();
+
+
+        console.log('HEADER', $scope.auth, $scope.auth.isAuthenticated);
 
         $scope.isAdmin = false;
 

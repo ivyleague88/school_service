@@ -4,14 +4,14 @@ angular.module('project')
     .controller('ProfileEditController', ['$scope', 'Users', '$location', '$routeParams', 'auth', 'Credentials', 'Projects', 'SweetAlert',
         function($scope, Users, $location, $routeParams, auth, Credentials, Projects, SweetAlert) {
 
-            $scope.auth = auth;
+            $scope.auth = Credentials.auth();
 
-            if (!auth.isAuthenticated) {
+            if (!$scope.auth.isAuthenticated) {
                 Credentials.login();
                 return;
             }
 
-            $scope.userId = auth.profile.user_id;
+            $scope.userId = $scope.auth.profile.user_id;
 
 
             var user = Users.getByUserId({
