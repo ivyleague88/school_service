@@ -36,10 +36,23 @@ angular.module('project')
 
 
             $scope.save = function() {
-                user.skills = $scope.skills.split(",");
-                user.interests = $scope.interests.split(",");
-                user.status = $scope.status;
 
+                // trim
+                var skills = $scope.skills.split(",");
+                for (var i = 0; i < skills.length; i++) {
+                    skills[i] = skills[i].trim();
+                };
+                user.skills = skills;
+
+
+                // trim interests
+                var interests = $scope.interests.split(",");
+                for (var i = 0; i < interests.length; i++) {
+                    interests[i] = interests[i].trim();
+                };
+                user.interests = interests;
+
+                user.status = $scope.status;
                 $scope.status = !$scope.status;
 
 

@@ -326,6 +326,10 @@ angular.module('project')
                     console.log("APPPLIED PROJECT", $scope.project);
                     $scope.hasApplied = true;
 
+
+
+
+
                     Users.getByUserId({
                         user_id: $scope.project.user.user_id
                     }, function(newUser) {
@@ -334,28 +338,41 @@ angular.module('project')
                             return;
                         }
 
-                        Email.apply({
-                            owner_email: newUser.email,
-                            owner_name: newUser.name,
-                            username: $scope.auth.profile.name,
-                            user_id: $scope.auth.profile.user_id,
-                            project_name: $scope.project.title,
-                            project_id: $scope.project._id
-                        }, function() {
-                            console.log("Email has been sent");
+                        SweetAlert.swal({
+                            title: "Application",
+                            text: "Write your own message to the email " + newUser.email,
+                            type: "input",
+                            showCancelButton: true,
+                            closeOnConfirm: false,
+                            animation: "slide-from-top",
+                            inputPlaceholder: "Your message..."
+                        }, function(inputValue) {
+                            if (inputValue === false) return false;
+                            if (inputValue === "") {
+                                swal.showInputError("You need to write something before sending your application!");
+                                return false;
+                            }
+
+
+                            Email.apply({
+                                owner_email: newUser.email,
+                                owner_name: newUser.name,
+                                username: $scope.auth.profile.name,
+                                user_id: $scope.auth.profile.user_id,
+                                project_name: $scope.project.title,
+                                project_id: $scope.project._id,
+                                content: inputValue
+                            }, function() {
+                                console.log("Apply for a project - Email has been sent");
+
+                            });
+
+
+                            SweetAlert.swal("Done!", "You applied to the project! An email has been sent to the owner " + newUser.email, "success");
 
                         });
 
-                        SweetAlert.swal("Done!", "You applied to the project! An email has been sent to the owner " + newUser.email, "success");
-
-
                     });
-
-
-
-
-
-
                 });
             };
 

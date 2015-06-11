@@ -103,15 +103,6 @@ angular.module('project')
 
             }
 
-            // $scope.save = function(){
-            //   if(!$scope.newProjectVal || $scope.newProjectVal.length < 1) return;
-            //   var project = new Projects({ name: $scope.newProjectVal, completed: false });
-
-            //   project.$save(function(){
-            //     $scope.projects.push(project);
-            //     $scope.newProjectVal = ''; // clear textbox
-            //   });
-            // };
 
             $scope.update = function(index) {
                 var project = $scope.projects[index];
@@ -143,7 +134,13 @@ angular.module('project')
                 var newProject = angular.copy($scope.project);
 
                 if (newProject.skillset.constructor !== Array) {
-                    newProject.skillset = newProject.skillset.split(',');
+
+                    var skills = newProject.skillset.split(',');
+                    // trim
+                    for (var i = 0; i < skills.length; i++) {
+                        skills[i] = skills[i].trim();
+                    };
+                    newProject.skillset = skills;
                 }
 
                 // check if the field is a number
