@@ -5,6 +5,7 @@ var router = express.Router();
 var User = require('./usersSchema');
 var ObjectId = require('mongoose').Types.ObjectId;
 var geoip = require('geoip-lite');
+var crypto = require('crypto');
 
 /* GET /users listing. */
 router.get('/', function(req, res, next) {
@@ -21,10 +22,19 @@ router.get('/', function(req, res, next) {
 
 /* POST /users */
 router.post('/', function(req, res, next) {
-    User.create(req.body, function(err, post) {
+
+    var dat = req.body;
+
+    dat.user_id = crypto.createHash('md5').update(dat.email).digest('hex');
+
+    User.findOneAndUpdate({
+        user_id: dat.user_id
+    }, dat, {
+        upsert: true
+    }, function(err, user) {
         if (err) return next(err);
-        res.json(post);
-    });
+        res.json(user);
+    })
 });
 
 
@@ -95,6 +105,14 @@ router.post('/login', function(req, res, next) {
 });
 
 
+/* GET /users/fake_login */
+router.get('/fake_login', function(req, res, next) {
+
+    var dat = "var staffDetails_name='John Doe';var staffDetails_empid='333333';var staffDetails_extphone='+4373457111';var staffDetails_country='CANADA';var staffDetails_jobrole='Programmer';var staffDetails_dept='IT Support';var staffDetails_photourl='http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=identicon&s=200';var staffDetails_extemail='tinhoc@outlook.com';";
+    res.send(dat);
+});
+
+
 /* GET /users/featured */
 router.get('/featured', function(req, res, next) {
 
@@ -158,6 +176,19 @@ router.get('/by_id/:user_id', function(req, res, next) {
         res.json(post);
     });
 });
+
+/* GET /users/by_email/:email */
+router.get('/by_email/:email', function(req, res, next) {
+
+    console.log("USER EMAIL", req.params.email);
+    User.findOne({
+        email: req.params.email
+    }, function(err, post) {
+        if (err) return next(err);
+        res.json(post);
+    });
+});
+
 
 /* PUT /users/upsert/:user_id */
 router.put('/upsert/:user_id', function(req, res, next) {

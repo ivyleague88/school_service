@@ -4,6 +4,8 @@
 angular.module('home')
     .controller('HomeController', function(auth, $scope, store, $location, Users, Credentials, Projects, $interval) {
 
+
+
         $scope.auth = Credentials.auth();
 
         console.log("AUTH VARIABLE HERE", $scope.auth);

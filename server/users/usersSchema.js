@@ -27,6 +27,18 @@ var UserSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
+    dept: {
+        type: String,
+        default: ""
+    },
+    job_role: {
+        type: String,
+        default: ""
+    },
+    country: {
+        type: String,
+        default: ""
+    },
     featured: {
         type: Boolean,
         default: false

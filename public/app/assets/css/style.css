@@ -776,3 +776,48 @@ video#bgvid {
     background-color: white;
     border: 0px;
 }
+
+.not-bold-container-user{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    margin-left: 100px;
+}
+
+.bold-container {
+    background-color: #F5F4F4;
+    width: 100%;
+    padding : 40px;
+}
+
+.bold-container  .title {
+    padding-left: 80px;
+}
+
+.input-group.search-bar {
+    width: 300px;
+    height: 50px;
+}
+
+.form-control.search-bar {
+    height: 50px;
+}
+.glyphicon.glyphicon-search{
+    font-size: 2em;
+}
+
+.glyphicon.glyphicon-home{
+    font-size: 3em;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.header-logo {
+    color: white;
+}
+
+.header-logo:hover {
+    color: white;
+    
+}

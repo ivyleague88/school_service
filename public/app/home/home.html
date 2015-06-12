@@ -5,7 +5,7 @@
         <ul class="nav nav-pills header-nav-links">
             <li role="presentation" class="active"><a href="/project/">New Project</a></li>
             <li role="presentation" class="login-btn" ng-show="auth.isAuthenticated"><a href="/my_profile/"> My profile</a></li>
-            <li role="presentation" ng-show="auth.isAuthenticated" class="login-btn" ng-click="logout()"><a href="#/">Logout</a></li>
+            <li role="presentation" ng-show="false" class="login-btn" ng-click="logout()"><a href="#/">Logout</a></li>
             <li role="presentation" class="login-btn" ng-show="!auth.isAuthenticated" ng-click="login()"><a href="#/">Login</a></li>
             <li role="presentation"><a href=""><i class="glyphicon glyphicon-question-sign"></i></a></li>
         </ul>
@@ -29,7 +29,7 @@
     </video>
 </div>
 <!-- /container full -->
-<div class="container container-main">
+<div class="container container-main" style="margin-top: 50px;">
 
     <div class="featurette-header">
         <h1 class="featurette-heading">Featured People</h1>
@@ -56,22 +56,7 @@
         <h1 class="featurette-heading">How it works</h1>
         <br/>
     </div>
-    <div class="row">
-        <div class="col-md-6 col-sm-6 text-center project {{ (projectOwnerSelected) ? 'active thumbnail' : '' }} {{ (projectSeekerSelected) ? 'p-inactive' : '' }}" ng-click="selectProjectOwner()">
-            <img class="img-rounded" width="200px" src="/app/assets/png/case.png">
-            <h2>PROJECT OWNER</h2>
-            <!-- <p>This is for a project owner</p> -->
-        </div>
-        <div class="col-md-6 col-sm-6 text-center project {{ (projectSeekerSelected) ? 'active thumbnail' : '' }} {{ (projectOwnerSelected ) ? 'p-inactive' : '' }}" ng-click="selectProjectSeeker()">
-            <img class="img-rounded" width="200px" src="/app/assets/png/wooden-sign.png">
-            <h2>PROJECT SEEKER</h2>
-            <!-- <p>This is for a project seeker</p> -->
-        </div>
-    </div>
-    <!-- /.row -->
-    <br/>
-    <br/>
-    <!-- FOR THE PROJECT OWNER -->
+        <!-- FOR THE PROJECT OWNER -->
     <div class="row {{(projectOwnerSelected) ? 'owner-active' : 'owner-inactive' }}">
         <div class="col-md-4 col-sm-4 text-center">
             <img class="img-rounded" width="140px" src="/app/assets/png/umbrella.png">
@@ -109,6 +94,22 @@
         </div>
     </div>
     <!-- /.row -->
+    <div class="row">
+        <div class="col-md-6 col-sm-6 text-center project {{ (projectOwnerSelected) ? 'active thumbnail' : '' }} {{ (projectSeekerSelected) ? 'p-inactive' : '' }}" ng-click="selectProjectOwner()">
+            <img class="img-rounded" width="200px" src="/app/assets/png/case.png">
+            <h2>PROJECT OWNER</h2>
+            <!-- <p>This is for a project owner</p> -->
+        </div>
+        <div class="col-md-6 col-sm-6 text-center project {{ (projectSeekerSelected) ? 'active thumbnail' : '' }} {{ (projectOwnerSelected ) ? 'p-inactive' : '' }}" ng-click="selectProjectSeeker()">
+            <img class="img-rounded" width="200px" src="/app/assets/png/wooden-sign.png">
+            <h2>PROJECT SEEKER</h2>
+            <!-- <p>This is for a project seeker</p> -->
+        </div>
+    </div>
+    <!-- /.row -->
+    <br/>
+    <br/>
+
 
 </div>
 
@@ -270,7 +271,4 @@
     <!-- /.row -->
 </div>
 <!-- /.container -->
-<footer class="footer">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</p>
-</footer>
-<!-- /.footer -->
+

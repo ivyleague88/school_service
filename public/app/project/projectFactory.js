@@ -77,6 +77,10 @@ angular.module('project')
                 'getByUserId': {
                     method: 'GET',
                     'url': '/api/users/by_id/:user_id'
+                },
+                'getByEmail': {
+                    method: 'GET',
+                    'url': '/api/users/by_email/:email'
                 }
             });
         }

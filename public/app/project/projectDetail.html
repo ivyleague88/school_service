@@ -1,4 +1,4 @@
-<div class="container container-main" style="min-height: 75%">
+<div class="container container-main" style="min-height: 75%;margin-top:30px">
 	<div class="page-header" style="margin-top: 0;">
 		<!-- Use green for Available, red for In Progress, grey for Completed -->
 		<h1 style="margin-top: 0;">{{project.title}}    <small style="color: green">{{project.status}}</small>  <button ng-show="isAdmin" class="btn btn-danger" ng-click="delete()">Delete</button> <i ng-show="isAdmin" class="glyphicon {{(project.featured) ? 'glyphicon-ok-circle text-success' : 'glyphicon-remove-circle'}}" ng-click="feature()"></i> <button ng-show="hasBeenInvited" class="btn btn-success" ng-click="acceptInvitation(auth.profile)">Accept this project</button> </h1>

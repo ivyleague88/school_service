@@ -5,8 +5,8 @@
 angular.module('home')
 
 
-.factory('Credentials', ['auth', 'store', '$location', 'Users', '$modal',
-    function(auth, store, $location, Users, $modal) {
+.factory('Credentials', ['auth', 'store', '$location', 'Users', '$modal', '$http',
+    function(auth, store, $location, Users, $modal, $http) {
 
         // var login = function(callback) {
 
@@ -82,24 +82,119 @@ angular.module('home')
         var auth = function() {
             var profile = store.get("profile");
 
-            console.log("PROFLE GET", profile);
+            // console.log("PROFLE GET", profile);
             if (profile !== null) {
+                // console.log("AUTOLOGIN", profile);
                 return {
                     isAuthenticated: true,
                     profile: profile
                 }
             } else {
-                return {
-                    isAuthenticated: false,
-                    profile: {}
-                }
+                // return {
+                //     isAuthenticated: false,
+                //     profile: {}
+                // }
+                // enable auto login
+                // console.log("ENABLE AUTO LOGGIN");
+                autoLogin(function(user) {
+                    store.set("profile", user);
+                    // console.log("CALLBACK _ AUTOLOGIN", user);
+                    window.location.reload();
+
+                });
             }
+        }
+
+
+        var parseLoginInfo = function(data) {
+            var lines = data.split(';');
+            var user = {};
+
+
+            for (var i = 0; i < lines.length; i++) {
+                var line = lines[i];
+                // console.log("LINE", line);
+                if (line !== "") {
+                    var field = line.split('=')[0].replace("var", "").trim();
+                    var value = line.split("='")[1].replace("'", "").replace('"', '').trim();
+                    // console.log("XXXX", field, value);
+                    switch (field) {
+                        case 'staffDetails_name':
+                            user.name = value;
+                            if (value.split(" ").length == 2) {
+                                user.family_name = value.split(" ")[1];
+                                user.given_name = value.split(" ")[0];
+                            } else {
+                                user.family_name = "";
+                                user.given_name = "";
+                            }
+                            break;
+                        case 'staffDetails_extphone':
+                            user.phone = value;
+                            break;
+                        case 'staffDetails_country':
+                            user.country = value;
+                            break;
+                        case 'staffDetails_jobrole':
+                            user.job_role = value;
+                            break;
+                        case 'staffDetails_dept':
+                            user.dept = value;
+                            break;
+                        case 'staffDetails_photourl':
+                            user.picture = value;
+                            break;
+                        case 'staffDetails_extemail':
+                            user.email = value;
+                            if (value.split("@").length == 2) {
+                                user.nickname = value.split("@")[0];
+                            } else {
+                                user.nickname = value;
+                            }
+                            user.email_verified = true;
+                            break;
+                        default:
+                            ;
+                    }
+                }
+
+            };
+
+            console.log("PARSED USER", user);
+
+            return user;
+        }
+
+        var autoLogin = function(callback) {
+            $http.get('http://localhost:3000/api/users/fake_login').
+            success(function(data, status, headers, config) {
+                // this callback will be called asynchronously
+                // when the response is available
+                // parseLoginInfo(data);
+                // console.log("LOADED DATA", data);
+
+
+                var user = new Users(parseLoginInfo(data));
+                user.$save(function(data) {
+                    // console.log("SAVED USER", data);
+                    if (typeof(callback) == "function") {
+                        callback(data);
+                    }
+                })
+            }).
+            error(function(data, status, headers, config) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                alert("cannot auto login");
+                window.location.reload();
+            });
         }
 
         return {
             'login': login,
             'logout': logout,
-            'auth': auth
+            'auth': auth,
+            'autoLogin': autoLogin
         };
     }
 ]);

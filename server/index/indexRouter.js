@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 
 /* GET project page. */
 router.get('/project', function(req, res) {
-    res.render('postproject', {});
+    res.render('project', {});
 });
 
 /* GET profile page. */
@@ -28,6 +28,10 @@ router.get('/user', function(req, res) {
 
 router.get('/search', function(req, res) {
     res.render('search', {});
+});
+
+router.get('/loaduser', function(req, res) {
+    res.render('loaduser', {});
 });
 
 
