@@ -30,14 +30,14 @@
     <div class="form-group">
         <label class="col-md-4 control-label" for="project-title">Department</label>
         <div class="col-md-4">
-            <input type="text" placeholder="Your Department" class="form-control input-md" ng-required="true" ng-model="user.department">
+            <input type="text" placeholder="Your Department" class="form-control input-md" ng-required="true" ng-model="user.dept">
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-md-4 control-label" for="project-title">Picture</label>
         <div class="col-md-4">
-            <input type="text" placeholder="Your Photo's URL" class="form-control input-md"  ng-model="user.picture">
+            <input type="text" placeholder="Your Photo's URL" value="http://api.adorable.io/avatars/200/{{user.name}}"  class="form-control input-md"  >
         </div>
     </div>
 
@@ -61,7 +61,7 @@
     <div class="form-group">
         <label class="col-md-4 control-label" for="project-submit"></label>
         <div class="col-md-4">
-            <button id="project-submit" name="project-submit" class="btn btn-danger">{{ (isNewProject) ? "Submit" : "Update" }}</button>
+            <button id="project-submit" name="project-submit" class="btn btn-danger">Create</button>
         </div>
     </div>
 </form>

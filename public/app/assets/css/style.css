@@ -161,7 +161,10 @@ body {
     position: absolute;
     right: 20px;
     top: 5px;
+    font-size:  2em;
 }
+
+
 
 .header-nav-links > li > a {
     padding: 5px 15px;

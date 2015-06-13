@@ -75,7 +75,12 @@
             <div class="col-sm-6 col-md-4 text-center" ng-repeat="project in projects">
                 <div class="thumbnail">
                     <img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
-                    <h3><i class="glyphicon {{(project.featured) ? 'glyphicon-star text-warning' : 'ng-hide' }} featured-project"></i>{{project.title}}</h3>
+                    <h3>{{project.title}}</h3>
+                    <div class="featured-project">
+                        <i class="glyphicon {{(project. featured) ? 'glyphicon-ok-circle text-success' : 'ng-hide' }} "></i> 
+
+                        <i class="glyphicon {{(project.visibility == 'global') ? 'glyphicon-globe text-success' : 'ng-hide' }} "></i>
+                    </div>
                     <p class="project-desc">{{project.description}}</p>
                     <p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
                 </div>
@@ -91,7 +96,12 @@
             <div class="col-md-4 text-center" ng-repeat="project in completedProjects">
                 <div class="thumbnail">
                     <img class="img-circle" width="140px" src="/app/assets/categories/{{project.category}}.png">
-                    <h3><i class="glyphicon {{(project.featured) ? 'glyphicon-star text-warning' : 'ng-hide' }} featured-project"></i> {{project.title}}</h3>
+                    <h3> {{project.title}}</h3>
+                    <div class="featured-project">
+                        <i class="glyphicon {{(project. featured) ? 'glyphicon-ok-circle text-success' : 'ng-hide' }} "></i> 
+
+                        <i class="glyphicon {{(project.visibility == 'global') ? 'glyphicon-globe text-success' : 'ng-hide' }} "></i>
+                    </div>
                     <p class="project-desc">{{project.description}}</p>
                     <p><a class="btn btn-default" href="/project/#/{{project._id}}">View details »</a></p>
                 </div>

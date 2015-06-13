@@ -16,6 +16,18 @@ router.get('/', function(req, res, next) {
         var query = Project.find();
     }
 
+    if ((req.query.country != "") && (req.query.country != undefined)) {
+        query.or([{
+            country: req.query.country
+        }, {
+            visibility: "global"
+        }]);
+    } else {
+
+    }
+
+
+
 
     query.exec(function(err, post) {
         if (err) return next(err);
@@ -35,6 +47,12 @@ router.get('/featured', function(req, res, next) {
     var query = Project.find({
         'featured': true
     }).limit(3);
+
+    query.or([{
+        country: req.query.country
+    }, {
+        visibility: "global"
+    }]);
 
     query.exec(function(err, post) {
         if (err) return next(err);

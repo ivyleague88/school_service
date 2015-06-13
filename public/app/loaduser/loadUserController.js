@@ -7,7 +7,7 @@ angular.module('project')
 
 
             $scope.user = {
-                picture: 'http://placehold.it/200x200',
+                // picture: 'http://placehold.it/200x200',
                 country: 'CANADA'
             };
 
@@ -28,7 +28,7 @@ angular.module('project')
 
             $scope.save = function() {
                 var newUser = angular.copy($scope.user);
-
+                newUser.picture = "http://api.adorable.io/avatars/200/" + newUser.name;
 
 
                 console.log("NEW USER", newUser);

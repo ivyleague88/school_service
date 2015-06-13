@@ -119,6 +119,10 @@ router.get('/featured', function(req, res, next) {
     var query = User.find({
         featured: true
     }).limit(3);
+
+    query.or([{
+        country: req.query.country
+    }]);
     // query.or([{status : "Open"},{status : "In Progress"}]);
     query.exec(function(err, post) {
         if (err) return next(err);

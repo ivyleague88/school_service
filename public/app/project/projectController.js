@@ -156,6 +156,8 @@ angular.module('project')
                 newProject.effortRequired = $scope.effortNum + ' ' + newProject.effortRequired;
                 newProject.timeAvailability = $scope.hoursAvail + " hours per " + newProject.timeAvailability;
 
+                newProject.country = $scope.auth.profile.country;
+
 
                 console.log("NEW PROJECT", newProject);
                 // return;

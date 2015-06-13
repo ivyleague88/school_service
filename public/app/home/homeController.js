@@ -77,9 +77,13 @@ angular.module('home')
 
 
 
-        $scope.featuredProjects = Projects.featured();
+        $scope.featuredProjects = Projects.featured({
+            country: $scope.auth.profile.country
+        });
 
-        $scope.featuredUsers = Users.featured();
+        $scope.featuredUsers = Users.featured({
+            country: $scope.auth.profile.country
+        });
 
         $scope.projectOwnerSelected = false;
         $scope.projectSeekerSelected = false;

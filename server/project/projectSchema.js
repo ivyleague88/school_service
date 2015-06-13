@@ -20,6 +20,10 @@ var ProjectSchema = new mongoose.Schema({
         type: String,
         default: '10 hours per Day'
     },
+    country: {
+        type: String,
+        default: 'CANADA'
+    },
     postedEndDate: {
         type: Date,
         default: Date.now

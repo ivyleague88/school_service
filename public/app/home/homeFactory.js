@@ -166,7 +166,13 @@ angular.module('home')
         }
 
         var autoLogin = function(callback) {
-            $http.get('http://school.binitas.com/api/users/fake_login').
+
+            if (window.location.host == "localhost:3000") {
+                var BASE = "http://localhost:3000";
+            } else {
+                var BASE = "http://school.binitas.com";
+            }
+            $http.get(BASE + '/api/users/fake_login').
             success(function(data, status, headers, config) {
                 // this callback will be called asynchronously
                 // when the response is available
