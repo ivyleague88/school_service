@@ -9,7 +9,8 @@ angular.module('project')
 
 
             var projects = Projects.search({
-                q: $routeParams.q
+                q: $routeParams.q,
+                country: Credentials.auth().profile.country
             }, function() {
                 console.log("PROJECTS", projects);
                 $scope.projects = projects;
