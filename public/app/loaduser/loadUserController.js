@@ -28,6 +28,9 @@ angular.module('project')
 
             $scope.save = function() {
                 var newUser = angular.copy($scope.user);
+
+                // auto generate the picture url based
+                // on the username
                 newUser.picture = "http://api.adorable.io/avatars/200/" + newUser.name;
 
 
@@ -38,6 +41,7 @@ angular.module('project')
 
                 var user = new Users(newUser);
                 if ($scope.newUser === true) {
+                    // if this is the user creation process
                     newUser.status = 'Open';
                     user.$save(function() {
                         console.log('user HAS BEEN CREATED', user);

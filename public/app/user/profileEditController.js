@@ -14,9 +14,9 @@ angular.module('project')
             $scope.userId = $scope.auth.profile.user_id;
 
 
-            var user = Users.getByUserId({
+            $scope.user = Users.getByUserId({
                 user_id: $scope.userId
-            }, function() {
+            }, function(user) {
 
                 // set default value
                 if (!user.skills) {
@@ -28,12 +28,12 @@ angular.module('project')
 
                 $scope.skills = user.skills.join(',');
                 $scope.interests = user.interests.join(',');
-                $scope.user = user;
-                $scope.status = user.status;
 
-                console.log("USER", user);
             })
 
+            $scope.change = function() {
+                console.log("STATUS", $scope.user.status, $scope.user);
+            }
 
             $scope.save = function() {
 
@@ -42,7 +42,7 @@ angular.module('project')
                 for (var i = 0; i < skills.length; i++) {
                     skills[i] = skills[i].trim();
                 };
-                user.skills = skills;
+                $scope.user.skills = skills;
 
 
                 // trim interests
@@ -50,18 +50,18 @@ angular.module('project')
                 for (var i = 0; i < interests.length; i++) {
                     interests[i] = interests[i].trim();
                 };
-                user.interests = interests;
-
-                user.status = $scope.status;
-                $scope.status = !$scope.status;
+                $scope.user.interests = interests;
 
 
                 Users.update({
-                    id: user._id
-                }, user);
-                console.log("USER HAS BEEN UPDATED", user);
-                // alert("The user has been saved!");
-                SweetAlert.swal("Saved!", "The user's profile has been updated.", "success");
+                    id: $scope.user._id
+                }, $scope.user, function(user) {
+                    $scope.user = user;
+                    console.log("USER HAS BEEN UPDATED", user);
+                    // alert("The user has been saved!");
+                    SweetAlert.swal("Saved!", "The user's profile has been updated.", "success");
+                });
+
             }
 
 
