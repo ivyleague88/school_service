@@ -67,7 +67,6 @@ angular.module('home')
                 $scope.location = null;
             });
         }
-
         // animated location
         var location = store.get("profile").country;
         animatedBG(location);
