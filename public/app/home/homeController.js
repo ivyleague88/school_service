@@ -47,17 +47,19 @@ angular.module('home')
         }
 
         $scope.login = function() {
-            Credentials.login(function() {
-                var location = store.get("profile").location;
 
-                if (location != null) {
-                    $scope.imgUrl = "/app/assets/img/bg/" + location + "/1.jpg";
-                } else {
-                    $scope.imgUrl = "";
-                }
+            var location = store.get("profile").country;
 
-                animatedBG(location);
-            });
+            console.log('location', location);
+
+            if (location != null) {
+                $scope.imgUrl = "/app/assets/img/bg/" + location + "/1.jpg";
+            } else {
+                $scope.imgUrl = "";
+            }
+
+            animatedBG(location);
+
         }
 
         $scope.logout = function() {
@@ -66,15 +68,9 @@ angular.module('home')
             });
         }
 
-        if (auth.isAuthenticated) {
-            var location = store.get("profile").location;
-            animatedBG(location);
-
-
-        }
-
-
-
+        // animated location
+        var location = store.get("profile").country;
+        animatedBG(location);
 
 
         $scope.featuredProjects = Projects.featured({
