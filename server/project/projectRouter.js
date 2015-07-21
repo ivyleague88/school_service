@@ -117,21 +117,29 @@ router.get('/invited', function(req, res, next) {
 router.get('/search', function(req, res, next) {
 
     console.log("USEr ID", req.query.q);
-    var query = Project.find({
-        country: req.query.country
-    });
+    var query = Project.find();
 
-    query.or([{
-        title: new RegExp(req.query.q, 'i')
-    }, {
-        description: new RegExp(req.query.q, 'i')
-    }, {
-        category: new RegExp(req.query.q, 'i')
-    }, {
-        skillset: {
-            $in: [new RegExp(req.query.q, 'i')]
+    query.and([{
+            $or: [{
+                country: req.query.country
+            }, {
+                visibility: "global"
+            }]
+        }, {
+            $or: [{
+                title: new RegExp(req.query.q, 'i')
+            }, {
+                description: new RegExp(req.query.q, 'i')
+            }, {
+                category: new RegExp(req.query.q, 'i')
+            }, {
+                skillset: {
+                    $in: [new RegExp(req.query.q, 'i')]
+                }
+            }]
         }
-    }]);
+
+    ]);
 
     query.exec(function(err, post) {
         if (err) return next(err);
