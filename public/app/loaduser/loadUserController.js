@@ -90,5 +90,8 @@ angular.module('project')
             window.location = '/search/#/?q=' + $scope.query;
         };
 
+
+
+
     }
 ]);
