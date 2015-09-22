@@ -6,6 +6,7 @@ var ProjectSchema = new mongoose.Schema({
     content: String,
     project_id: mongoose.Schema.Types.ObjectId,
     user: mongoose.Schema.Types.Mixed,
+    country: String,
     createdDate: {
         type: Date,
         default: Date.now

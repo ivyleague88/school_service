@@ -14,6 +14,9 @@ var users = require('./server/users/usersRouter');
 var email = require('./server/email/emailRouter');
 var rating = require('./server/rating/ratingRouter');
 
+// add analytics router
+var analytics = require('./server/analytics/analyticsRouter');
+
 var mongoose = require('mongoose');
 var databaseURI = 'mongodb://localhost/school';
 
@@ -55,6 +58,11 @@ app.use('/api/questions', questions);
 app.use('/api/users', users);
 app.use('/api/email', email);
 app.use('/api/rating', rating);
+
+// update the router
+app.use('/api/analytics', analytics);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

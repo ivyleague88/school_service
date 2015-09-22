@@ -232,8 +232,8 @@ angular.module('project')
         }
     ])
 
-.controller('HeaderController', ['$scope', 'Projects', '$location', '$routeParams', 'Credentials',
-    function($scope, Projects, $location, $routeParams, Credentials) {
+.controller('HeaderController', ['$scope', 'Projects', '$location', '$routeParams', 'Credentials', 'Analytics',
+    function($scope, Projects, $location, $routeParams, Credentials, Analytics) {
 
 
         console.log("MMMEEEEE");
@@ -251,12 +251,23 @@ angular.module('project')
             }
         });
 
+
         $scope.login = Credentials.login;
         $scope.logout = Credentials.logout;
 
         $scope.search = function() {
             window.location = '/search/#/?q=' + $scope.query;
         };
+
+
+        Analytics.visitor({
+            user_id: $scope.auth.profile._id,
+            role: $scope.auth.profile.role,
+            job_role: $scope.auth.profile.job_role,
+            country: $scope.auth.profile.country
+        }, function(ret) {
+            console.log('visitor', ret);
+        });
 
     }
 ]);

@@ -298,7 +298,8 @@ angular.module('project')
                         name: $scope.auth.profile.name,
                         user_id: $scope.auth.profile.user_id,
                         picture: $scope.auth.profile.picture,
-                    }
+                    },
+                    country: $scope.auth.profile.country
                 };
                 var question = new Questions(newQuestion);
                 question.$save(function() {

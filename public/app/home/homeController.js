@@ -2,7 +2,7 @@
 
 
 angular.module('home')
-    .controller('HomeController', function(auth, $scope, store, $location, Users, Credentials, Projects, $interval) {
+    .controller('HomeController', function(auth, $scope, store, $location, Users, Credentials, Projects, $interval, Analytics) {
 
 
 
@@ -111,6 +111,17 @@ angular.module('home')
         $scope.go = function(path) {
             window.location = path;
         };
+
+
+        // track visitor
+        Analytics.visitor({
+            user_id: $scope.auth.profile._id,
+            role: $scope.auth.profile.role,
+            job_role: $scope.auth.profile.job_role,
+            country: $scope.auth.profile.country
+        }, function(ret) {
+            console.log('visitor', ret);
+        });
 
 
 
