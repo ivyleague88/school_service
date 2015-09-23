@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('project')
-    .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location', 'Questions', 'Credentials', 'Users', 'SweetAlert', 'Email', 'Rating', 'store',
-        function($scope, $routeParams, Projects, $location, Questions, Credentials, Users, SweetAlert, Email, Rating, store) {
+    .controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'Projects', '$location', 'Questions', 'Credentials', 'Users', 'SweetAlert', 'Email', 'Rating', 'store', 'Analytics',
+        function($scope, $routeParams, Projects, $location, Questions, Credentials, Users, SweetAlert, Email, Rating, store, Analytics) {
 
             $scope.auth = Credentials.auth();
 
@@ -578,6 +578,15 @@ angular.module('project')
             }, {
                 stateOff: 'glyphicon-off'
             }];
+
+            Analytics.visitor({
+                user_id: $scope.auth.profile._id,
+                role: $scope.auth.profile.role,
+                job_role: $scope.auth.profile.job_role,
+                country: $scope.auth.profile.country
+            }, function(ret) {
+                console.log('visitor', ret);
+            });
 
 
 

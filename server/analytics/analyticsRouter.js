@@ -119,8 +119,8 @@ router.post('/visitor', function(req, res, next) {
             // console.log('foud_user', user);
             // 1000 milisec * 60 sec 
             var oneMIN = 1000 * 60;
-            //30 means 30 mins
-            var defaultInterval = 30;
+            //10 means 10 mins
+            var defaultInterval = 10;
 
             var lastVisitDate = user.created_at;
             var now = new Date();
@@ -142,6 +142,8 @@ router.post('/visitor', function(req, res, next) {
                     if (err) return next(err);
                     res.json(user);
                 });
+            } else {
+                res.json(user);
             }
 
 

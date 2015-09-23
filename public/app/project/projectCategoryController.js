@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('project')
-    .controller('ProjectCategoryController', ['$scope', 'Projects', '$location', '$routeParams', 'Credentials',
-        function($scope, Projects, $location, $routeParams, Credentials) {
+    .controller('ProjectCategoryController', ['$scope', 'Projects', '$location', '$routeParams', 'Credentials', 'Analytics',
+        function($scope, Projects, $location, $routeParams, Credentials, Analytics) {
 
 
 
@@ -25,6 +25,15 @@ angular.module('project')
 
 
             $scope.title = "Category: " + $routeParams.category;
+
+            Analytics.visitor({
+                user_id: $scope.auth.profile._id,
+                role: $scope.auth.profile.role,
+                job_role: $scope.auth.profile.job_role,
+                country: $scope.auth.profile.country
+            }, function(ret) {
+                console.log('visitor', ret);
+            });
 
         }
     ]);

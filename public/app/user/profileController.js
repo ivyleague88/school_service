@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('project')
-    .controller('ProfileController', ['$scope', 'Users', '$location', '$routeParams', 'Credentials', 'Projects',
-        function($scope, Users, $location, $routeParams, Credentials, Projects) {
+    .controller('ProfileController', ['$scope', 'Users', '$location', '$routeParams', 'Credentials', 'Projects', 'Analytics',
+        function($scope, Users, $location, $routeParams, Credentials, Projects, Analytics) {
 
 
             $scope.auth = Credentials.auth();
@@ -56,6 +56,15 @@ angular.module('project')
             $scope.editProfile = function() {
                 $location.path("/edit");
             }
+
+            Analytics.visitor({
+                user_id: $scope.auth.profile._id,
+                role: $scope.auth.profile.role,
+                job_role: $scope.auth.profile.job_role,
+                country: $scope.auth.profile.country
+            }, function(ret) {
+                console.log('visitor', ret);
+            });
 
 
 

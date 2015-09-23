@@ -64,6 +64,10 @@ var ProjectSchema = new mongoose.Schema({
     createdDate: {
         type: Date,
         default: Date.now
+    },
+    updatedDate: {
+        type: Date,
+        default: Date.now
     }
 }, {
     strict: false
