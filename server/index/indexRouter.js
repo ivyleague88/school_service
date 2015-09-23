@@ -34,5 +34,9 @@ router.get('/loaduser', function(req, res) {
     res.render('loaduser', {});
 });
 
+router.get('/dashboard', function(req, res) {
+    res.render('dashboard', {});
+});
+
 
 module.exports = router;
