@@ -47,7 +47,7 @@ angular.module('project')
                         console.log('user HAS BEEN CREATED', JSON.stringify(user), JSON.stringify(ret));
                         // $location.url('/' + user._id);
                         store.set('profile', user);
-                        window.location = "/";
+                        // window.location = "/";
                     });
                 } else {
                     // login process
