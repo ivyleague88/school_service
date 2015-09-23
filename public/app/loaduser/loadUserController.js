@@ -43,8 +43,8 @@ angular.module('project')
                 if ($scope.newUser === true) {
                     // if this is the user creation process
                     newUser.status = 'Open';
-                    user.$save(function() {
-                        console.log('user HAS BEEN CREATED', user);
+                    user.$save(function(ret) {
+                        console.log('user HAS BEEN CREATED', JSON.stringify(user), JSON.stringify(ret));
                         // $location.url('/' + user._id);
                         store.set('profile', user);
                         window.location = "/";
