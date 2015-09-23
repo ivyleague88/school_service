@@ -30,7 +30,8 @@ router.post('/', function(req, res, next) {
     User.findOneAndUpdate({
         user_id: dat.user_id
     }, dat, {
-        upsert: true
+        upsert: true,
+        'new': true
     }, function(err, user) {
         if (err) return next(err);
         res.json(user);
